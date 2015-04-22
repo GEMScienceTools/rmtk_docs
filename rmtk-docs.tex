@@ -1,0 +1,159 @@
+% ------------------------------------------------------------------------------
+% Risk Modeller's Toolkit (RMTK) User Guide
+%
+% Authors:
+% 	C. Casotto	- GEM Model Facility, Pavia, Italy
+%
+% Document distributed under the Common Creative License
+% © GEM Foundation, Pavia, February 2014
+
+%-------------------------------------------------------------------------------
+%	LOAD PACKAGES
+%-------------------------------------------------------------------------------
+\input{./configuration/configuration.tex}
+
+
+%-------------------------------------------------------------------------------
+% Insert the structure.tex file which contains the majority of the structure 
+% behind the template
+\input{./configuration/structure.tex}
+
+
+% =============================================================== BEGIN DOCUMENT
+\begin{document}
+\lstset{language=Python} % --------------- For listings environment - use python
+\input{"./tex/glossary.tex"} % ------------------------------  Load the glossary
+
+
+%-------------------------------------------------------------------------------
+%	TITLE PAGE
+%-------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+%\AddToShipoutPicture*{\put(6,5){\includegraphics[scale=1]{background}}} % Image background
+\par\normalfont\fontsize{15}{15}\sffamily\selectfont
+“OpenQuake: Calculate, share, explore”
+\centering
+\vspace*{9cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+Risk Modeller's Toolkit - User Guide\par % Book title
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2014 GEM Foundation\\ % Copyright notice
+
+\noindent \textsc{Published by GEM Foundation}\\ % Publisher
+
+\noindent \textsc{globalquakemodel.org/openquake}\\ % URL
+
+\noindent
+   {\textbf{Citation}} \hfill \\
+   Please cite this document as:\\
+   Casotto, C. (2014) OpenQuake Risk Modeller's Toolkit - User Guide. \textit{Global Earthquake Model (GEM). Technical Report}\\
+
+   {\bf{Disclaimer}} \hfill \\
+\noindent
+   The ``Risk Modeller's Tookit - User Guide'' is distributed in the hope 
+   that it will be useful, but without any warranty: without 
+   even the implied warranty of merchantability or fitness for a 
+   particular purpose. While every 
+   precaution has been taken in the preparation of this document, in 
+   no event shall the authors of the manual and the GEM Foundation be 
+   liable to any party for direct, indirect, special, incidental, or 
+   consequential damages, including lost profits, arising out of the 
+   use of information contained in this document or from the use of 
+   programs and source code that may accompany it, even if the authors 
+   and GEM Foundation have been advised of the possibility of such damage. 
+   The Book provided hereunder is on as "as is" basis, and the authors 
+   and GEM Foundation have no obligations to provide maintenance, support,
+   updates, enhancements, or modifications. 
+   \hfill \\
+   The current version of the book has been revised only by members of 
+   the GEM model facility and it must be considered a draft copy. 
+   %
+   \vspace{0.4cm} \hfill \\
+   {\bf{License}} \hfill \\
+   This Book is distributed under the Creative Common License 
+   Attribution-NonCommercial-NoDerivs 3.0 Unported (CC BY-NC-ND 3.0) 
+   (see link below). You can download this Book and share it with 
+   others as long as you provide proper credit, but you cannot change 
+   it in any way or use it commercially. 
+   \hfill \\
+
+\noindent \textit{First printing, November 2014} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{./figures/chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	PREAMBLE
+%----------------------------------------------------------------------------------------
+\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preamble}
+\input{./book/preamble.tex}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\include{./book/chapter1}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
+\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\include{./book/chapter2}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\include{./book/chapter3}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+% \include{./book/bibliography}
+
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+\printglossary
+
+
+%----------------------------------------------------------------------------------------
+%	APPENDICES
+%----------------------------------------------------------------------------------------
+%\part{Appendices}
+\appendix
+\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\include{./book/appendix1}
+
+\end{document}

@@ -1,0 +1,16 @@
+Nonlinear Static Methods are based on the use of capacity curves, resulting from nonlinear static pushover analysis, to determine the median seismic intensity values $\hat{s}_c$ corresponding to the attainment of a certain damage state threshold (limit state) and the corresponding dispersion $\beta_{sc}$. These parameters are used to represent a fragility curve as the probability of the limit state capacity C being exceeded by the demand D, both expressed in terms of intensity levels (s$_c$ and s respectively), as shown in the following equation:
+
+\begin{equation}
+P_{LS}(s) = P(C < D | s) = \Phi(\frac{ln s -ln \hat{s}_c}{\beta_{sc}})
+\label{eq:fragility-definition}
+\end{equation}
+
+The methodologies implemented so far in the RMTK allow to consider different shapes of the pushover curve, multilinear and bilinear, record-to-record dispersion and dispersion in the damage state thresholds in a systematic and harmonised way. 
+
+Different input types can be inserted depending on whether the user has already at his disposal an idealised pushover curve or it has to be derived from the raw results of a pushover analysis. Fragility and vulnerability functions can be derived for a single building or for a class of buildings.
+
+The intensity measure to be used is S$_a$ and a mapping between any engineering demand parameter (EDP), assumed to describe the damage state thresholds, and the roof displacement should be available from the pushover analysis.
+
+Ruiz-Garcia and Miranda (2007) study on inelastic displacement demand estimation, Vamvatsikos and Cornell (2006) and Dolsek and Fajfar (2004) work on seismic demand estimation with multilinear static pushover curves, have been integrated in three nonlinear static procedures, C$_R$-based, spo2ida-based and R-$mu$-T-based. In this way the user has the chance to select the procedure consistent with the available input, the type of structural analyses performed, the type of structures and the type of vulnerability assessment to perform. 
+
+In section \ref{subsec:nls-how-to-use} the main information necessary to start the analysis are presented. In sections \ref{subsec:nls-ruiz-garcia-miranda}, \ref{subsec:nls-spo2ida} and \ref{subsec:nls-dolsek-fajfar} the three procedures are explained respectively, from the point of view of the scientific background behind the metho and their step-by-step implementation in the python script.

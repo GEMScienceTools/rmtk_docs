@@ -1,0 +1,46 @@
+This manual is designed to explain the various functions in the toolkit, to provide the theoretical background behind them, and to guide the modeller in the use of the rmtk within the ``IPython Notebook'' environment. This novel tool implements Python inside a web-browser environment, permitting the user to execute real Python workflows, whilst allowing for images and text to be embedded. Its use is encouraged especially for beginner python users for a more visual application of the rmtk.
+
+The IPython Notebook  comes installed from version 1.0 of IPython, that can be installed from the python package repository by entering: 
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+~\$ sudo pip install ipython
+\end{Verbatim}
+
+A notebook session can be started via the command:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+~\$ ipython notebook --pylab inline
+\end{Verbatim}
+
+The tutorial itself does not specifically require a working knowledge of Python. However, an understanding of the basic python data types is highly desirable. Users who are new to Python are recommended to familiarise themselves with Appendix \ref{sec:python_guide} of this tutorial. 
+
+The \textit{rmtk} is currently subdivided into two classes of tools, the Vulnerability and Plotting tools, presented in Chapter 2 and Chapter 3 of this tutorial respectively. In the Vulnerability chapter the vulnerability methodologies implemented are classified in Non-linear Static (NLS) and Non-linear Dynamic (NLD) according to the structural analysis type performed to assess the response of the building. These two main sections (NLS and NLD) are organised as follows:
+
+\begin{itemize}
+\item General Introduction.
+\item Getting Started, where it is explained what files need to be executed to start the vulnerability analysis, and what options are available to call the preferred methodology and to input the preferred data type.
+\item Description of the methodologies.
+\end{itemize}
+
+Within the description of each methodology the user can find the following subsections:
+\begin{itemize}
+\item Theoretical description of the method.
+\item Description and examples of the inputs.
+\item Description of the workflow.
+\end{itemize}
+
+A summary of the algorithms available in the present version is given in Table \ref{tab:current_features}.
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|c|c|} \hline
+Feature & Algorithm\\ \hline
+\textbf{Non-linear Static} & Cr-based (\cite{Ruiz-Garcia and Miranda, 2007})\\
+    & Spo2ida (\cite{Vamvatsikos and Cornell, 2006}) \\
+    & R-$/mu$-T-based (\cite{Dolsek and Fajfar, 2004}) \\ \hline
+ \textbf{Non-linear Dynamic} & DPM-based (\cite{Silva et al., 2013})\\
+  & Ida-postprocessing (\cite{Vamvatsikos and Cornell, 2002}) \\ \hline
+\end{tabular}
+\caption{Current algorithms in the HMTK}
+\label{tab:current_features}
+\end{table}
+

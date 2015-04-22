@@ -1,0 +1,64 @@
+\section{Introduction}
+The Risk Modeller's Toolkit (\textit{rmtk} hereafter) is a Python 2.7 library of functions written by scientists at the GEM Model Facility, which is intended to provide scientists and engineers with the tools to help creating the vulnerability input models that go into the OpenQuake risk engine and managing the generated output files. The intention of this software is to provide scientists and engineers with the means to apply some of the most commonly used algorithms for preparing vulnerability models using structural analysis data and to facilitate the visualisation and the use of the outputs from OpenQuake. In forthcoming versions will hope to make available more methodologies for the process indicated here, and to integrate new functionalities for i) building structural models of different levels of complexity within the \textit{rmtk} in combination with a structural analysis software, ii) running dynamic and static analysis within the \textit{rmtk} in combination with a structural analysis software, iii) deriving vulnerability curves directly applying engineering demand parameters-to-loss functions to structural analysis results.
+
+\subsection{Getting Started and Running the Software}
+The Modeller’s Toolkit is designed for execution from the command line. As with OpenQuake engine, the preferred environment is Ubuntu Linux (12.04 or later), however, the \textit{rmtk} is a library that can be run using any python environment for other operating systems (i.e. Mac, Windows). A careful effort has been made to keep the number of additional dependencies to a minimum. No packaged version of the software has been released at the time of writing, so the user must install Python 2.7 and the dependencies manually. The current dependencies are:
+\begin{itemize}
+\item Numpy and Scipy (included in the standard OpenQuake installation)
+\item Matplotlib (http://matplotlib.org/)
+\item Os
+\end{itemize}
+
+The Numpy, Scipy, Matplotlib, and Os dependencies are installed in the library for the demos, but once Python 2.7 has been installed they can be easily installed from the command line by:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+~\$ sudo pip install numpy
+~\$ sudo pip install scipy
+~\$ sudo pip install matplotlib
+~\$ sudo pip install os
+\end{Verbatim}
+
+To enable usage of the \textit{rmtk} within any location in the operating system, OSX and Linux users should add the folder location (set the path) manually to the command line profile file. This can be done as follows:
+\begin{enumerate}
+\item Using a command line text editor (e.g. VIM), open the ~/.profile folder as follows:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+~\$ vim ~/.profile
+\end{Verbatim}
+
+\item At the bottom of the profile file (if one does not exist it will be created) add the line:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+export PYTHONPATH=/path/to/rmtk/folder/:\$PYTHONPATH
+\end{Verbatim}
+
+Where \verb=/path/to/rmtk/folder/= is the system path to the location of the \textit{rmtk} folder (use the command \verb=pwd= from within the \textit{rmtk} folder to view the full system path).
+
+\item Re-source the bash shell via the command
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+~\$ source ~/.profile
+\end{Verbatim}
+ 
+\end{enumerate}
+
+\subsubsection{Windows Installation}
+
+Although this installation has been primarily tested in a Linux/Unix environment it is possible to install natively in Windows using the following process. This assumes that no other version of Python is installed in your windows environment.
+
+The easiest way to install all of the dependencies needed is by virtue of the PythonXY program \href{http://code.google.com/p/pythonxy/}{http://code.google.com/p/pythonxy/}, a free and open python user interface, which will bring in all the dependencies nedeed automatically. The installer for the latest version of PythonXY can be downloaded from here: \href{http://code.google.com/p/pythonxy/wiki/Downloads?tm=2}{http://code.google.com/p/pythonxy/wiki/Downloads?tm=2}.
+
+Click on the executable and follow the instructions (the installation may take up to half an hour or more, depending on the system). It is strongly recommended that the use opt for the ``\textbf{FULL}'' installation, which should bring in all of the dependencies needed for the \textit{rmtk}. 
+
+Now, download the zipped folder of the \textit{rmtk} from the github repository and unzip to a folder of your choosing. To allow for usage of the \textit{rmtk} throughout your operating system, do the following: 
+
+\begin{enumerate}
+\item From the desktop, right-click \textbf{My Computer} and open \textbf{Properties}
+\item In the ``System Properties'' window click on the \textbf{Advanced} tab.
+\item From the ``Advanced'' section open the \textbf{Environment Variables}.
+\item In the ``Environment Variables'' you will see a list of ``System Variables'', select ``Path'' and ``Edit''.
+\item Add the path to the \textit{rmtk} directory to the list of folders then save.
+\end{enumerate}
+
+After this process it may be necessary to restart PythonXY.
+

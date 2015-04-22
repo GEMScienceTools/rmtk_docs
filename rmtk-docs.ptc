@@ -1,0 +1,115 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Preamble}{5}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
+\ttl@starttoc {default@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Introduction}{7}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.1}Getting Started and Running the Software}{7}{subsection.1.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Windows Installation}{8}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Current features}{8}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Organization}{9}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Vulnerability}{11}{chapter.2}
+\ttl@stoptoc {default@1}
+\ttl@starttoc {default@2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Non-linear Static (NLS) Methods}{11}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Using the NLS module}{12}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Options}{14}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}C$_R$-based procedure (Ruiz-Garcia and Miranda, 2007)}{15}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Single Building Fragility and Vulnerability function}{15}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Multiple-Building Fragility and Vulnerability function}{18}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Inputs}{19}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Calculation Steps}{21}{section*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}spo2ida-based procedure (Vamvatsikos and Cornell, 2006)}{24}{subsection.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Single-building Fragility and Vulnerability function}{25}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Multiple-Building Fragility and Vulnerability function}{25}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Inputs}{26}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Calculation Steps}{27}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.4}$R-mu-T$-based procedure (Dolsek and Fajfar, 2004)}{29}{subsection.2.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Single Building Fragility and Vulnerability function}{30}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Multiple Building Fragility and Vulnerability function}{31}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Inputs}{31}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Calculation Steps}{32}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.5}NLS methods without record-to-record dispersion}{34}{subsection.2.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Non-linear Dynamic (NLD) Methods}{34}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Using the NLD module}{35}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Damage probability matrix DPM-based procedure}{35}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Options}{36}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Inputs}{37}{section*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Calculations}{37}{section*.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Post-processing IDA}{38}{subsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Plotting}{39}{chapter.3}
+\ttl@stoptoc {default@2}
+\ttl@starttoc {default@3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{41}{section*.45}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}The 10 Minute Guide to Python!}{43}{appendix.A}
+\ttl@stoptoc {default@3}
+\ttl@starttoc {default@4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Basic Data Types}{43}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.1}Scalar Parameters}{43}{subsection.A.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Scalar Arithmetic}{44}{section*.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.2}Iterables}{45}{subsection.A.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Indexing}{46}{section*.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.3}Dictionaries}{46}{subsection.A.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.4}Loops and Logicals}{46}{subsection.A.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Logical}{46}{section*.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Looping}{47}{section*.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Functions}{48}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Classes and Inheritance}{48}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.1}Simple Classes}{48}{subsection.A.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.2}Inheritance}{49}{subsection.A.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.3}Abstraction}{50}{subsection.A.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Numpy/Scipy}{51}{section.A.4}
+\contentsfinish 
