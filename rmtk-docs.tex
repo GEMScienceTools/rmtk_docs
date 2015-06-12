@@ -21,8 +21,9 @@
 
 % =============================================================== BEGIN DOCUMENT
 \begin{document}
+
 \lstset{language=Python} % --------------- For listings environment - use python
-\input{"./tex/glossary.tex"} % ------------------------------  Load the glossary
+\input{./tex/glossary.tex} % ------------------------------  Load the glossary
 
 
 %-------------------------------------------------------------------------------
@@ -33,7 +34,7 @@
 \thispagestyle{empty}
 %\AddToShipoutPicture*{\put(6,5){\includegraphics[scale=1]{background}}} % Image background
 \par\normalfont\fontsize{15}{15}\sffamily\selectfont
-“OpenQuake: Calculate, share, explore”
+``OpenQuake: Calculate, share, explore''
 \centering
 \vspace*{9cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
@@ -45,7 +46,7 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 %----------------------------------------------------------------------------------------
 
 \newpage
-~\vfill
+\vfill
 \thispagestyle{empty}
 
 \noindent Copyright \copyright\ 2014 GEM Foundation\\ % Copyright notice
@@ -88,7 +89,7 @@ Risk Modeller's Toolkit - User Guide\par % Book title
    it in any way or use it commercially. 
    \hfill \\
 
-\noindent \textit{First printing, November 2014} % Printing/edition date
+\noindent \textit{First printing, June 2015} % Printing/edition date
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
@@ -109,31 +110,41 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 %----------------------------------------------------------------------------------------
 \chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
 \chapter*{Preface}
-\addcontentsline{toc}{chapter}{Preamble}
-\input{./book/preamble.tex}
+%\addcontentsline{toc}{chapter}{Preamble}
+\input{./book/preamble}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 1
 %----------------------------------------------------------------------------------------
+% Introduction
 \chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
-\include{./book/chapter1}
+\include{book/chapter1/chapter1}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 2
 %----------------------------------------------------------------------------------------
+% Plotting part
 \chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
-\include{./book/chapter2}
+\include{book/chapter2/chapter2}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 3
 %----------------------------------------------------------------------------------------
+% Risk part
 \chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
-\include{./book/chapter3}
+\include{book/chapter3/chapter3}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 4
+%----------------------------------------------------------------------------------------
+% Vulnerability part
+\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\include{book/chapter4/chapter4}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-% \include{./book/bibliography}
+%\include{./book/bibliography}
 
 
 %----------------------------------------------------------------------------------------
@@ -151,9 +162,8 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 %----------------------------------------------------------------------------------------
 %	APPENDICES
 %----------------------------------------------------------------------------------------
-%\part{Appendices}
+\part{Appendices}
 \appendix
-\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
-\include{./book/appendix1}
+\include{book/appendix1}
 
 \end{document}

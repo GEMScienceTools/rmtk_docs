@@ -22,16 +22,6 @@
   Timestamp                = {2011.01.25}
 }
 
-@Article{PaganiEtAl2014a,
-  Title                    = {OpenQuake Engine: An open hazard (and risk) software for the Global Earthquake Model},
-  Author                   = {Marco Pagani and Damiano Monelli and Graeme Weatherill and Laurentiu Danciu and Helen Crowley and Vitor Silva abd Paul Henshaw and Lars Butler and Matteo Nastasi and Luigi Panzeri and Michele Simionato and Daniele Vigano},
-  Journal                  = {Seismological Research Letters},
-  Year                     = {2014},
-
-  Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.07}
-}
-
 @Article{RuizGarciaMiranda2007,
   Title                    = {Probabilistic estimation of maximum inelastic displacement demands for performance-based design},
   Author                   = {Ruiz-Garcia, J. and Miranda, E.},
