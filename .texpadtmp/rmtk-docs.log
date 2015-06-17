@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.3)  10 JUN 2015 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.3)  16 JUN 2015 15:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1815,11 +1815,7 @@ pter2.aux)
 (/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/book/chapter3/cha
 pter3.aux)
 (/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/book/chapter4/cha
-pter4.aux
-
-LaTeX Warning: Label `subsec:DBELA' multiply defined.
-
-)
+pter4.aux)
 (/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/book/appendix1.au
 x))
 \openout1 = `rmtk-docs.aux'.
@@ -2028,7 +2024,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--91
 
  []
 
-[2] <./figures/chapter_head_1.pdf, id=230, 596.95016pt x 298.47508pt>
+[2] <./figures/chapter_head_1.pdf, id=254, 596.95016pt x 298.47508pt>
 File: ./figures/chapter_head_1.pdf Graphic file (type pdf)
 
 <use ./figures/chapter_head_1.pdf>
@@ -2057,13 +2053,13 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 
  <./figures/chapter_head_1.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 95.
 )
 \tf@toc=\write12
 \openout12 = `rmtk-docs.toc'.
 
  [4]
-<./figures/chapter_head_2.pdf, id=346, 596.95016pt x 298.47508pt>
+<./figures/chapter_head_2.pdf, id=382, 596.95016pt x 298.47508pt>
 File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
 
 <use ./figures/chapter_head_2.pdf>
@@ -2165,14 +2161,14 @@ Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
 
 (/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.ptc)
 (./book/chapter2/introduction.tex) (./book/chapter2/damage.tex
-<Figures/damage_distribution.png, id=402, 910.40125pt x 517.935pt>
+<Figures/damage_distribution.png, id=438, 910.40125pt x 517.935pt>
 File: Figures/damage_distribution.png Graphic file (type png)
 
 <use Figures/damage_distribution.png>
 Package pdftex.def Info: Figures/damage_distribution.png used on input line 9.
 (pdftex.def)             Requested size: 284.52756pt x 161.87009pt.
 
-<Figures/total_damage_dist.png, id=405, 977.6525pt x 573.14125pt>
+<Figures/total_damage_dist.png, id=441, 977.6525pt x 573.14125pt>
 File: Figures/total_damage_dist.png Graphic file (type png)
 
 <use Figures/total_damage_dist.png>
@@ -2202,7 +2198,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-<Figures/collapse_map.png, id=424, 400.49625pt x 379.4175pt>
+<Figures/collapse_map.png, id=460, 400.49625pt x 379.4175pt>
 File: Figures/collapse_map.png Graphic file (type png)
 
 <use Figures/collapse_map.png>
@@ -2213,7 +2209,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<Figures/hazard_curve.png, id=428, 459.7175pt x 347.2975pt>
+<Figures/hazard_curve.png, id=464, 459.7175pt x 347.2975pt>
 File: Figures/hazard_curve.png Graphic file (type png)
 
 <use Figures/hazard_curve.png>
@@ -2226,13 +2222,13 @@ on (e.g.[]\T1/cmtt/m/n/10.95 uhs.plot("81.213823|29.761172")\T1/ptm/m/n/10.95 (
 -20) ).
  []
 
-<Figures/UHS.png, id=430, 457.71pt x 361.35pt>
+<Figures/UHS.png, id=466, 457.71pt x 361.35pt>
 File: Figures/UHS.png Graphic file (type png)
  <use Figures/UHS.png>
 Package pdftex.def Info: Figures/UHS.png used on input line 18.
 (pdftex.def)             Requested size: 256.0748pt x 202.17267pt.
  [11 <./Figures/collapse_map.png>]
-<Figures/loss_curve.png, id=441, 964.60374pt x 577.15625pt>
+<Figures/loss_curve.png, id=477, 964.60374pt x 577.15625pt>
 File: Figures/loss_curve.png Graphic file (type png)
 
 <use Figures/loss_curve.png>
@@ -2241,18 +2237,18 @@ Package pdftex.def Info: Figures/loss_curve.png used on input line 29.
 ) (./book/chapter2/maps.tex [12 <./Figures/hazard_curve.png> <./Figures/UHS.png
 >]
 Package epstopdf Info: Source file: <Figures/hazard_Ecuador.eps>
-(epstopdf)                    date: 2015-06-05 10:55:04
+(epstopdf)                    date: 2015-06-05 09:55:04
 (epstopdf)                    size: 155944 bytes
 (epstopdf)             Output file: <Figures/hazard_Ecuador-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2015-06-07 23:43:44
+(epstopdf)                    date: 2015-06-07 22:43:44
 (epstopdf)                    size: 71783 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/hazard_Ecuador-eps
 -converted-to.pdf Figures/hazard_Ecuador.eps>
 (epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/hazard_Ecuador-eps-converted-to.pdf, id=450, 370.38374pt x 380.42125pt
+<Figures/hazard_Ecuador-eps-converted-to.pdf, id=486, 370.38374pt x 380.42125pt
 >
 File: Figures/hazard_Ecuador-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/hazard_Ecuador-eps-converted-to.pdf>
@@ -2270,14 +2266,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Figures/loss_map.png, id=463, 397.485pt x 379.4175pt>
+<Figures/loss_map.png, id=499, 397.485pt x 379.4175pt>
 File: Figures/loss_map.png Graphic file (type png)
 
 <use Figures/loss_map.png>
 Package pdftex.def Info: Figures/loss_map.png used on input line 29.
 (pdftex.def)             Requested size: 199.16928pt x 190.11932pt.
 
-<Figures/loss_map_AAL.png, id=465, 235.6002pt x 226.9278pt>
+<Figures/loss_map_AAL.png, id=501, 235.6002pt x 226.9278pt>
 File: Figures/loss_map_AAL.png Graphic file (type png)
 
 <use Figures/loss_map_AAL.png>
@@ -2295,7 +2291,7 @@ Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
 
 (/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.ptc)
 (./book/chapter3/introduction.tex) (./book/chapter3/derive_pml.tex
-<Figures/pml_example.png, id=483, 276.0714pt x 220.6644pt>
+<Figures/pml_example.png, id=519, 276.0714pt x 220.6644pt>
 File: Figures/pml_example.png Graphic file (type png)
 
 <use Figures/pml_example.png>
@@ -2317,33 +2313,75 @@ Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
 (pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
 
 (/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.ptc
-Underfull \hbox (badness 5592) in paragraph at lines 82--82
+Underfull \hbox (badness 4569) in paragraph at lines 72--72
+[]|[]\T1/pag/db/n/9 Assessment of non-lin-ear srtruc-tural re-
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 88--88
  []|[]\T1/pag/m/n/9 (+20) Capacity Spec-trum Method (FEMA,
  []
 
-) (./book/chapter4/introduction.tex) (./book/chapter4/input_models.tex)
+
+Underfull \hbox (badness 3965) in paragraph at lines 94--94
+[]|[]\T1/pag/db/n/9 Derivation of fragility and vul-ner-a-bil-ity
+ []
+
+) (./book/chapter4/introduction.tex)
+(./book/chapter4/input_models/introduction.tex)
+(./book/chapter4/input_models/capacity_curves.tex)
+(./book/chapter4/input_models/gmrs.tex)
+(./book/chapter4/input_models/damage_models.tex)
 (./book/chapter4/model_generator/introduction.tex)
 (./book/chapter4/model_generator/DBELA.tex)
-(./book/chapter4/model_generator/DBELA.tex)
+(./book/chapter4/model_generator/SPBELA.tex)
 (./book/chapter4/model_generator/dispersion.tex)
-(./book/chapter4/mdof_to_sdof/introduction.tex)
+(./book/chapter4/mdof_to_sdof/introduction.tex) [17
+
+
+
+]
 (./book/chapter4/mdof_to_sdof/simple_mdof_to_sdof.tex)
 (./book/chapter4/mdof_to_sdof/adaptive_mdof_to_sdof.tex)
-(./book/chapter4/derivation_fragility/introduction.tex [17
+(./book/chapter4/nonlinear_response/introduction.tex)
+(./book/chapter4/nonlinear_response/SPO2IDA.tex)
+(./book/chapter4/nonlinear_response/Dolsek_Fajfar2004.tex)
+(./book/chapter4/nonlinear_response/Ruiz_Garcia_Miranda_2007.tex)
+(./book/chapter4/nonlinear_response/Vidic_etal_1994.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
-])
-(./book/chapter4/derivation_fragility/SPO2IDA.tex)
-(./book/chapter4/derivation_fragility/Dolsek_Fajfar2004.tex)
-(./book/chapter4/derivation_fragility/Ruiz_Garcia_Miranda_2007.tex)
-(./book/chapter4/derivation_fragility/Vidic_Fajfar_1994.tex)
-(./book/chapter4/derivation_fragility/Lin_Miranda2008.tex)
-(./book/chapter4/derivation_fragility/Miranda2000.tex)
-(./book/chapter4/derivation_fragility/N2.tex)
-(./book/chapter4/derivation_fragility/CSM.tex)
-(./book/chapter4/derivation_fragility/DBELA.tex)
-(./book/chapter4/derivation_fragility/NLTHA_SDOF.tex)) [18]
+ []
+
+[18]) (./book/chapter4/nonlinear_response/Lin_Miranda2008.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+[19]) (./book/chapter4/nonlinear_response/Miranda2000.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+[20]) (./book/chapter4/nonlinear_response/N2.tex)
+(./book/chapter4/nonlinear_response/CSM.tex)
+(./book/chapter4/nonlinear_response/DBELA.tex)
+(./book/chapter4/nonlinear_response/NLTHA_SDOF.tex)
+(./book/chapter4/nonlinear_response/introduction.tex)
+(./book/chapter4/derive_fragility/fragility.tex)
+(./book/chapter4/derive_fragility/vulnerability.tex)) [21] [22
+
+
+]
 No file rmtk-docs.ind.
 (/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.gls)
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
@@ -2351,11 +2389,9 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 165.
 
-[19
+[23
 
-
-
-] [20]
+] [24]
 \openout2 = `book/appendix1.aux'.
 
  (./book/appendix1.tex
@@ -2369,7 +2405,7 @@ Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
 (./tex/python-guide.tex
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 17.
- [21
+ [25
 
 
 ]
@@ -2377,7 +2413,7 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 81.
- [22] [23] [24] [25] [26] [27] [28] [29])) [30]
+ [26] [27] [28] [29] [30] [31] [32] [33])) [34]
 \tf@ptc=\write13
 \openout13 = `rmtk-docs.ptc'.
 
@@ -2399,20 +2435,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `rmtk-docs.out' has not changed.
 (rerunfilecheck)             Checksum: 7EE4B9A33971328D1B83F7734C164268;1381.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'rmtk-docs.run.xml'.
 \openout1 = `rmtk-docs.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41281 strings out of 493117
- 745455 string characters out of 6135434
- 1242008 words of memory out of 5000000
- 43178 multiletter control sequences out of 15000+600000
- 101964 words of font info for 225 fonts, out of 8000000 for 9000
+ 41353 strings out of 493117
+ 746692 string characters out of 6135434
+ 1242565 words of memory out of 5000000
+ 43192 multiletter control sequences out of 15000+600000
+ 110933 words of font info for 246 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,12n,77p,10436b,3378s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.0@PaganiEtAl2014a} has been referenced but d
@@ -2423,21 +2455,24 @@ pdfTeX warning (dest): name{cite.0@SilvaEtAl2014a} has been referenced but does
 
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
 usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/cm-super/sfst0900.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sfst0900.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/urw/avantgar/uagk8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/urw/symbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/s
+ymbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a
+.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on /Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/
-rmtk-docs.pdf (30 pages, 864164 bytes).
+rmtk-docs.pdf (34 pages, 900841 bytes).
 PDF statistics:
- 1131 PDF objects out of 1200 (max. 8388607)
- 961 compressed objects within 10 object streams
- 471 named destinations out of 1000 (max. 500000)
- 57321 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1234 PDF objects out of 1440 (max. 8388607)
+ 1043 compressed objects within 11 object streams
+ 488 named destinations out of 1000 (max. 500000)
+ 57369 words of extra memory for PDF output out of 61914 (max. 10000000)
 

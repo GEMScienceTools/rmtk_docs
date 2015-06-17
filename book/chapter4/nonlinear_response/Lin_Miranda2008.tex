@@ -1,0 +1,19 @@
+This methodology estimates the maximum inelastic displacement of an existing structure based on the maximum elastic displacement response of its equivalent linear system without the need for iterations, based on the strength ratio R (instead of the most commonly used ductility ratio).\\
+In order to evaluate an existing structure, a pushover analysis should be conducted in order to obtain the capacity curve. This curve should be bilinearised in order to obtain the yield strength, fy, the postyield stiffness ratio, $\alpha$, and the strength ratio, R. With these parameters, along with the initial period of the system, it is possible to estimate the optimal period shift (i.e. the ratio between the period of the equivalent linear system and the initial period) and the equivalent viscous damping, $\xi$eq, of the equivalent linear system, using the following relationships derived by Lin and Miranda (2008). 	 \begin{equation}
+\frac{T_{eq}}{T_{0}} = 1 + \frac{m_1}{T_0^{m_2}}\left(R^{1.8}-1\right)
+\end{equation} 
+
+\begin{equation}
+\xi_{eq} = \xi_{0} + \frac{n_1}{T_0^{n_2}}\left(R-1\right)
+\end{equation}   Where the coefficients m1, m2, n1, and n2 depend on the postyield stiffness ratio, as shown in the following table.
+
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c |}
+    \hline
+    $\alpha$ & $m_1$ & $m_2$ & $n_1$ & $n_2$ \\ \hline
+    0\% & 0.026 & 0.87 & 0.016 & 0.84 \\ \hline
+    5\% & 0.026 & 0.65 & 0.027 & 0.55 \\ \hline
+    10\% & 0.027 & 0.51 & 0.031 & 0.39 \\ \hline
+    20\% & 0.027 & 0.36 & 0.030 & 0.24 \\ \hline
+  \end{tabular}
+\end{center}Using $\xi$eq and the damping modification factor, B (as defined in Table 15.6-1 of NEHRP-2003), it is possible to construct the reduced displacement spectrum, Sd(T, $\xi$eq) from which the maximum displacement demand (i.e. the displacement corresponding to the equivalent system period) can be obtained, using the following equation:	  
