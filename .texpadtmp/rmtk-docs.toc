@@ -42,6 +42,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Definition input models}{17}{section.4.2}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Definition of capacity curves}{17}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Definition of ground motion records}{17}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Definition of damage model criterium}{17}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Model generator}{17}{section.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.1}Generation of capacity curves using DBELA}{17}{subsection.4.3.1}
@@ -50,13 +56,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.3}Generation of capacity curves using point dispersion}{17}{subsection.4.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Conversion from MDOF to SDOF}{17}{section.4.4}
+\contentsline {section}{\numberline {4.4}Conversion from MDOF to SDOF}{18}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Conversion based on one mode of vibration}{17}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.1}Conversion based on one mode of vibration}{18}{subsection.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Conversion using an adaptive approach}{17}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.2}Conversion using an adaptive approach}{18}{subsection.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Derivation of fragility}{18}{section.4.5}
+\contentsline {section}{\numberline {4.5}Assessment of nonlinear srtructural response}{18}{section.4.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.1}SPO2IDA (Vamvatsikos and Cornell 2006)}{18}{subsection.4.5.1}
 \defcounter {refsection}{0}\relax 
@@ -66,51 +72,65 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.4}Vidic and Fajfar 1994}{18}{subsection.4.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.5}Lin and Miranda 2008}{18}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.5}Lin and Miranda 2008}{19}{subsection.4.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.6}Miranda (2000) for firm soils}{18}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.6}Miranda (2000) for firm soils}{20}{subsection.4.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.7}N2 (EC8, CEN 2005)}{18}{subsection.4.5.7}
+\contentsline {subsection}{\numberline {4.5.7}N2 (EC8, CEN 2005)}{22}{subsection.4.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.8}Capacity Spectrum Method (FEMA, 2005)}{18}{subsection.4.5.8}
+\contentsline {subsection}{\numberline {4.5.8}Capacity Spectrum Method (FEMA, 2005)}{22}{subsection.4.5.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.9}DBELA (Silva et al. 2013)}{18}{subsection.4.5.9}
+\contentsline {subsection}{\numberline {4.5.9}DBELA (Silva et al. 2013)}{23}{subsection.4.5.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.10}Nonlinear time-history analysis in Single Degree of Freedom (SDOF) Oscilators}{18}{subsection.4.5.10}
+\contentsline {subsection}{\numberline {4.5.10}Nonlinear time-history analysis in Single Degree of Freedom (SDOF) Oscilators}{23}{subsection.4.5.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{19}{section*.14}
+\contentsline {section}{\numberline {4.6}Derivation of fragility and vulnerability functions}{23}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Appendices}{19}{part.1}
+\contentsline {subsection}{\numberline {4.6.1}Derivation of fragility functions}{23}{subsection.4.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}The 10 Minute Guide to Python!}{21}{appendix.A}
+\contentsline {subsection}{\numberline {4.6.2}Derivation of vulnerability functions}{23}{subsection.4.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Basic Data Types}{21}{section.A.1}
+\contentsline {chapter}{\numberline {5}Bibliography}{25}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}Scalar Parameters}{21}{subsection.A.1.1}
+\contentsline {section}{\numberline {5.1}Books}{25}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Scalar Arithmetic}{22}{section*.15}
+\contentsline {section}{\numberline {5.2}Articles}{25}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}Iterables}{23}{subsection.A.1.2}
+\contentsline {section}{\numberline {5.3}Other Sources}{25}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Indexing}{24}{section*.16}
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{27}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.3}Dictionaries}{24}{subsection.A.1.3}
+\contentsline {part}{I\hspace {1em}Appendices}{27}{part.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.4}Loops and Logicals}{24}{subsection.A.1.4}
+\contentsline {chapter}{\numberline {A}The 10 Minute Guide to Python!}{29}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Logical}{24}{section*.17}
+\contentsline {section}{\numberline {A.1}Basic Data Types}{29}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Looping}{25}{section*.18}
+\contentsline {subsection}{\numberline {A.1.1}Scalar Parameters}{29}{subsection.A.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Functions}{26}{section.A.2}
+\contentsline {subsubsection}{Scalar Arithmetic}{30}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Classes and Inheritance}{26}{section.A.3}
+\contentsline {subsection}{\numberline {A.1.2}Iterables}{31}{subsection.A.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.1}Simple Classes}{26}{subsection.A.3.1}
+\contentsline {subsubsection}{Indexing}{32}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.2}Inheritance}{27}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.1.3}Dictionaries}{32}{subsection.A.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.3}Abstraction}{28}{subsection.A.3.3}
+\contentsline {subsection}{\numberline {A.1.4}Loops and Logicals}{32}{subsection.A.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Numpy/Scipy}{29}{section.A.4}
+\contentsline {subsubsection}{Logical}{32}{section*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Looping}{33}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Functions}{34}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Classes and Inheritance}{34}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.1}Simple Classes}{34}{subsection.A.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.2}Inheritance}{35}{subsection.A.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.3}Abstraction}{36}{subsection.A.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Numpy/Scipy}{37}{section.A.4}
 \contentsfinish 
