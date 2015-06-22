@@ -3,6 +3,7 @@ rm *.acn
 rm *.acr
 rm *.alg
 rm *.aux
+find . -name \*.aux -delete
 rm *.bbl
 rm *.bcf
 rm *.blg
@@ -20,3 +21,5 @@ rm *.out
 rm *.ptc
 rm *.run.xml
 rm *.toc
+rm -rf .texpadtmp
+rm -rf tex/.texpadtmp
