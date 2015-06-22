@@ -1,2 +1,16 @@
-[0] 554906f9.pm:318> INFO - This is Biber 1.8
-[0] 554906f9.pm:321> INFO - Logfile is '/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.blg'
+[0] Config.pm:318> INFO - This is Biber 1.8
+[0] Config.pm:321> INFO - Logfile is '/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.blg'
+[44] biber-darwin:275> INFO - === Mon Jun 22, 2015, 10:13:41
+[45] Biber.pm:333> INFO - Reading '/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.bcf'
+[92] Biber.pm:630> INFO - Found 14 citekeys in bib section 0
+[110] Biber.pm:3053> INFO - Processing section 0
+[128] Biber.pm:3190> INFO - Looking for bibtex format file './bibliography/rmtk.bib' for section 0
+[132] bibtex.pm:937> INFO - Decoding LaTeX character macros into UTF-8
+[134] bibtex.pm:812> INFO - Found BibTeX data source './bibliography/rmtk.bib'
+[154] Utils.pm:169> WARN - I didn't find a database entry for 'PriesleyEtAl2007' (section 0)
+[194] Biber.pm:2939> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[194] Biber.pm:2945> INFO - Sorting 'entry' list 'nyt' keys
+[194] Biber.pm:2949> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[220] bbl.pm:482> INFO - Writing '/Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.bbl' with encoding 'UTF-8'
+[221] bbl.pm:555> INFO - Output to /Users/vitorsilva/Documents/GEM/git/gem/rmtk_docs/.texpadtmp/rmtk-docs.bbl
+[221] Biber.pm:105> INFO - WARNINGS: 1
