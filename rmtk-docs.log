@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.3)  4 JUN 2015 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.3)  22 JUN 2015 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1806,7 +1806,7 @@ Package biblatex Info: ... file 'english.lbx' found.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 )
-(./rmtk-docs.aux (./book/chapter2/chapter2.aux) (./book/appendix1.aux))
+No file rmtk-docs.aux.
 \openout1 = `rmtk-docs.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -1824,7 +1824,6 @@ LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 23.
-
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1895,16 +1894,15 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `rmtk-docs.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'rmtk-docs.bbl' found.
+Package biblatex Info: ... file 'rmtk-docs.bbl' not found.
 
-(./rmtk-docs.bbl)
+No file rmtk-docs.bbl.
 Package biblatex Info: Reference section=0 on input line 23.
 Package biblatex Info: Reference segment=0 on input line 23.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
@@ -1930,7 +1928,7 @@ e
 ABD: EveryShipout initializing macros
 Package marginnote Info: \pdfoutput not 0 and \pdflastxpos available.
 (marginnote)             Extended position detection mode activated.
- (./rmtk-docs.glsdefs)
+
 
 Package ctable Warning:  Transparency disabled: incompatible with tikz package 
  on input line 23.
@@ -1949,8 +1947,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 23.
 LaTeX Info: Redefining \pageref on input line 23.
 LaTeX Info: Redefining \nameref on input line 23.
-
-(./rmtk-docs.out) (./rmtk-docs.out)
 \@outlinefile=\write10
 \openout10 = `rmtk-docs.out'.
 
@@ -2011,7 +2007,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--91
 
  []
 
-[2] <./figures/chapter_head_1.pdf, id=105, 596.95016pt x 298.47508pt>
+[2] <./figures/chapter_head_1.pdf, id=21, 596.95016pt x 298.47508pt>
 File: ./figures/chapter_head_1.pdf Graphic file (type pdf)
 
 <use ./figures/chapter_head_1.pdf>
@@ -2021,22 +2017,6 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 102.
- (./rmtk-docs.toc
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <12> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 21.
-)
 \tf@toc=\write12
 \openout12 = `rmtk-docs.toc'.
 
@@ -2044,7 +2024,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
  <./figures/chapter_head_1.pdf>] [4
 
-] <./figures/chapter_head_2.pdf, id=159, 596.95016pt x 298.47508pt>
+]
+<./figures/chapter_head_2.pdf, id=34, 596.95016pt x 298.47508pt>
 File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
 
 <use ./figures/chapter_head_2.pdf>
@@ -2053,9 +2034,9 @@ Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 112.
  (./book/preamble.tex) [5
 
  <./figures/chapter_head_2.pdf>]
-\openout2 = `book/chapter2/chapter2.aux'.
+\openout2 = `book/chapter1/chapter1.aux'.
 
- (./book/chapter2/chapter2.tex [6
+ (./book/chapter1/chapter1.tex [6
 
 
 ]
@@ -2065,40 +2046,16 @@ File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
 <use ./figures/chapter_head_2.pdf>
 Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
 (pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
- (./rmtk-docs.ptc
-LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <9> not available
-(Font)              Font shape `T1/pag/b/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <9> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 8.
-)
-(./book/chapter2/introduction.tex) (./book/chapter2/damage.tex
 
-LaTeX Warning: Citation 'SilvaEtAl2014a' on page 7 undefined on input line 1.
-
-) (./book/chapter2/curves.tex) (./book/chapter2/maps.tex)) [7] [8
-
-
-]
-No file rmtk-docs.ind.
-No file rmtk-docs.gls.
-[9] [10
-
-]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 165.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 165.
- [11] [12]
-\openout2 = `book/appendix1.aux'.
-
- (./book/appendix1.tex
-Appendix A.
-File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
-<use ./figures/chapter_head_2.pdf>
-Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
-(pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
- (./rmtk-docs.ptc) (./tex/python-guide.tex
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 15.
+No file rmtk-docs.ptc.
+(./book/chapter1/introduction.tex
+LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <12> not available
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 1.
+) (./book/chapter1/features.tex)
+(./book/chapter1/organization.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -2107,9 +2064,573 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+
+LaTeX Warning: Reference `sec:python_guide' on page 7 undefined on input line 1
+5.
+
+[7]
+
+LaTeX Warning: Reference `tab:current_features' on page 8 undefined on input li
+ne 33.
+
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 36
+.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `ztmcm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 36
+.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 36
+.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 36
+.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 36.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 44.
+))
+LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pag/b/n' tried instead on input line 121.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 121.
+ [8]
+\openout2 = `book/chapter2/chapter2.aux'.
+
+
+(./book/chapter2/chapter2.tex
+Chapter 2.
+File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
+<use ./figures/chapter_head_2.pdf>
+Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
+(pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
+
+No file rmtk-docs.ptc.
+(./book/chapter2/introduction.tex) (./book/chapter2/damage.tex
+
+LaTeX Warning: Citation 'SilvaEtAl2014a' on page 9 undefined on input line 1.
+
+
+LaTeX Warning: Reference `fig:damage_disag' on page 9 undefined on input line 5
+.
+
+<Figures/damage_distribution.png, id=65, 910.40125pt x 517.935pt>
+File: Figures/damage_distribution.png Graphic file (type png)
+
+<use Figures/damage_distribution.png>
+Package pdftex.def Info: Figures/damage_distribution.png used on input line 9.
+(pdftex.def)             Requested size: 284.52756pt x 161.87009pt.
+
+
+LaTeX Warning: Reference `fig:total_dmg' on page 9 undefined on input line 14.
+
+<Figures/total_damage_dist.png, id=67, 977.6525pt x 573.14125pt>
+File: Figures/total_damage_dist.png Graphic file (type png)
+
+<use Figures/total_damage_dist.png>
+Package pdftex.def Info: Figures/total_damage_dist.png used on input line 18.
+(pdftex.def)             Requested size: 227.62204pt x 133.4376pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+[9
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+[10 <./Figures/damage_distribution.png> <./Figures/total_damage_dist.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+LaTeX Warning: Reference `fig:collapse_map' on page 11 undefined on input line 
+42.
+
+<Figures/collapse_map.png, id=87, 400.49625pt x 379.4175pt>
+File: Figures/collapse_map.png Graphic file (type png)
+
+<use Figures/collapse_map.png>
+Package pdftex.def Info: Figures/collapse_map.png used on input line 46.
+(pdftex.def)             Requested size: 227.62204pt x 215.64496pt.
+) (./book/chapter2/curves.tex
+
+LaTeX Warning: Citation 'SilvaEtAl2014a' on page 11 undefined on input line 1.
+
+
+LaTeX Warning: Citation 'PaganiEtAl2014a' on page 11 undefined on input line 1.
+
+
+
+LaTeX Warning: Reference `fig:hazard_curve' on page 11 undefined on input line 
+5.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+<Figures/hazard_curve.png, id=88, 459.7175pt x 347.2975pt>
+File: Figures/hazard_curve.png Graphic file (type png)
+
+<use Figures/hazard_curve.png>
+Package pdftex.def Info: Figures/hazard_curve.png used on input line 9.
+(pdftex.def)             Requested size: 256.0748pt x 193.4625pt.
+
+
+LaTeX Warning: Reference `fig:UHS' on page 11 undefined on input line 14.
+
+
+Overfull \hbox (1.07954pt too wide) in paragraph at lines 14--15
+\T1/ptm/m/n/10.95 (-20) a lo-ca-tion must be pro-vided to the plot-ting func-ti
+on (e.g.[]\T1/cmtt/m/n/10.95 uhs.plot("81.213823|29.761172")\T1/ptm/m/n/10.95 (
+-20) ).
+ []
+
+<Figures/UHS.png, id=89, 457.71pt x 361.35pt>
+File: Figures/UHS.png Graphic file (type png)
+ <use Figures/UHS.png>
+Package pdftex.def Info: Figures/UHS.png used on input line 18.
+(pdftex.def)             Requested size: 256.0748pt x 202.17267pt.
+
+
+LaTeX Warning: Reference `fig:loss_curve' on page 11 undefined on input line 25
+.
+
+[11 <./Figures/collapse_map.png>]
+<Figures/loss_curve.png, id=98, 964.60374pt x 577.15625pt>
+File: Figures/loss_curve.png Graphic file (type png)
+
+<use Figures/loss_curve.png>
+Package pdftex.def Info: Figures/loss_curve.png used on input line 29.
+(pdftex.def)             Requested size: 227.62204pt x 136.18655pt.
+) (./book/chapter2/maps.tex [12 <./Figures/hazard_curve.png> <./Figures/UHS.png
+>]
+
+LaTeX Warning: Reference `fig:hazard_curve' on page 13 undefined on input line 
+5.
+
+Package epstopdf Info: Source file: <Figures/hazard_Ecuador.eps>
+(epstopdf)                    date: 2015-06-05 10:55:04
+(epstopdf)                    size: 155944 bytes
+(epstopdf)             Output file: <Figures/hazard_Ecuador-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-06-07 23:43:44
+(epstopdf)                    size: 71783 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/hazard_Ecuador-eps
+-converted-to.pdf Figures/hazard_Ecuador.eps>
+(epstopdf)             \includegraphics on input line 9.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/hazard_Ecuador-eps-converted-to.pdf, id=109, 370.38374pt x 380.42125pt
+>
+File: Figures/hazard_Ecuador-eps-converted-to.pdf Graphic file (type pdf)
+ <use Figures/hazard_Ecuador-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/hazard_Ecuador-eps-converted-to.pdf used on in
+put line 9.
+(pdftex.def)             Requested size: 199.16928pt x 204.5711pt.
+
+
+LaTeX Warning: Reference `subsec:plot-collapse_maps' on page 13 undefined on in
+put line 17.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+[13 <./Figures/loss_curve.png> <./Figures/hazard_Ecuador-eps-converted-to.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+LaTeX Warning: Reference `fig:loss_map' on page 14 undefined on input line 25.
+
+<Figures/loss_map.png, id=123, 397.485pt x 379.4175pt>
+File: Figures/loss_map.png Graphic file (type png)
+
+<use Figures/loss_map.png>
+Package pdftex.def Info: Figures/loss_map.png used on input line 29.
+(pdftex.def)             Requested size: 199.16928pt x 190.11932pt.
+
+
+LaTeX Warning: Reference `fig:all_loss_map' on page 14 undefined on input line 
+34.
+
+<Figures/loss_map_AAL.png, id=124, 235.6002pt x 226.9278pt>
+File: Figures/loss_map_AAL.png Graphic file (type png)
+
+<use Figures/loss_map_AAL.png>
+Package pdftex.def Info: Figures/loss_map_AAL.png used on input line 38.
+(pdftex.def)             Requested size: 170.71652pt x 164.4336pt.
+)) [14 <./Figures/loss_map.png> <./Figures/loss_map_AAL.png>]
+\openout2 = `book/chapter3/chapter3.aux'.
+
+ (./book/chapter3/chapter3.tex
+Chapter 3.
+File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
+<use ./figures/chapter_head_2.pdf>
+Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
+(pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
+
+No file rmtk-docs.ptc.
+(./book/chapter3/introduction.tex) (./book/chapter3/derive_pml.tex
+
+LaTeX Warning: Citation 'SilvaEtAl2014a' on page 15 undefined on input line 1.
+
+
+LaTeX Warning: Reference `fig:pml' on page 15 undefined on input line 2.
+
+<Figures/pml_example.png, id=136, 276.0714pt x 220.6644pt>
+File: Figures/pml_example.png Graphic file (type png)
+
+<use Figures/pml_example.png>
+Package pdftex.def Info: Figures/pml_example.png used on input line 6.
+(pdftex.def)             Requested size: 227.62204pt x 181.94261pt.
+) [15
+
+
+
+ <./Figures/pml_example.png>]
+(./book/chapter3/logic_tree_selection.tex)) [16]
+\openout2 = `book/chapter4/chapter4.aux'.
+
+ (./book/chapter4/chapter4.tex
+Chapter 4.
+File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
+<use ./figures/chapter_head_2.pdf>
+Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
+(pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{Vulnerability}
+                           
+? 
+No file rmtk-docs.ptc.
+(./book/chapter4/introduction.tex)
+(./book/chapter4/input_models/introduction.tex)
+(./book/chapter4/input_models/capacity_curves.tex)
+(./book/chapter4/input_models/gmrs.tex)
+(./book/chapter4/input_models/damage_models.tex)
+(./book/chapter4/model_generator/introduction.tex)
+(./book/chapter4/model_generator/DBELA.tex)
+(./book/chapter4/model_generator/SPBELA.tex)
+(./book/chapter4/model_generator/dispersion.tex)
+(./book/chapter4/mdof_to_sdof/introduction.tex) [17
+
+
+
+]
+(./book/chapter4/mdof_to_sdof/simple_mdof_to_sdof.tex)
+(./book/chapter4/mdof_to_sdof/adaptive_mdof_to_sdof.tex)
+(./book/chapter4/nonlinear_response/introduction.tex)
+(./book/chapter4/nonlinear_response/SPO2IDA.tex)
+(./book/chapter4/nonlinear_response/Dolsek_Fajfar2004.tex)
+(./book/chapter4/nonlinear_response/Ruiz_Garcia_Miranda_2007.tex)
+(./book/chapter4/nonlinear_response/Vidic_etal_1994.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+LaTeX Warning: Citation 'VidicEtAl1994' on page 18 undefined on input line 3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[18]
+
+LaTeX Warning: Reference `table:VidicEtAl' on page 19 undefined on input line 2
+2.
+
+
+LaTeX Warning: Citation 'VidicEtAl1994' on page 19 undefined on input line 25.
+
+
+LaTeX Warning: Citation 'VidicEtAl1994' on page 19 undefined on input line 25.
+
+
+LaTeX Warning: Reference `subsec:cap_curves' on page 19 undefined on input line
+ 39.
+
+
+LaTeX Warning: Reference `subsec:gmrs' on page 19 undefined on input line 39.
+
+
+LaTeX Warning: Reference `subsec:dmg_model' on page 19 undefined on input line 
+39.
+
+
+LaTeX Warning: Reference `table:VidicEtAl' on page 19 undefined on input line 3
+9.
+
+
+LaTeX Warning: Reference `subsec:derive_fragility' on page 19 undefined on inpu
+t line 46.
+
+) (./book/chapter4/nonlinear_response/Lin_Miranda2008.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+LaTeX Warning: Citation 'LinMiranda2008' on page 19 undefined on input line 3.
+
+[19]
+
+LaTeX Warning: Reference `table:LinMiranda2008' on page 20 undefined on input l
+ine 13.
+
+
+LaTeX Warning: Citation 'LinMiranda2008' on page 20 undefined on input line 16.
+
+
+
+LaTeX Warning: Citation 'LinMiranda2008' on page 20 undefined on input line 16.
+
+
+
+LaTeX Warning: Reference `subsec:cap_curves' on page 20 undefined on input line
+ 32.
+
+
+LaTeX Warning: Reference `subsec:gmrs' on page 20 undefined on input line 32.
+
+
+LaTeX Warning: Reference `subsec:dmg_model' on page 20 undefined on input line 
+32.
+
+
+LaTeX Warning: Reference `subsec:derive_fragility' on page 20 undefined on inpu
+t line 39.
+
+) (./book/chapter4/nonlinear_response/Miranda2000.tex
+
+LaTeX Warning: Citation 'Miranda2000' on page 20 undefined on input line 1.
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+LaTeX Warning: Reference `subsec:cap_curves' on page 21 undefined on input line
+ 20.
+
+
+LaTeX Warning: Reference `subsec:gmrs' on page 21 undefined on input line 20.
+
+
+LaTeX Warning: Reference `subsec:dmg_model' on page 21 undefined on input line 
+20.
+
+
+LaTeX Warning: Reference `subsec:derive_fragility' on page 21 undefined on inpu
+t line 27.
+
+) (./book/chapter4/nonlinear_response/N2.tex) [21]
+(./book/chapter4/nonlinear_response/CSM.tex
+
+LaTeX Warning: Citation 'FreemanEtAl1975' on page 22 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation 'ATC1996' on page 22 undefined on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+LaTeX Warning: Reference `fig:per_point' on page 22 undefined on input line 3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+<Figures/performance_points.png, id=204, 324.2514pt x 122.859pt>
+File: Figures/performance_points.png Graphic file (type png)
+
+<use Figures/performance_points.png>
+Package pdftex.def Info: Figures/performance_points.png used on input line 7.
+(pdftex.def)             Requested size: 341.43306pt x 129.36754pt.
+
+
+LaTeX Warning: Citation 'Fajfar1999' on page 22 undefined on input line 12.
+
+
+LaTeX Warning: Citation 'ChopraGoel2010' on page 22 undefined on input line 12.
+
+
+
+LaTeX Warning: Citation 'FEMA4402005' on page 22 undefined on input line 12.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+LaTeX Warning: Citation 'FEMA4402005' on page 22 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'Kowalsky1994' on page 22 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'Iwan1980' on page 22 undefined on input line 17.
+
+
+LaTeX Warning: Citation 'GulkanSozen1974' on page 22 undefined on input line 18
+.
+
+[22 <./Figures/performance_points.png>]
+
+LaTeX Warning: Citation 'PriesleyEtAl2007' on page 23 undefined on input line 1
+9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+) (./book/chapter4/nonlinear_response/DBELA.tex)
+(./book/chapter4/nonlinear_response/NLTHA_SDOF.tex)
+(./book/chapter4/nonlinear_response/introduction.tex)
+(./book/chapter4/derive_fragility/fragility.tex)
+(./book/chapter4/derive_fragility/vulnerability.tex)) [23]
+\openout2 = `./book/bibliography.aux'.
+
+
+(./book/bibliography.tex [24
+
+
+
+]
+Chapter 5.
+File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
+<use ./figures/chapter_head_2.pdf>
+Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
+(pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
+
+No file rmtk-docs.ptc.
+
+Package biblatex Warning: Type 'book' not found on input line 5.
+
+
+LaTeX Warning: Empty bibliography on input line 5.
+
+
+Package biblatex Warning: Type 'article' not found on input line 8.
+
+
+LaTeX Warning: Empty bibliography on input line 8.
+
+
+LaTeX Warning: Empty bibliography on input line 11.
+
+) [25] [26
+
+
+]
+No file rmtk-docs.ind.
+No file rmtk-docs.gls.
+[27] [28
+
+]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 165.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 165.
+ [29] [30]
+\openout2 = `book/appendix1.aux'.
+
+ (./book/appendix1.tex
+Appendix A.
+File: ./figures/chapter_head_2.pdf Graphic file (type pdf)
+<use ./figures/chapter_head_2.pdf>
+Package pdftex.def Info: ./figures/chapter_head_2.pdf used on input line 1.
+(pdftex.def)             Requested size: 597.50787pt x 298.75671pt.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{The 10 Minute Guide to Python!}
+                                            
+? 
+No file rmtk-docs.ptc.
+(./tex/python-guide.tex
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 17.
- [13
+ [31
 
 
 ]
@@ -2117,22 +2638,32 @@ LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 81.
- [14]
-[15] [16] [17] [18] [19] [20] [21])) [22]
+ [32] [33] [34] [35] [36] [37] [38] [39])) [40]
 \tf@ptc=\write13
 \openout13 = `rmtk-docs.ptc'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
- (./rmtk-docs.aux
-(./book/chapter2/chapter2.aux) (./book/appendix1.aux))
+
+(./rmtk-docs.aux (./book/chapter1/chapter1.aux) (./book/chapter2/chapter2.aux)
+(./book/chapter3/chapter3.aux) (./book/chapter4/chapter4.aux)
+(./book/bibliography.aux) (./book/appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
-Package rerunfilecheck Info: File `rmtk-docs.out' has not changed.
-(rerunfilecheck)             Checksum: 7EE4B9A33971328D1B83F7734C164268;1381.
 
+
+Package rerunfilecheck Warning: File `rmtk-docs.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rmtk-docs.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  8CDD96B80FE33EF65AB15659B1046645;4571.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2144,28 +2675,32 @@ Package logreq Info: Writing requests to 'rmtk-docs.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40765 strings out of 493117
- 731649 string characters out of 6135434
- 1230023 words of memory out of 5000000
- 42932 multiletter control sequences out of 15000+600000
- 81945 words of font info for 162 fonts, out of 8000000 for 9000
+ 41219 strings out of 493117
+ 741477 string characters out of 6135434
+ 1223793 words of memory out of 5000000
+ 43103 multiletter control sequences out of 15000+600000
+ 96112 words of font info for 229 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,72p,10432b,3378s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,77p,10432b,3378s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/cm-super/sfst0900.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on rmtk-docs.pdf (22 pages, 230356 bytes).
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sfst0900.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/urw/avantgar/uagk8a.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/urw/symbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
+/symbol/usyr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb
+8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on rmtk-docs.pdf (40 pages, 936951 bytes).
 PDF statistics:
- 768 PDF objects out of 1000 (max. 8388607)
- 689 compressed objects within 7 object streams
- 411 named destinations out of 1000 (max. 500000)
- 44223 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 838 PDF objects out of 1000 (max. 8388607)
+ 750 compressed objects within 8 object streams
+ 498 named destinations out of 1000 (max. 500000)
+ 49230 words of extra memory for PDF output out of 51595 (max. 10000000)
 

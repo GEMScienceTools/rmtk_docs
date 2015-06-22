@@ -1,12 +1,15 @@
 This methodology estimates the maximum inelastic displacement of an existing structure based on the maximum elastic displacement response of its equivalent linear system without the need for iterations, based on the strength ratio R (instead of the most commonly used ductility ratio).\\
-In order to evaluate an existing structure, a pushover analysis should be conducted in order to obtain the capacity curve. This curve should be bilinearised in order to obtain the yield strength, fy, the postyield stiffness ratio, $\alpha$, and the strength ratio, R. With these parameters, along with the initial period of the system, it is possible to estimate the optimal period shift (i.e. the ratio between the period of the equivalent linear system and the initial period) and the equivalent viscous damping, $\xi$eq, of the equivalent linear system, using the following relationships derived by Lin and Miranda (2008). 	 \begin{equation}
+In order to evaluate an existing structure, a pushover analysis should be conducted in order to obtain the capacity curve. This curve should be bilinearised in order to obtain the yield strength, fy, the postyield stiffness ratio, $\alpha$, and the strength ratio, R. With these parameters, along with the initial period of the system, it is possible to estimate the optimal period shift (i.e. the ratio between the period of the equivalent linear system and the initial period) and the equivalent viscous damping, $\xi$eq, of the equivalent linear system, using the following relationships derived by \citep{LinMiranda2008}.	 \begin{equation}
 \frac{T_{eq}}{T_{0}} = 1 + \frac{m_1}{T_0^{m_2}}\left(R^{1.8}-1\right)
 \end{equation} 
 
 \begin{equation}
 \xi_{eq} = \xi_{0} + \frac{n_1}{T_0^{n_2}}\left(R-1\right)
-\end{equation}   Where the coefficients m1, m2, n1, and n2 depend on the postyield stiffness ratio, as shown in the following table.
+\end{equation}   Where the coefficients m1, m2, n1, and n2 depend on the postyield stiffness ratio, as shown in the following Table \ref{table:LinMiranda2008}.
 
+\begin {table}
+\caption{Paramereters for the estimation of the reduction factor C proposed by \citep{LinMiranda2008}} 
+\label{table:LinMiranda2008} 
 \begin{center}
   \begin{tabular}{ | c | c | c | c | c |}
     \hline
@@ -16,4 +19,18 @@ This methodology estimates the maximum inelastic displacement of an existing str
     10\% & 0.027 & 0.51 & 0.031 & 0.39 \\ \hline
     20\% & 0.027 & 0.36 & 0.030 & 0.24 \\ \hline
   \end{tabular}
-\end{center}Using $\xi$eq and the damping modification factor, B (as defined in Table 15.6-1 of NEHRP-2003), it is possible to construct the reduced displacement spectrum, Sd(T, $\xi$eq) from which the maximum displacement demand (i.e. the displacement corresponding to the equivalent system period) can be obtained, using the following equation:	  
+\end{center}
+\end{table}
+Using $\xi$eq and the damping modification factor, B (as defined in Table 15.6-1 of NEHRP-2003), it is possible to construct the reduced displacement spectrum, Sd(T, $\xi$eq) from which the maximum displacement demand (i.e. the displacement corresponding to the equivalent system period) can be obtained, using the following equation:	  
+In order to use this methodology, it is necessary to load one or multiple capacity curves as described in Section \ref{subsec:cap_curves}, as well as a set of ground motion records as explained in Section \ref{subsec:gmrs}. Then, it is necessary to specify a damage model using the parameter \verb=damage_model= (see Section \ref{subsec:dmg_model}). After importing the module \verb=lin_miranda_2008=, it is possible to calculate the distribution of structures across the set of damage state for each ground motion record using the following command:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+PDM, Sds = lin_miranda_2008.calculate_fragility(capacity_curves,gmrs,...
+damage_model,damping)
+\end{Verbatim}
+
+Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDOF) of each structure per ground motion record. the variable PDM can then be used to calculate the mean fragility model as described in Section \ref{subsec:derive_fragility}.
+
+
+
+

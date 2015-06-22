@@ -83,55 +83,65 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.6}Miranda (2000) for firm soils}{20}{subsection.4.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.7}N2 (EC8, CEN 2005)}{21}{subsection.4.5.7}
+\contentsline {subsection}{\numberline {4.5.7}N2 (EC8, CEN 2005)}{22}{subsection.4.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.8}Capacity Spectrum Method (FEMA, 2005)}{21}{subsection.4.5.8}
+\contentsline {subsection}{\numberline {4.5.8}Capacity Spectrum Method (FEMA, 2005)}{22}{subsection.4.5.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.9}DBELA (Silva et al. 2013)}{21}{subsection.4.5.9}
+\contentsline {subsection}{\numberline {4.5.9}DBELA (Silva et al. 2013)}{23}{subsection.4.5.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.10}Nonlinear time-history analysis in Single Degree of Freedom (SDOF) Oscilators}{21}{subsection.4.5.10}
+\contentsline {subsection}{\numberline {4.5.10}Nonlinear time-history analysis in Single Degree of Freedom (SDOF) Oscilators}{23}{subsection.4.5.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Derivation of fragility and vulnerability functions}{21}{section.4.6}
+\contentsline {section}{\numberline {4.6}Derivation of fragility and vulnerability functions}{23}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}Derivation of fragility functions}{21}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.1}Derivation of fragility functions}{23}{subsection.4.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Derivation of vulnerability functions}{21}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.2}Derivation of vulnerability functions}{23}{subsection.4.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{23}{section*.15}
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Appendices}{23}{part.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}The 10 Minute Guide to Python!}{25}{appendix.A}
+\contentsline {chapter}{\numberline {5}Bibliography}{25}{chapter.5}
 \ttl@stoptoc {default@4}
 \ttl@starttoc {default@5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Basic Data Types}{25}{section.A.1}
+\contentsline {section}{\numberline {5.1}Books}{25}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}Scalar Parameters}{25}{subsection.A.1.1}
+\contentsline {section}{\numberline {5.2}Articles}{25}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Scalar Arithmetic}{26}{section*.16}
+\contentsline {section}{\numberline {5.3}Other Sources}{25}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}Iterables}{27}{subsection.A.1.2}
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{27}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Indexing}{28}{section*.17}
+\contentsline {part}{I\hspace {1em}Appendices}{27}{part.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.3}Dictionaries}{28}{subsection.A.1.3}
+\contentsline {chapter}{\numberline {A}The 10 Minute Guide to Python!}{29}{appendix.A}
+\ttl@stoptoc {default@5}
+\ttl@starttoc {default@6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.4}Loops and Logicals}{28}{subsection.A.1.4}
+\contentsline {section}{\numberline {A.1}Basic Data Types}{29}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Logical}{28}{section*.18}
+\contentsline {subsection}{\numberline {A.1.1}Scalar Parameters}{29}{subsection.A.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Looping}{29}{section*.19}
+\contentsline {subsubsection}{Scalar Arithmetic}{30}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Functions}{30}{section.A.2}
+\contentsline {subsection}{\numberline {A.1.2}Iterables}{31}{subsection.A.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Classes and Inheritance}{30}{section.A.3}
+\contentsline {subsubsection}{Indexing}{32}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.1}Simple Classes}{30}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.1.3}Dictionaries}{32}{subsection.A.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.2}Inheritance}{31}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.1.4}Loops and Logicals}{32}{subsection.A.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.3}Abstraction}{32}{subsection.A.3.3}
+\contentsline {subsubsection}{Logical}{32}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Numpy/Scipy}{33}{section.A.4}
+\contentsline {subsubsection}{Looping}{33}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Functions}{34}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Classes and Inheritance}{34}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.1}Simple Classes}{34}{subsection.A.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.2}Inheritance}{35}{subsection.A.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.3}Abstraction}{36}{subsection.A.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Numpy/Scipy}{37}{section.A.4}
 \contentsfinish 
