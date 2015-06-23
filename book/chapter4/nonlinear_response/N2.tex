@@ -1,1 +1,23 @@
-To be completed by Vitor.
+This simplified nonlinear procedure has been firstly proposed by Fajfar, and it is capable of estimating the seismic response of structures using capacity curves (for the equivalent SDOF) and response spectra. It is somehow similar to the well-known Capacity Spectrum Method (see Section ), but it does not require an iterative process and instead of elastic overdamped spectra, it uses inelastic response spectra. This method is part of recommendations of the Eurocode 8 \citep{CEN2005} for the seismic design of new structues, and the capacity curves are usually simplified by a elasto-perfectly plastic relationship.\\
+To estimate the target displacement ($\delta_t$) within this methodology, it is necessary to assess whether the SDOF structure is in the short-period or medium/long-period ranges. To do so, it is necessary to compare the fundamental period of vibration of the structure with the corner period of the ground motion record. If the structure is in the latter category, it is assumed that the target displacement is equal to the elastic spectral displacement for the fundamental period of the idealized SDOF. If on the other hand it is located in the short-period range, a procedure is carried out to evaluate whether the capacity of the SDOF at the yielding point (taken from the bilinear curve) is lower than the spectral acceleration response for the same period. If this is verified, then the structure is assumed to have an elastic response and once again, the target displacement will be equal to the elastic spectral displacement for the fundamental period. In case the capacity is lower than the response for the yielding point, the structure is assumed to have an inelastic response and the following formula is employed to determine the target displacement:
+\begin{equation}
+\delta_t = \frac{Sd(T_{el})}{q_u}\left(1+(q_u-1)\frac{T_c}{T_{el}}\right)Sd(T_{el})
+\end{equation}
+Where $Sd(T_{el})$ stands for the spectral displacement for the fundamental period of the idealized SDOF ($T_{el}$), $T_c$ stands for the corner period and $q_u$ represents the ratio between the spectral acceleration for $T_{el}$ and the acceleration at the yielding point.\\
+
+It is important to understand that this methodology has been developed originally to be combined with a design or code-based response spectrum, and not with a spectrum derived from real ground motion records. For this reason, its employment in the derivation of fragility functions calls for due care. For instance, the estimation of $T_c$ (which is a fundamental parameter within this methodology) when considering accelerograms is not a trivial task, and various proposals can be found in the literature. For the sake of simplicity, a decision was made to adopt the formula recommended by the \cite{ASCE2010} which defines:
+
+\begin{equation}
+T_c = \frac{Sa(T=1.0s)}{Sa(T=0.2s)}
+\end{equation}
+
+Despite these caveats, it is worth mentioning that a recent study \citep{SilvaEtAl2014b} compared its performance in the derivation of vulnerability functions against nonlinear time history analyses, and concluded that reasonable results can still be obtained.\\
+
+In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motio nrecords, as explained in Section \ref{subsec:cap_curves} and \ref{subsec:gmrs}, respectively. Then, it is necessary to specify a damage model using the parameter \verb=damage_model= (see Section \ref{subsec:dmg_model}), and a damping ratio using the parameter \verb=damping=. After importing the module \verb=N2Method=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+PDM, Sds = N2Method.calculate_fragility(capacity_curves,gmrs,...
+damage_model,damping)
+\end{Verbatim}
+
+Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDOF) of each structure per ground motion record. the variable PDM can then be used to calculate the mean fragility model as described in Section \ref{subsec:derive_fragility}.
