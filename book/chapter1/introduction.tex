@@ -1,2 +1,43 @@
-\section{Introduction}
-To be completed by Anirudh.
+\section{Getting started}
+The Risk Modeller's Toolkit makes extensive use of the Python programming language and the web-browser based interactive IPython notebook interface. As with OpenQuake, the preferred working environment is Ubuntu (12.04 or later) or Mac OS X. At present, the user  must install the dependencies manually. An effort has been made to keep the number of additional dependencies to a minimum. More information regarding the current dependencies of the toolkit can be found at \href{http://github.com/GEMScienceTools/rmtk}{http://github.com/GEMScienceTools/rmtk}.
+
+The current dependencies are:
+\begin{itemize}
+\item Numpy and Scipy (included in the standard OpenQuake installation)
+% \item OpenQuake RiskLib (included in the standard OpenQuake installation)
+%     \hfill \\ (\href{http:/github.com/gem/oq-risklib}{http:/github.com/gem/oq-risklib})
+\item Matplotlib (\href{http://matplotlib.org/}{http://matplotlib.org/})
+\end{itemize}
+
+The Matplotlib library can be installed easily from the command line by:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
+~\$ sudo pip install matplotlib
+\end{Verbatim}
+
+To enable usage of the rmtk within any location in the operating system, OS X and Linux users should add the path to the rmtk folder to their profile file. This can be done as follows:
+
+\begin{enumerate}
+\item Using a command line text editor (e.g. VIM or Emacs), open the \verb=~/.profile= folder as follows:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
+~\$ vim ~/.profile
+\end{Verbatim}
+
+\item At the bottom of the profile file (if one does not exist it will be created) add the line:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
+export PYTHONPATH=/path/to/rmtk/folder/:\$PYTHONPATH
+\end{Verbatim}
+
+Where \verb=/path/to/rmtk/folder/= is the system path to the location of the rmtk folder (use the command \verb=pwd= from within the rmtk folder to view the full system path).
+
+\item Reload the profile file using the command
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
+~\$ source ~/.profile
+\end{Verbatim}
+
+\end{enumerate}
+
+At present, the recommended approach for Windows users is to run Ubuntu Linux 12.04 within a Virtual Machine and install the rmtk following the instructions above. Up-to-date VirtualBox images containing the OpenQuake-engine and platform, and the Hazard and Risk Modeller's Toolkits are available here: \href{http://www.globalquakemodel.org/openquake/start/download/}{http://www.globalquakemodel.org/openquake/start/download/}
