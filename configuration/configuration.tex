@@ -17,12 +17,11 @@
 % When you first open the template, compile it from the command line with the 
 % commands below to make sure your LaTeX distribution is configured correctly:
 %
-% 1) pdflatex rmtk-docs
-% 1a) pdflatex -shell-escape rmtk-docs
-% 2) makeindex rmtk-docs.idx -s StyleInd.ist
-% 3) biber rmtk-docs
-% 4  makeglossaries rmtk-docs
-% 4) pdflatex rmtk-docs x 2
+% 1) pdflatex oq-manual
+% 2) makeindex oq-manual.idx -s StyleInd.ist
+% 3) biber oq-manual
+% 4  makeglossaries oq-manual
+% 4) pdflatex oq-manual x 2
 %
 % After this, when you wish to update the bibliography/index use the appropriate
 % command above and make sure to compile with pdflatex several times 
@@ -38,13 +37,6 @@
 % e.g. 920px width and 460px height.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
-
 \usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,a4paper]{geometry} % Page margins
 
 \usepackage{xcolor} % Required for specifying colors by name
@@ -77,7 +69,8 @@
             backend=bibtex,
 	    	uniquename=false,
 	    	uniquelist=false]{biblatex}
-\addbibresource{./bibliography/rmtk.bib} % BibTeX bibliography file
+\addbibresource{./bibliography/hazard.bib} % BibTeX bibliography file
+\addbibresource{./bibliography/risk.bib} % BibTeX bibliography file
 \defbibheading{bibempty}{}
 
 % Figure caption settings
@@ -87,43 +80,30 @@
 
 % Table - colors from
 \usepackage{verbatim}
+\usepackage{fancyvrb}
 \usepackage{color, colortbl}
-\definecolor{almond}{rgb}{0.94, 0.87, 0.8}
-\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
-\definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
-\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{darkblue}{rgb}{.2, .2, .8}
+\definecolor{darkgray}{gray}{0.25}
+
 
 % Index
 \usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly
 \usepackage{makeidx} % Required to make an index
-% \setcounter{tocdepth}{3}    % entries down to \subsubsections in the TOC
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}    % entries down to \subsubsections in the TOC
 \makeindex % Tells LaTeX to create the files required for indexing
 
 \usepackage{todonotes}
-\usepackage{geometry}
 \usepackage{marginnote}
-
-%
-% Package to create a glossary - It must be uploaded after hyperref
-% to produce the glossary: makeglossaries OQB
-\usepackage[acronym,nonumberlist,style=altlist]{glossaries}
-\glstoctrue
-\makeglossaries
 
 % package for bold symbols
 \usepackage{bm}
 
 % for better looking tables
 \usepackage{ctable}
-\usepackage{microtype}
-
-% for listing Python code
-\usepackage{listings}
-
 %
 %----------------------------------------------------------------------------------------
 % Trees
-%\usepackage[pdf]{pstricks}
-%\usepackage{auto-pst-pdf}
-%\usepackage{pst-tree}
-%
+% \usepackage{auto-pst-pdf}
+% \usepackage[pdf]{pstricks}
+% \usepackage{pst-tree}

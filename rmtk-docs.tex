@@ -4,27 +4,31 @@
 % Authors:
 % 	C. Casotto	- GEM Model Facility, Pavia, Italy
 %
-% Document distributed under the Common Creative License
-% © GEM Foundation, Pavia, February 2014
-
+%
+% License:
+% Document distributed under the CC BY-NC-SA 4.0 License
+% Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+% http://creativecommons.org/licenses/by-nc-sa/4.0/
+%
+% Copyright:
+% © GEM Foundation, Pavia, Italy. June 2015.
+%
 %-------------------------------------------------------------------------------
-%	LOAD PACKAGES
+%  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-------------------------------------------------------------------------------
-\input{configuration/configuration.tex}
 
+\documentclass[11pt,fleqn]{book} % ------------------ Left-justified equations -
+\input{configuration/configuration.tex} % -------------------- Load packages -
+\input{configuration/structure.tex} % ------------------------ Load template -
 
-%-------------------------------------------------------------------------------
-% Insert the structure.tex file which contains the majority of the structure 
-% behind the template
-\input{configuration/structure.tex}
-
-
-% =============================================================== BEGIN DOCUMENT
 \begin{document}
+\input{tex/glossary.tex} % ------------------------------  Load the glossary
 
-\lstset{language=Python} % --------------- For listings environment - use python
-\input{./tex/glossary.tex} % ------------------------------  Load the glossary
+%-------------------------------------------------------------------------------
+%  COVER PAGE
+%-------------------------------------------------------------------------------
 
+% \includepdf[pages=-]{figures/rmtk-docs-cover.pdf}
 
 %-------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -32,7 +36,6 @@
 
 \begingroup
 \thispagestyle{empty}
-%\AddToShipoutPicture*{\put(6,5){\includegraphics[scale=1]{background}}} % Image background
 \par\normalfont\fontsize{15}{15}\sffamily\selectfont
 ``OpenQuake: Calculate, share, explore''
 \centering
@@ -49,7 +52,7 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 \vfill
 \thispagestyle{empty}
 
-\noindent Copyright \copyright\ 2014 GEM Foundation\\ % Copyright notice
+\noindent \copyright\ 2015 GEM Foundation\\ % Copyright notice
 
 \noindent \textsc{Published by GEM Foundation}\\ % Publisher
 
@@ -58,7 +61,9 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 \noindent
    {\textbf{Citation}} \hfill \\
    Please cite this document as:\\
-   Casotto, C. (2014) OpenQuake Risk Modeller's Toolkit - User Guide. \textit{Global Earthquake Model (GEM). Technical Report}\\
+   Casotto, C. (2015) OpenQuake Risk Modeller's Toolkit - User Guide. 
+   \textit{Global Earthquake Model (GEM). Technical Report 2015-06.\\ 
+   doi: 10.13117/GEM.OPENQUAKE.MAN.RMTK.1.0/01, 60 pages.} \hfill \\
 
    {\bf{Disclaimer}} \hfill \\
 \noindent
@@ -82,12 +87,13 @@ Risk Modeller's Toolkit - User Guide\par % Book title
    %
    \vspace{0.4cm} \hfill \\
    {\bf{License}} \hfill \\
-   This Book is distributed under the Creative Common License 
-   Attribution-NonCommercial-NoDerivs 3.0 Unported (CC BY-NC-ND 3.0) 
-   (see link below). You can download this Book and share it with 
+   This Manual is distributed under the Creative Commons License 
+   Attribution-NonCommercial-ShareAlike 4.0 International 
+   (\href{http://creativecommons.org/licenses/by-nc-sa/4.0/}
+   {CC BY-NC-SA 4.0}). 
+   You can download this Manual and share it with 
    others as long as you provide proper credit, but you cannot change 
-   it in any way or use it commercially. 
-   \hfill \\
+   it in any way or use it commercially.\hfill \\
 
 \noindent \textit{First printing, June 2015} % Printing/edition date
 
@@ -95,61 +101,63 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-\chapterimage{./figures/chapter_head_1.pdf} % Table of contents heading image
-
+\chapterimage{figures/chapter_head_1.pdf} % Table of contents heading image
 \pagestyle{empty} % No headers
-
 \tableofcontents % Print the table of contents itself
-
 \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
-
 \pagestyle{fancy} % Print headers again
 
 %----------------------------------------------------------------------------------------
 %	PREAMBLE
 %----------------------------------------------------------------------------------------
-\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\chapterimage{figures/chapter_head_2.pdf} % Chapter heading image
 \chapter*{Preface}
 %\addcontentsline{toc}{chapter}{Preamble}
-\input{./book/preamble}
+\input{book/preamble}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 1
 %----------------------------------------------------------------------------------------
 % Introduction
-\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\chapterimage{figures/chapter_head_2.pdf} % Chapter heading image
 \include{book/chapter1/chapter1}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 2
 %----------------------------------------------------------------------------------------
 % Plotting part
-\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\chapterimage{figures/chapter_head_2.pdf} % Chapter heading image
 \include{book/chapter2/chapter2}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 3
 %----------------------------------------------------------------------------------------
 % Risk part
-\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\chapterimage{figures/chapter_head_2.pdf} % Chapter heading image
 \include{book/chapter3/chapter3}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 4
 %----------------------------------------------------------------------------------------
 % Vulnerability part
-\chapterimage{./figures/chapter_head_2.pdf} % Chapter heading image
+\chapterimage{figures/chapter_head_2.pdf} % Chapter heading image
 \include{book/chapter4/chapter4}
+
+%----------------------------------------------------------------------------------------
+%  APPENDICES
+%----------------------------------------------------------------------------------------
+\part{Appendices}
+\appendix
+\include{book/appendix1}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\include{./book/bibliography}
+\include{book/bibliography}
 
-
-%----------------------------------------------------------------------------------------
-%	INDEX
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%  INDEX & GLOSSARY
+%-------------------------------------------------------------------------------
 
 \cleardoublepage
 \phantomsection
@@ -157,13 +165,7 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 \printindex
 \printglossary
+\hfill \\ \thispagestyle{empty} \clearpage % ---------------- Final empty page -
 
-
-%----------------------------------------------------------------------------------------
-%	APPENDICES
-%----------------------------------------------------------------------------------------
-\part{Appendices}
-\appendix
-\include{book/appendix1}
 
 \end{document}

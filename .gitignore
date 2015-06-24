@@ -5,9 +5,11 @@
 *.alg
 *.aux
 *.bbl
+rmtk-docs-blx.bib
 *.blg
 *.dvi
 *.fdb_latexmk
+.gitignore~
 *.glg
 *.glo
 *.gls
