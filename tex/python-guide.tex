@@ -1,10 +1,10 @@
-The HMTK is intended to be used by scientists and engineers without the necessity of having an existing knowledge of Python. It is hoped that the examples contained in this manual should provide enough context to allow the user to understand how to use the tools for their own needs. In spite of this, however, an understanding of the fundamentals of the Python programming language can greatly enhance the user experience and permit the user to join together the tools in a workflow that best matches their needs. 
+The RMTK is intended to be used by scientists and engineers without the necessity of having an existing knowledge of Python. It is hoped that the examples contained in this manual should provide enough context to allow the user to understand how to use the tools for their own needs. In spite of this, however, an understanding of the fundamentals of the Python programming language can greatly enhance the user experience and permit the user to join together the tools in a workflow that best matches their needs.
 
-The aim of this appendix is therefore to introduce some fundamentals of the Python programming language in order to help understand how, and why, the HMTK can be used in a specific manner. If the reader wishes to develop their knowledge of the Python programming language beyond the examples shown here, there is a considerable body of literature on the topic from both a scientific and developer perspective.
+The aim of this appendix is therefore to introduce some fundamentals of the Python programming language in order to help understand how, and why, the RMTK can be used in a specific manner. If the reader wishes to develop their knowledge of the Python programming language beyond the examples shown here, there is a considerable body of literature on the topic from both a scientific and developer perspective.
 
 \section{Basic Data Types}
 
-Fundamental to the use of the HMTK is an understanding of the basic data types Python recognises:
+Fundamental to the use of the RMTK is an understanding of the basic data types Python recognises:
 
 
 \subsection{Scalar Parameters}
@@ -105,7 +105,7 @@ Scalars support basic mathematical operations (\# indicates a comment):
 
 \subsection{Iterables}
 
-Python can also define variables as lists, tuples and sets. These data types can form the basis for iterable operations. It should be noted that unlike other languages, such as Matlab or Fortran, Python iterable locations are zero-ordered (i.e. the first location in a list has an index value of 0, rather than 1). 
+Python can also define variables as lists, tuples and sets. These data types can form the basis for iterable operations. It should be noted that unlike other languages, such as Matlab or Fortran, Python iterable locations are zero-ordered (i.e. the first location in a list has an index value of 0, rather than 1).
 
 \begin{itemize}
 \item \textbf{List} A simple list of objects, which have the same or different data types. Data in lists can be re-assigned or replaced
@@ -140,7 +140,7 @@ TypeError: 'tuple' object does not support item assignment
 >> a = range(0, 5)
 >> print a
 [0, 1, 2, 3, 4]  # Note that the stop number is not 
-                 # included in the set!  
+                 # included in the set!
 >> b = range(0, 6, 2)
 >> print b
 [0, 2, 4]
@@ -163,7 +163,7 @@ Set([8.0, 3.0, 5.0]) # Notice the results are not ordered!
 
 \subsubsection{Indexing}
 
-For some iterables (including lists, sets and strings) Python allows for subsets of the iterable to be selected and returned as a new iterable. The selection of elements within the set is done according to the \verb=index= of the set. 
+For some iterables (including lists, sets and strings) Python allows for subsets of the iterable to be selected and returned as a new iterable. The selection of elements within the set is done according to the \verb=index= of the set.
 
 \begin{python}[frame=single]
 >> x = range(0, 10)  # Create an iterable
@@ -189,7 +189,7 @@ For some iterables (including lists, sets and strings) Python allows for subsets
 
 \subsection{Dictionaries}
 
-Python is capable of storing multiple data types associated with a map of variable names inside a single object. This is called a ``Dictionary'', and works in a similar manner to a ``data structure'' in languages such as Matlab. Dictionaries are used frequently in the HMTK as ways of structuring inputs to functions that share a common behaviour but may take different numbers and types of parameters on input.
+Python is capable of storing multiple data types associated with a map of variable names inside a single object. This is called a ``Dictionary'', and works in a similar manner to a ``data structure'' in languages such as Matlab. Dictionaries are used frequently in the RMTK as ways of structuring inputs to functions that share a common behaviour but may take different numbers and types of parameters on input.
 
 \begin{python}[frame=single]
 >> earthquake = {"Name": "Parkfield",
@@ -340,7 +340,7 @@ In the above example the function returns two outputs. If only one output is ass
 
 \section{Classes and Inheritance}
 
-Python is one of many languages that is fully object-oriented, and the use (and terminology) of objects is prevalent throughout the HMTK and this manual. A full treatise on the topic of object oriented programming in Python is beyond the scope of this manual and the reader is referred to one of the many textbooks on Python for more examples
+Python is one of many languages that is fully object-oriented, and the use (and terminology) of objects is prevalent throughout the RMTK and this manual. A full treatise on the topic of object oriented programming in Python is beyond the scope of this manual and the reader is referred to one of the many textbooks on Python for more examples
 
 \subsection{Simple Classes}
 
@@ -421,12 +421,12 @@ In the following example we create a new magnitude converter, which may work in 
 4.8
 >> mag4 = converter2.convert(5.0, 1994)
 >> print mag4
-4.4    
+4.4
 \end{python}
 
 \subsection{Abstraction}
 
-Inspection of the HMTK code (\href{https://github.com/GEMScienceTools/hmtk}{https://github.com/GEMScienceTools/hmtk}) shows frequent usage of classes and inheritance. This is useful in our case if we wish to make available different methods for the same problem. In many cases the methods may have similar logic, or may provide the same types of outputs, but the specifics of the implementation may differ. Functions or attributes that are common to all methods can be placed in a ``Base Class'', permitting each implementation of a new method to inherit the ``Base Class'' and its functions/attributes/behaviour. The new method will simply modify those aspects of the base class that are required for the specific method in question. This allows functions to be used interchangeably, thus allowing for a "mapping" of data to specific methods. 
+Inspection of the RMTK code (\href{https://github.com/GEMScienceTools/rmtk}{https://github.com/GEMScienceTools/rmtk}) shows frequent usage of classes and inheritance. This is useful in our case if we wish to make available different methods for the same problem. In many cases the methods may have similar logic, or may provide the same types of outputs, but the specifics of the implementation may differ. Functions or attributes that are common to all methods can be placed in a ``Base Class'', permitting each implementation of a new method to inherit the ``Base Class'' and its functions/attributes/behaviour. The new method will simply modify those aspects of the base class that are required for the specific method in question. This allows functions to be used interchangeably, thus allowing for a "mapping" of data to specific methods.
 
 An example of abstraction is shown using our two magnitude converters shown previously. Imagine that a seismic recording network (named "XXX") has a model for converting from their locally recorded magnitude to a reference global scale (for the purposes of narrative, imagine that a change in recording procedures in 1990 results in a change of conversion model). A different recording network (named ``YYY'') has a different model for converting their local magnitude to a reference global scale (and we imagine they also changed their recording procedures, but they did so in 1994). We can create a mapping that would apply the correct conversion for each locally recorded magnitude in a short catalogue, provided we know the local magnitude, the year and the recording network.
 
@@ -452,9 +452,9 @@ So we have a simple magnitude homogenisor that applies the correct function depe
 
 \section{Numpy/Scipy}
 
-Python has two powerful libraries for undertaking mathematical and scientific calculation, which are essential for the vast majority of scientific applications of Python: Numpy (for multi-dimensional array calculations) and Scipy (an extensive library of applications for maths, science and engineering). Both libraries are critical to both OpenQuake and the HMTK. Each package is so extensive that a comprehensive description requires a book in itself. Fortunately there is abundant documentation via the online help for Numpy \href{www.numpy.org}{www.numpy.org} and Scipy \href{www.scipy.org}{www.scipy.org}, so we do not need to go into detail here. 
+Python has two powerful libraries for undertaking mathematical and scientific calculation, which are essential for the vast majority of scientific applications of Python: Numpy (for multi-dimensional array calculations) and Scipy (an extensive library of applications for maths, science and engineering). Both libraries are critical to both OpenQuake and the RMTK. Each package is so extensive that a comprehensive description requires a book in itself. Fortunately there is abundant documentation via the online help for Numpy \href{www.numpy.org}{www.numpy.org} and Scipy \href{www.scipy.org}{www.scipy.org}, so we do not need to go into detail here.
 
-The particular facet we focus upon is the way in which Numpy operates with respect to vector arithmatic. Users familiar with Matlab will recognise many similarities in the way the Numpy package undertakes array-based calculations. Likewise, as with Matlab, code that is well vectorised is signficantly faster and more efficient than the pure Python equivalent. 
+The particular facet we focus upon is the way in which Numpy operates with respect to vector arithmatic. Users familiar with Matlab will recognise many similarities in the way the Numpy package undertakes array-based calculations. Likewise, as with Matlab, code that is well vectorised is signficantly faster and more efficient than the pure Python equivalent.
 
 The following shows how to undertake basic array arithmetic operations using the Numpy library
 
