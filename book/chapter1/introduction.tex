@@ -15,6 +15,12 @@ The Matplotlib library can be installed easily from the command line by:
 ~\$ sudo pip install matplotlib
 \end{Verbatim}
 
+The Risk Modeller's Toolkit itself requires no specific installation. In a Unix/Linux environment you can simply download the code as a zipped package from the website shown previously, then unzip and move into the code directory. Alternatively you can download the code directly into any current repository with the command
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
+~\$ git clone https://github.com/GEMScienceTools/rmtk.git
+\end{Verbatim}
+
 To enable usage of the rmtk within any location in the operating system, OS X and Linux users should add the path to the rmtk folder to their profile file. This can be done as follows:
 
 \begin{enumerate}
@@ -24,7 +30,7 @@ To enable usage of the rmtk within any location in the operating system, OS X an
 ~\$ vim ~/.profile
 \end{Verbatim}
 
-\item At the bottom of the profile file (if one does not exist it will be created) add the line:
+\item At the bottom of the profile file add the line:
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
 export PYTHONPATH=/path/to/rmtk/folder/:\$PYTHONPATH
@@ -44,13 +50,13 @@ The IPython Notebook is a browser-based notebook which provides support for inte
 
 If you already have Python installed , you can get IPython along with the dependencies for the IPython notebook using pip:
 
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize, samepage=true]
 ~\$ sudo pip install "ipython[notebook]"
 \end{Verbatim}
 
 A notebook session can be started via the command line:
 
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize, samepage=true]
 ~\$ ipython notebook
 \end{Verbatim}
 
