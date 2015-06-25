@@ -17,11 +17,11 @@
 % When you first open the template, compile it from the command line with the 
 % commands below to make sure your LaTeX distribution is configured correctly:
 %
-% 1) pdflatex oq-manual
-% 2) makeindex oq-manual.idx -s StyleInd.ist
-% 3) biber oq-manual
-% 4  makeglossaries oq-manual
-% 4) pdflatex oq-manual x 2
+% 1) pdflatex rmtk-docs
+% 2) makeindex rmtk-docs.idx -s StyleInd.ist
+% 3) bibtex rmtk-docs
+% 4  makeglossaries rmtk-docs
+% 4) pdflatex rmtk-docs x 2
 %
 % After this, when you wish to update the bibliography/index use the appropriate
 % command above and make sure to compile with pdflatex several times 
@@ -69,8 +69,7 @@
             backend=bibtex,
 	    	uniquename=false,
 	    	uniquelist=false]{biblatex}
-\addbibresource{./bibliography/hazard.bib} % BibTeX bibliography file
-\addbibresource{./bibliography/risk.bib} % BibTeX bibliography file
+\addbibresource{./bibliography/rmtk.bib} % BibTeX bibliography file
 \defbibheading{bibempty}{}
 
 % Figure caption settings
@@ -101,9 +100,3 @@
 
 % for better looking tables
 \usepackage{ctable}
-%
-%----------------------------------------------------------------------------------------
-% Trees
-% \usepackage{auto-pst-pdf}
-% \usepackage[pdf]{pstricks}
-% \usepackage{pst-tree}

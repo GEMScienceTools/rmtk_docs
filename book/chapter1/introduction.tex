@@ -40,4 +40,26 @@ Where \verb=/path/to/rmtk/folder/= is the system path to the location of the rmt
 
 \end{enumerate}
 
+The IPython Notebook is a browser-based notebook which provides support for interactive coding, text, mathematical expressions, inline plots and other rich media. Static notebooks can also be created for recording and distributing the results of the rich computations.
+
+If you already have Python installed , you can get IPython along with the dependencies for the IPython notebook using pip:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+~\$ sudo pip install "ipython[notebook]"
+\end{Verbatim}
+
+A notebook session can be started via the command line:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+~\$ ipython notebook
+\end{Verbatim}
+
+This will print some information about the notebook server in your console, and open a web browser to the URL of the web application (by default, http://127.0.0.1:8888).
+
+The landing page of the IPython notebook web application, the dashboard, shows the notebooks currently available in the notebook directory (by default, the directory from which the notebook server was started).
+
+You can create new notebooks from the dashboard with the New Notebook button, or open existing ones by clicking on their name.
+
 At present, the recommended approach for Windows users is to run Ubuntu Linux 12.04 within a Virtual Machine and install the rmtk following the instructions above. Up-to-date VirtualBox images containing the OpenQuake-engine and platform, and the Hazard and Risk Modeller's Toolkits are available here: \href{http://www.globalquakemodel.org/openquake/start/download/}{http://www.globalquakemodel.org/openquake/start/download/}
+
+Knowledge of the Python programming language is not necessary in order to use the tools provided in the Risk Modeller's Toolkit. Nevertheless, a basic understanding of the data types and concepts of Python will come in handy if you are interested in modifying or enhancing the standard scripts provided in the toolkit. If you’ve never used Python before, the official \href{https://docs.python.org/2/tutorial/}{Python tutorial} is a good place to start. \href{http://www.swaroopch.com/notes/python/}{A Byte of Python} is also a well-written guide to Python and a great reference for beginners. Appendix \ref{sec:python_guide} at the end of this user manual also provides a quick-start guide to Python.
