@@ -106,11 +106,7 @@
   Title                    = {Eurocode 8: Design of Structures for Earthquake Resistance - Part 1: General rules,
 seismic actions and rules for buildings.},
   Author                   = {CEN},
-<<<<<<< HEAD:Bibliography/rmtk.bib
   Institution              = {Comite Europeen de Normalisation, Brussels, Belgium},
-=======
-  Institution              = {ComitŽ EuropŽen de Normalisation, Brussels, Belgium},
->>>>>>> origin/master:bibliography/rmtk.bib
   Year                     = {2005},
   Number                   = {EN 1998-2},
 
@@ -205,13 +201,8 @@ seismic actions and rules for buildings.},
   Author                   = {Dolsek, Matjaz and Fajfar, Peter},
   Journal                  = {Earthquake Engineering and Structural Dynamics},
   Year                     = {2004},
-<<<<<<< HEAD:Bibliography/rmtk.bib
   Number                   = {25},
   Pages                    = {1395-1416},
-=======
-  Number                   = {15},
-  Pages                    = {1395Ã1416},
->>>>>>> origin/master:bibliography/rmtk.bib
   Volume                   = {33},
 
   Owner                    = {vitorsilva},
@@ -408,135 +399,4 @@ seismic actions and rules for buildings.},
   Year                     = {2007},
 
   Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.21}
-}
-
-@TechReport{RezaeianEtAl2012,
-  Title                    = {Spectral Damping Scaling Factors for Shallow Crustal Earthquakes in Active Tectonic Regions},
-  Author                   = {Rezaeian, S. and Bozorgnia, Y. and Idriss, I.M. and Campbell, K. and Abrahamson, N. and Silva, W.},
-  Institution              = {Pacific Earthquake Engineering Research Center, California, USA},
-  Year                     = {2012},
-  Number                   = {2012/01},
-  Type                     = {PEER Report},
-
-  Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.22}
-}
-
-@Article{RossettoElnashai2005,
-  Title                    = {A new analytical procedure for the derivation of displacement-based vulnerability curves for populations of RC structures},
-  Author                   = {Rossetto, Tiziana and Elnashai, Amr},
-  Journal                  = {Engineering Structures},
-  Year                     = {2005},
-  Pages                    = {397-409},
-  Volume                   = {27},
-
-  Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.29}
-}
-
-@Article{RuizGarciaMiranda2007,
-  Title                    = {Probabilistic estimation of maximum inelastic displacement demands for performance-based design},
-  Author                   = {Ruiz-Garcia, J. and Miranda, E.},
-  Journal                  = {Earthquake Engineering and Structural Dynamics},
-  Year                     = {2007},
-  Pages                    = {1235-1254},
-  Volume                   = {36},
-
-  Owner                    = {chiaracasotto},
-  Timestamp                = {2014.07.07}
-}
-
-@Article{SilvaEtAl2014a,
-  Title                    = {Development of the OpenQuake engine, the Global Earthquake Model open-source software for seismic risk assessment},
-  Author                   = {Vitor Silva and Helen Crowley and Marco Pagani and Damiano Monelli and Rui Pinho},
-  Journal                  = {Natural Hazards},
-  Year                     = {2014},
-  Number                   = {3},
-  Pages                    = {1409-1427},
-  Volume                   = {72},
-
-  __markedentry            = {[vitorsilva:]},
-  ISSN                     = {0921-030X, 1573-0840},
-  Language                 = {en},
-  Urldate                  = {2015-06-04}
-}
-
-@Article{SilvaEtAl2014b,
-  Title                    = {Evaluation of Analytical Methodologies Used to Derive Vulnerability Functions},
-  Author                   = {Silva, Vitor and Crowley, Helen and Pinho, Rui and Varum, Humberto},
-  Journal                  = {Earthquake Engineering and Structural Dynamics},
-  Year                     = {2014},
-  Number                   = {2},
-  Pages                    = {181-204},
-  Volume                   = {43},
-
-  Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.23}
-}
-
-@Article{SilvaEtAl2014c,
-  Title                    = {Investigation of the characteristics of Portuguese regular moment-frame RC buildings and development of a vulnerability model},
-  Author                   = {Silva, Vitor and Crowley, Helen and Pinho, Rui and Varum, Humberto},
-  Journal                  = {Bulletin of Earthquake Engineering},
-  Year                     = {2014},
-
-  Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.29}
-}
-
-@Article{SilvaEtAl2013,
-  Title                    = {Extending Displacement-Based Earthquake Loss Assessment (DBELA) for the Computation of Fragility Curves.},
-  Author                   = {Silva, V and Crowley, H and Pinho, R and Varum, H},
-  Journal                  = {Engineering Structures},
-  Year                     = {2013},
-  Pages                    = {343-356},
-  Volume                   = {56},
-
-  Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.22}
-}
-
-@TechReport{Vamvatsikos2014,
-  Title                    = {A static pushover methodology for extracting fragility curves with record-to-record dispersion information},
-  Author                   = {Vamvatsikos, D.},
-  Institution              = {GEM foundation},
-  Year                     = {2014},
-
-  Owner                    = {chiaracasotto},
-  Timestamp                = {2014.07.07}
-}
-
-@Article{VamvatsikosCornell2005,
-  Title                    = {Direct Estimation of the Seismic Demand and Capacity of Oscillators with Multi-Linear Static Pushovers through IDA},
-  Author                   = {Vamvatsikos, D. and Cornell, A.},
-  Journal                  = {Earthquake Engineering and Structural Dynamics},
-  Year                     = {2005},
-  Pages                    = {1-20},
-  Volume                   = {0},
-
-  Owner                    = {chiaracasotto},
-  Timestamp                = {2014.07.07}
-}
-
-@Article{VidicEtAl1994,
-  Title                    = {Consistent inelastic design spectra: Strength and displacement.},
-  Author                   = {Vidic, T. and Fajfar, P. and Fischinger M.},
-  Journal                  = {Earthquake Engineering and Structural Dynamics},
-  Year                     = {1994},
-  Number                   = {5},
-  Pages                    = {507-521},
-  Volume                   = {23},
-
-  Owner                    = {vitorsilva},
-  Timestamp                = {2015.06.18}
-}
-
-@comment{jabref-meta: selector_publisher:}
-
-@comment{jabref-meta: selector_author:}
-
-@comment{jabref-meta: selector_journal:}
-
-@comment{jabref-meta: selector_keywords:}
-
+  Timestamp    
