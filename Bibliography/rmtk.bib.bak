@@ -106,7 +106,11 @@
   Title                    = {Eurocode 8: Design of Structures for Earthquake Resistance - Part 1: General rules,
 seismic actions and rules for buildings.},
   Author                   = {CEN},
+<<<<<<< HEAD:Bibliography/rmtk.bib
   Institution              = {Comite Europeen de Normalisation, Brussels, Belgium},
+=======
+  Institution              = {ComitŽ EuropŽen de Normalisation, Brussels, Belgium},
+>>>>>>> origin/master:bibliography/rmtk.bib
   Year                     = {2005},
   Number                   = {EN 1998-2},
 
@@ -201,8 +205,13 @@ seismic actions and rules for buildings.},
   Author                   = {Dolsek, Matjaz and Fajfar, Peter},
   Journal                  = {Earthquake Engineering and Structural Dynamics},
   Year                     = {2004},
+<<<<<<< HEAD:Bibliography/rmtk.bib
   Number                   = {25},
   Pages                    = {1395-1416},
+=======
+  Number                   = {15},
+  Pages                    = {1395Ã1416},
+>>>>>>> origin/master:bibliography/rmtk.bib
   Volume                   = {33},
 
   Owner                    = {vitorsilva},
