@@ -1,1 +1,50 @@
-To be completed by Anirudh.
+The derivation of fragility models requires the definition of a criterium to allocate one (or mutiple) structures in a set of damage states, according to their nonlinear structural response. These rules to relate structural response with physical damage can vary significantly across the literature. The displacement-based methodologies frequently adopt the strain on the concrete and steel (e.g. \cite{BorziEtAl2008b}; \cite{SilvaEtAl2013}). The vast majority of the methodologies that require equivalent linearization or nonlinear time history analysis adopt interstorey drifts (e.g. \cite{VamvatsikosCornell2005}; \cite{RossettoElnashai2005}), or spectral displacement calculated based on a pushover curve (e.g. \cite{Erberik2008}; \cite{SilvaEtAl2014c}). The various rules dictated by the damage model are currently being stored in a \verb=csv= file (tabular format), as illustrated below for each type of model.
+
+\subsubsection{Strain-based damage criterium}
+\label{subsubsec:strain-dmg}
+
+
+\subsubsection{Capacity curve-based damage criterium}
+\label{subsubsec:strain-dmg}
+Several existing studies (e.g. \cite{Erberik2008}; \cite{SilvaEtAl2014c}; \cite{CasottoEtAl2005}) have relied on capacity curves (spectral displacement versus spectral acceleration) or pushover curves (roof displacement versus base shear) to define a set of damage thresholds. In the vast majority of these studies, the various limit states are defined as a function of the displacement at the yielding point (\verb=Sdy=), the maximum spectral acceleration (or base shear), and/or of the ultimate displacement capacity (\verb=Sdu=). For this, the mechanism that has been implemented in the RMTK is considerably flexible, and allows users to define a set of limit states following the options below:\\
+
+\begin{enumerate}
+ \item \verb=fraction Sdy=: this limit state is defined as a fraction of the displacement at the yeilding point (\verb=Sdy=) (e.g. 0.75 of \verb=Sdy=)
+ \item \verb=Sdy= this limit state is equal to the displacement at the yielding point, usually marking the initiation of structural damage.
+ \item \verb=max Sa= this limit state is defined at the displcament at the maximum spectral acceleration. 
+ \item \verb=mean Sdy Sdu= this limit state is equal to the mean between the displacement at the yielding point (\verb=Sdy=) and ultimate displacement capacity (\verb=Sdu=).
+ \item \verb=X Sdy Y Sdu= this limit state is defined as the weigthed mean between the displacement at the yielding point (\verb=Sdy=) and ultimate displacement capacity (\verb=Sdu=). X represents the weigth associated with the former displacement, and Y corresponds to the weigth of the latter (e.g. 1 Sdy 4 sdu).
+ \item \verb=fraction Sdu= this limit state is defined as a fraction of the ultimate displacement capacity (\verb=Sdu=) (e.g. 0.75 of \verb=Sdy=)
+ \item \verb=Sdu= this limit state is equal to ultimate displacement capacity (\verb=Sdu=), usually marking the point beyond which structural collapse is assumed to occur.\\
+\end{enumerate}
+
+In order to create a damage model based on this criterium, it is necessary to define the parameter \verb=Type= as \verb=capacity curve dependent=. Then, each limit state needs to be defined by a name (e.g. slight damage), type of criterium (as defined in the aformentioned list) and a pottential probabilistic model (as described in the previous sub-section). An example of a damage model considering all of the possible options described in the previous list is presented in Table \ref{table:cc_dmg}, and illustrated in Figure \ref{fig:cc_damage_model}.
+
+\begin {table}[htb]
+\caption{Example of a capacity curve dependent damage model.} 
+\label{table:cc_dmg} 
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c |}
+  \hline
+    Type & capacity curve dependent &  &  & \\ \hline
+    Damage States & Criteria & distribution & Mean & Cov \\ \hline
+    LS1 & fraction Sdy & lognormal & 0.75 & 0.0 \\ \hline
+    LS2 & Sdy & normal &  & 0.0 \\ \hline
+    LS3 & max Sda & normal &  & 0.0 \\ \hline
+    LS4 & mean Sdy Sdu & normal &  & 0.0 \\ \hline
+    LS5 & 2 Sdy 4 Sdu & normal &  & 0.0 \\ \hline
+    LS6 & fraction Sdu & normal & 0.85 & 0.0 \\ \hline
+    LS7 & Sdu & normal &  & 0.0 \\ \hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[htb]
+  \centering
+      \includegraphics[width=9cm]{Figures/cc_damage_model.png}
+  \caption{Representation of the possible options for the definition of the limit datates using a capacity curve.}
+  \label{fig:cc_damage_model}
+\end{figure}
+
+\subsubsection{Interstorey drift-based damage criterium}
+\label{subsubsec:strain-dmg}
