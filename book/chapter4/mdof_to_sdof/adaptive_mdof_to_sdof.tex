@@ -1,1 +1,16 @@
-To be completed by Anirudh.
+The equivalent system displacement $\Delta_{sys,k}$ at step $k$ is calculated as:
+\begin{equation}
+	\Delta_{sys,k} = \frac{\sideset{}{_i}\sum m_i \Delta_{i,k}^2}{\sideset{}{_i}\sum m_i \Delta_{i,k}}
+\end{equation}
+Note that $\Delta_{sys,k}$ is defined to be the inverse of the modal participation factor.
+
+The equivalent system acceleration $\S_{a-cap,k}$ at step $k$ is calculated as:
+\begin{equation}
+	S_{a-cap,k} = \frac{V_{b,k}}{M_{sys,k} g}
+\end{equation}
+
+The equivalent system mass $M_{sys,k}$ is defined as:
+\begin{equation}
+	M_{sys,k} = \frac{\sideset{}{_i}\sum m_i \Delta_{i,k}}{M_{sys,k} g}
+\end{equation}
+Note that $M_{sys,k}$ is defined as the inverse of the and modal mass

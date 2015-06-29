@@ -1,71 +1,35 @@
-\section{Getting started}
-The Risk Modeller's Toolkit makes extensive use of the Python programming language and the web-browser based interactive IPython notebook interface. As with OpenQuake, the preferred working environment is Ubuntu (12.04 or later) or Mac OS X. At present, the user  must install the dependencies manually. An effort has been made to keep the number of additional dependencies to a minimum. More information regarding the current dependencies of the toolkit can be found at \href{http://github.com/GEMScienceTools/rmtk}{http://github.com/GEMScienceTools/rmtk}.
 
-The current dependencies are:
-\begin{itemize}
-\item Numpy and Scipy (included in the standard OpenQuake installation)
-% \item OpenQuake RiskLib (included in the standard OpenQuake installation)
-%     \hfill \\ (\href{http:/github.com/gem/oq-risklib}{http:/github.com/gem/oq-risklib})
-\item Matplotlib (\href{http://matplotlib.org/}{http://matplotlib.org/})
-\end{itemize}
 
-The Matplotlib library can be installed easily from the command line by:
+Hazard and risk modelling
 
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
-~\$ sudo pip install matplotlib
-\end{Verbatim}
+OpenQuake and others
 
-The Risk Modeller's Toolkit itself requires no specific installation. In a Unix/Linux environment you can simply download the code as a zipped package from the website shown previously, then unzip and move into the code directory. Alternatively you can download the code directly into any current repository with the command
+Need for tools to prepare input models
 
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
-~\$ git clone https://github.com/GEMScienceTools/rmtk.git
-\end{Verbatim}
 
-To enable usage of the rmtk within any location in the operating system, OS X and Linux users should add the path to the rmtk folder to their profile file. This can be done as follows:
 
-\begin{enumerate}
-\item Using a command line text editor (e.g. VIM or Emacs), open the \verb=~/.profile= folder as follows:
+The OpenQuake software provides state-of-the-art scenario-based and probabilistic seismic hazard and risk calculators.
 
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
-~\$ vim ~/.profile
-\end{Verbatim}
+The currently available functionalities of the toolkit are shown graphically in Figure~\ref{fig:rmtk-structure} and described in more detail in Section~\ref{sec:features}.
 
-\item At the bottom of the profile file add the line:
+As with the OpenQuake-engine, the rmtk is developed primarily using the Python programming language and released under the GNU Affero open-source license. The rmtk software and user manual are updated regularly by scientists and engineers working within the Global Earthquake Model Foundation. The latest version of the software is available on an open GitHub repository: \href{https://github.com/GEMScienceTools/rmtk}{https://github.com/GEMScienceTools/rmtk}. The user manual for the rmtk can be downloaded here: \href{https://github.com/GEMScienceTools/rmtk_docs}{https://github.com/GEMScienceTools/rmtk\_docs}.
 
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
-export PYTHONPATH=/path/to/rmtk/folder/:\$PYTHONPATH
-\end{Verbatim}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\textwidth]{figures/rmtk_structure.png}
+	\caption{The modular structure of the Risk Modeller's Toolkit (rmtk), showing the currently available functionalities}
+	\label{fig:rmtk-structure}
+\end{figure}
 
-Where \verb=/path/to/rmtk/folder/= is the system path to the location of the rmtk folder (use the command \verb=pwd= from within the rmtk folder to view the full system path).
 
-\item Reload the profile file using the command
 
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize]
-~\$ source ~/.profile
-\end{Verbatim}
 
-\end{enumerate}
 
-The IPython Notebook is a browser-based notebook which provides support for interactive coding, text, mathematical expressions, inline plots and other rich media. Static notebooks can also be created for recording and distributing the results of the rich computations.
+% The methodology of probabilistic seismic hazard analysis (PSHA) is well established as means of characterising the level of ground motion to which a location may be subjected to within a given time period. Originating from the work of Cornell (1968) and McGuire (1976), the fundamentals of the PSHA calculation have remained constant, albeit modern PSHA analysis incorporate greater complexity in the characterisation of the source, path and site effects, whilst analysis of epistemic uncertainty is now standard practice. State-of-the-art PSHA calculation software is now freely available (e.g., CRISIS (Ordaz et al., 2013), OpenSHA (Field et al., 2003) and OpenQuake (Pagani et al., 2014)) permitting a wider implementation of PSHA globally. While such developments may provide greater consistency in the implementation of seismic hazard analysis, the process of constructing the probabilistic seismic hazard input models is far less standardised and few tools are available for this specific purpose. This lack of tools may drive modellers to use tools that, although powerful, are not specifically designed for the creation of PSHA models. Alternatively, seismic hazard modellers justifiably create their own implementations of standard methodologies, leading to a possible lack of implementation consistency and quality assurance, even if the methods selected in the model preparation process were the same.
+% The Global Earthquake Model (GEM) has a strong commitment to ensuring reproducibility, transparency and accessibility in all aspects of the seismic hazard modelling process. This is demonstrated by open standards followed in construction the OpenQuake-engine, a software for calculation of probabilistic seismic hazard and risk (e.g. public code repositories, open licenses) and, the development processes (e.g. agile, test-driven development, code review) that represent the best- practices in open-source software development (Pagani et al., 2014). There is, therefore, a clear motivation for extending this philosophy to the process of model preparation. This has lead us to the development of the Hazard Modeller’s Toolkit (hmtk), an open-source library for the development of probabilistic seismic hazard input models.
+% As with the OpenQuake-engine, the “hmtk” is developed in the Python programming language and released under the GNU Affero open-source license. The code is available in an open Github repository (https://github.com/GEMScienceTools/hmtk) alongside a live open documentation and tutorial repository (https://github.com/GEMScienceTools/hmtk_documentation). Following standard open-source practice, code and libraries submitted to the “hmtk” require a high-level of testing and undergo review from scientists working in the GEM Model Facility. The “hmtk” is does not necessarily operate as a software, but as a library of methods and functions that can be manipulated by the modeller to address the specific needs of a particular workflow. Auxiliary tools are also built-in, which allow the user more flexibility in how to link methods together in a workflow.
+%Whilst OpenQuake itself is designed to fullfill the need for open and tested software for PSHA calculation, it does not explicitly address the issue of PSHA model construction. A PSHA model can be broken down into three components: the seismogenic source model(s), the ground motion prediction equations and the logic tree to characterise the model-to-model uncertainty in an equation. GEM is now in the process of endeavouring to extend the OpenQuake development approach to the area of PSHA model construction. It has done so with the development of two “Modeller’s Toolkit’s:
+% 1. The Hazard Modeller’s Toolkit, a suite of open-source tools for the preparation of seismogenic source models for application in PSHA Weatherill, 2014
+% 2. The OpenQuake Ground Motion Toolkit, a suite of open-source tools for analysis and interpretation of observed ground motions and ground motion prediction equations, for the purposes of GMPE selection in PSHA
 
-If you already have Python installed , you can get IPython along with the dependencies for the IPython notebook using pip:
-
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize, samepage=true]
-~\$ sudo pip install "ipython[notebook]"
-\end{Verbatim}
-
-A notebook session can be started via the command line:
-
-\begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize, samepage=true]
-~\$ ipython notebook
-\end{Verbatim}
-
-This will print some information about the notebook server in your console, and open a web browser to the URL of the web application (by default, http://127.0.0.1:8888).
-
-The landing page of the IPython notebook web application, the dashboard, shows the notebooks currently available in the notebook directory (by default, the directory from which the notebook server was started).
-
-You can create new notebooks from the dashboard with the New Notebook button, or open existing ones by clicking on their name.
-
-At present, the recommended approach for Windows users is to run Ubuntu Linux 12.04 within a Virtual Machine and install the rmtk following the instructions above. Up-to-date VirtualBox images containing the OpenQuake-engine and platform, and the Hazard and Risk Modeller's Toolkits are available here: \href{http://www.globalquakemodel.org/openquake/start/download/}{http://www.globalquakemodel.org/openquake/start/download/}
-
-Knowledge of the Python programming language is not necessary in order to use the tools provided in the Risk Modeller's Toolkit. Nevertheless, a basic understanding of the data types and concepts of Python will come in handy if you are interested in modifying or enhancing the standard scripts provided in the toolkit. If you’ve never used Python before, the official \href{https://docs.python.org/2/tutorial/}{Python tutorial} is a good place to start. \href{http://www.swaroopch.com/notes/python/}{A Byte of Python} is also a well-written guide to Python and a great reference for beginners. Appendix \ref{sec:python_guide} at the end of this user manual also provides a quick-start guide to Python.
+% The Risk Modeller's Toolkit (rmtk) comprises a suite of highly useful tools designed to create a smooth and efficient workflow for a seismic risk modeller. The functionality provided by the rmtk ranges from preparation of input models for a risk analysis to post-processing and visualising the results from OpenQuake risk analyses. The rmtk makes it possible for a risk modeller to select from several commonly used methods to derive seismic fragility or vulnerability functions for individual buildings or a class of buildings.
