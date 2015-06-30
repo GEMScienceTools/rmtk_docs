@@ -1,5 +1,5 @@
 The Displacement-based Earthquake Loss Assessment (DBELA) methodology permits the calculation of the displacement capacity of a collection of structures at a number of limit states (which could be structural or non-structural). These displacements are derived based on the capacity of an equivalent SDOF structure, following the principles of structural mechanics (\cite{CrowleyEtAl2004}; \cite{BalEtAl2010}; \cite{SilvaEtAl2013}).\\
-The displacement at the height of the centre of seismic force of the original structure ($H_{CSF}$) can be estimated by multiplying the base rotation by the height of the equivalent SDOF structure ($H_{SDOF}$), which is obtained by multiplying the total height of the actual structure ($H_T$) by an effective height ratio ($ef_h$), as illustrated in Figure \ref{fig:efh}:
+The displacement at the height of the centre of seismic force of the original structure ($H_{CSF}$) can be estimated by multiplying the base rotation by the height of the equivalent SDOF structure ($H_{SDOF}$), which is obtained by multiplying the total height of the actual structure ($H_T$) by an effective height ratio ($ef_h$), as illustrated in Figure \ref{fig:efh}:
 
 \begin{figure}[htb]
   \centering
@@ -7,25 +7,28 @@ The Displacement-based Earthquake Loss Assessment (DBELA) methodology permits th
   \caption{Definition of effective height coefficient \cite{GlaisterPinho2003}.}
   \label{fig:efh}
 \end{figure}
- \cite{PinhoEtAl2002} and \cite{GlaisterPinho2003} proposed formulae for estimating the effective height coefficient for different response mechanisms. For what concerns the beam sway mechanism (or distributed plasticity mechanism, as shown in Figure \ref{fig:mechanisms}), a ratio of 0.64 is proposed for structures with 4 or less storeys, and 0.44 for structures with 20 or more storeys. For any structures that might fall within these limits, linear interpolation should be employed. With regards to the column-sway mechanism (or concentrated plasticity mechanism, as shown in Figure \ref{fig:mechanisms}), the deformed shapes vary from a linear profile (pre-yield) to a non-linear profile (post-yield). As described in \cite{GlaisterPinho2003}, a coefficient of 0.67 is assumed for the pre-yield response and the following simplified formula can be applied post-yield (to attempt to account for the ductility dependence of the effective height post-yield coefficient):
- \begin{equation}
+ 
+\cite{PinhoEtAl2002} and \cite{GlaisterPinho2003} proposed formulae for estimating the effective height coefficient for different response mechanisms. For what concerns the beam sway mechanism (or distributed plasticity mechanism, as shown in Figure \ref{fig:mechanisms}), a ratio of 0.64 is proposed for structures with 4 or less storeys, and 0.44 for structures with 20 or more storeys. For any structures that might fall within these limits, linear interpolation should be employed. With regards to the column-sway mechanism (or concentrated plasticity mechanism, as shown in Figure \ref{fig:mechanisms}), the deformed shapes vary from a linear profile (pre-yield) to a non-linear profile (post-yield). As described in \cite{GlaisterPinho2003}, a coefficient of 0.67 is assumed for the pre-yield response and the following simplified formula can be applied post-yield (to attempt to account for the ductility dependence of the effective height post-yield coefficient):
+ 
+\begin{equation}
 ef_h = 0.67 - 0.17\frac{\epsilon_{s(LS_i)}-\epsilon_y}{\epsilon_{s(LS_i)}}
-\end{equation} 
+\end{equation}
+ 
 \begin{figure}[htb]
   \centering
       \includegraphics[width=10cm]{Figures/collapse_mechanisms.png}
   \caption{Deformed profiles for beam-sway (left) and column-sway (right) mechanisms\cite{PaulayPriestley2002}.}
   \label{fig:mechanisms}
 \end{figure}
-The displacement capacity at different limit states (either at yield ($\delta_y$) or post-yield ($\delta_{(LSi)}$) for bare frame or infilled reinforced concrete structures can be computed using simplified formulae, which are distinct if the structure is expected to exhibit a beam- or column-sway failure mechanism. These formulae can be found in \cite{BalEtAl2010} or \cite{SilvaEtAl2013}, and their mathematical formulation is described in detail in \cite{CrowleyEtAl2004}.\\
+The displacement capacity at different limit states (either at yield ($\delta_y$) or post-yield ($\delta_{(LSi)}$) for bare frame or infilled reinforced concrete structures can be computed using simplified formulae, which are distinct if the structure is expected to exhibit a beam- or column-sway failure mechanism. These formulae can be found in \cite{BalEtAl2010} or \cite{SilvaEtAl2013}, and their mathematical formulation is described in detail in \cite{CrowleyEtAl2004}.\\
 
 In order to estimate whether a given frame will respond with a beam- or a column-sway mechanism it is necessary to evaluate the properties of the storey. A deformation-based index ($R$) has been proposed by \cite{AboElEzz2008} which reflects the relation between the stiffness of the beams and columns. This index can be computed using the following formula:
-\begin{equation}
+\begin{equation}
 R = \frac{^{h_b}/_{l_b}}{^{h_c}/_{l_c}}
 \end{equation}
 
 Where $l_c$ stands for the column length. \cite{AboElEzz2008} proposed some limits for this index applicable to bare and fully infilled frame structures, as described in Table \ref{table:AboElEzz2008}.
-\begin {table}[htb]
+\begin {table}[htb]
 \caption{Limits for the deformation-based sway index proposed by \cite{AboElEzz2008}} 
 \label{table:AboElEzz2008} 
 \begin{center}

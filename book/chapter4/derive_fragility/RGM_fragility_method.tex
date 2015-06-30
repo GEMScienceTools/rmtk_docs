@@ -1,8 +1,8 @@
-The relationship between the 16$^{th}$, 50$^{th}$ and 84$^{th}$ fractiles of $\mu$ and R needs to be drawn, as represented in Figure \ref{fig:Rmu}. This is done by computing $\beta_{\theta d}$ for a discretised number of R with eq. \ref{eq:beta_eq_RGM}, and obtaining from this value the 16$^{th}$ and 84$^{th}$ fractiles of $\mu$ ($\mu_{16\%}$ and $\mu_{84\%}$), according to the Equations \ref{eq:mu16-beta} and \ref{eq:mu84-beta}.
+fThe relationship between the 16$^{th}$, 50$^{th}$ and 84$^{th}$ fractiles of $\mu$ and R needs to be drawn, as represented in Figure \ref{fig:Rmu}. This is done by computing $\beta_{\theta d}$ for a discretised number of R with eq. \ref{eq:beta_eq_RGM}, and obtaining from this value the 16$^{th}$ and 84$^{th}$ fractiles of $\mu$ ($\mu_{16\%}$ and $\mu_{84\%}$), according to the Equations \ref{eq:mu16-beta} and \ref{eq:mu84-beta}.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=8cm]{./figures/Rmu.jpg}
+\includegraphics[width=8cm]{figures/Rmu.jpg}
 \caption{R-$\mu$ relationship.}
 \label{fig:Rmu}
 \end{figure}
@@ -26,7 +26,7 @@ If uncertainty in the damage criteria $\beta_{\theta c}$ is equal to 0 the $R_{5
 \begin{equation}
 \beta_{S_{a d}} = \beta_{R(\mu)} = \frac{\ln R(\mu)_{84\%} - \ln R(\mu)_{16\%}}{2}
 \label{eq:betaR}
-\end{equation} 
+\end{equation}
 
 where
 \begin{equation}
@@ -42,7 +42,7 @@ MC random S$_a$ for each of the MC sampled ductility limit states are computed u
 \subsubsection{Multiple-Building Fragility and Vulnerability function}
 \label{subsubsec:multiple-buildings}
 If multiple buildings have been input to derive fragility function for a class of buildings all $\hat{S}_{a, blg}$ and $\beta_{S_a, blg}$ are combined in a single lognormal curve. A minimum of 5 buildings should be considered to obtain reliable results for the class.\\ 
-A new issue arises when multiple buildings are considered: the S$_a$ at the fundamental period of each building should be converted to a common intensity measure, to be able to combine the different fragility functions. A common intensity measure is selected to be S$_a$ at the period T$_{av}$, which is a weighted average of the individual building fundamental periods T$_1$. Then each individual fragility needs to be expressed in terms of the common S$_a$(T$_{av}$), using a spectrum. FEMA P-695 far field set of 44 accelerograms (22 records for the two directions) was used to derive a mean uniform hazard spectrum, and the ratio between the S$_a$ at different periods is used to scale the fragility functions. It can be noted that the actual values of the spectrum are not important, but just the spectral shape. 
+A new issue arises when multiple buildings are considered: the S$_a$ at the fundamental period of each building should be converted to a common intensity measure, to be able to combine the different fragility functions. A common intensity measure is selected to be S$_a$ at the period T$_{av}$, which is a weighted average of the individual building fundamental periods T$_1$. Then each individual fragility needs to be expressed in terms of the common S$_a$(T$_{av}$), using a spectrum. FEMA P-695 far field set of 44 accelerograms (22 records for the two directions) was used to derive a mean uniform hazard spectrum, and the ratio between the S$_a$ at different periods is used to scale the fragility functions. It can be noted that the actual values of the spectrum are not important, but just the spectral shape.
 The median $\hat{S}_a$ is converted to the mean $\mu_{ln(S_a)}$ of the corresponding normal distribution ($\mu_{ln(S_a)} = ln(\hat{S}_a)$) and, simply scaled to the common intensity measure as follows:
 
 \begin{equation}
