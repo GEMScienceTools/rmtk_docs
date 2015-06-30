@@ -23,3 +23,4 @@ rm *.run.xml
 rm *.toc
 rm -rf .texpadtmp
 rm -rf tex/.texpadtmp
+rm rmtk-docs-blx.bib
