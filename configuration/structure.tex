@@ -15,9 +15,8 @@
 \setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
 
 \usepackage{booktabs} % Required for nicer horizontal rules in tables
-
+\usepackage{listings} % Required for embedding code snippets
 \usepackage{eso-pic} % Required for specifying an image background in the title page
-\usepackage{fancyvrb} % Verbatim environment
 \usepackage{pdfpages} % Needed to load .pdf pages
 
 %----------------------------------------------------------------------------------------
@@ -27,26 +26,59 @@
 \usepackage{titletoc} % Required for manipulating the table of contents
 
 \contentsmargin{0cm} % Removes the default margin
+
+% \titlecontents{section}
+% 			  	[left]
+% 			  	{above}
+%  			  	{before with label}
+% 			  	{before without label}
+%  			  	{filler and page}
+% 			  	[after]
+
+% Part text styling
+\titlecontents{part}
+			  [0cm] % Indentation
+			  {\addvspace{24pt}\Large\sffamily\bfseries} % Spacing and font options for parts
+			  {\color{black!60}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{black}} % Part number
+			  {}
+			  {\color{black!60}\Large\sffamily\bfseries\hfill\thecontentspage} % Page number
+			  []
+
 % Chapter text styling
-\titlecontents{chapter}[1.25cm] % Indentation
-{\addvspace{15pt}\large\sffamily\bfseries} % Spacing and font options for chapters
-{\color{ocre!60}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{ocre}} % Chapter number
-{}  
-{\color{ocre!60}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+\titlecontents{chapter}
+			  [1.25cm] % Indentation
+			  {\addvspace{18pt}\large\sffamily\bfseries} % Spacing and font options for chapters
+			  {\color{darkgray!80}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{darkgray}} % Chapter number
+			  {\color{darkgray}}
+			  {\color{darkgray!40}\large\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\color{darkgray!80}\thecontentspage} % Page number
+			  []
+
 % Section text styling
-\titlecontents{section}[1.25cm] % Indentation
-{\addvspace{5pt}\sffamily\bfseries} % Spacing and font options for sections
-{\contentslabel[\thecontentslabel]{1.25cm}} % Section number
-{}
-{\sffamily\hfill\color{black}\thecontentspage} % Page number
-[]
+\titlecontents{section}
+			  [1.25cm] % Indentation
+			  {\addvspace{12pt}\sffamily\bfseries} % Spacing and font options for sections
+			  {\color{black!60}\contentslabel[\thecontentslabel]{1.25cm}\color{black}} % Section number
+			  {}
+			  {\color{black!20}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\color{black!60}\thecontentspage} % Page number
+			  []
+
 % Subsection text styling
-\titlecontents{subsection}[1.25cm] % Indentation
-{\addvspace{1pt}\sffamily\small} % Spacing and font options for subsections
-{\contentslabel[\thecontentslabel]{1.25cm}} % Subsection number
-{}
-{\sffamily\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
-[] 
+\titlecontents{subsection}
+			  [1.25cm] % Indentation
+			  {\addvspace{6pt}\sffamily\small} % Spacing and font options for subsections
+			  {\color{black!60}\contentslabel[\thecontentslabel]{1.25cm}\color{black}} % Subsection number
+			  {}
+			  {\color{black!20}\normalsize\sffamily\;\titlerule*[.5pc]{.}\;\color{black!60}\thecontentspage} % Page number
+			  []
+
+% Subsubsection text styling
+\titlecontents{subsubsection}
+			  [1.25cm] % Indentation
+			  {\addvspace{3pt}\sffamily\footnotesize} % Spacing and font options for subsubsections
+			  {\color{black!60}\contentslabel[\thecontentslabel]{1.25cm}\color{black}\em} % Subsubsection number
+			  {}
+			  {\color{black!20}\normalsize\sffamily\;\titlerule*[.5pc]{.}\;\color{black!60}\thecontentspage} % Page number
+			  []
 
 %----------------------------------------------------------------------------------------
 %	MINI TABLE OF CONTENTS IN CHAPTER HEADS
@@ -65,7 +97,7 @@
 {}
 {}
 {}
- 
+
 %----------------------------------------------------------------------------------------
 %	PAGE HEADERS
 %----------------------------------------------------------------------------------------
@@ -158,7 +190,7 @@
 \makeatother
 
 % Defines the theorem text style for each type of theorem to one of the three styles above
-\newcounter{dummy} 
+\newcounter{dummy}
 \numberwithin{dummy}{section}
 \theoremstyle{ocrenumbox}
 \newtheorem{theoremeT}[dummy]{Theorem}
@@ -191,7 +223,7 @@ leftmargin=0cm,
 rightmargin=0cm,
 innerbottommargin=5pt]{tBox}
 
-% Exercise box	  
+% Exercise box
 \newmdenv[skipabove=7pt,
 skipbelow=7pt,
 rightline=false,
@@ -206,7 +238,7 @@ innertopmargin=5pt,
 innerbottommargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
-linewidth=4pt]{eBox}	
+linewidth=4pt]{eBox}
 
 % Definition box
 \newmdenv[skipabove=7pt,
@@ -222,7 +254,7 @@ innertopmargin=0pt,
 leftmargin=0cm,
 rightmargin=0cm,
 linewidth=4pt,
-innerbottommargin=0pt]{dBox}	
+innerbottommargin=0pt]{dBox}
 
 % Corollary box
 \newmdenv[skipabove=7pt,
@@ -243,10 +275,10 @@ innerbottommargin=5pt]{cBox}
 
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
-\newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
-\newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
-\newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
-\newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
+\newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}
+\newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}
+\newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}
+\newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}
 
 %----------------------------------------------------------------------------------------
 %	REMARK ENVIRONMENT
@@ -265,7 +297,7 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 \makeatletter
-\renewcommand{\@seccntformat}[1]{\llap{\textcolor{ocre}{\csname the#1\endcsname}\hspace{1em}}}                    
+\renewcommand{\@seccntformat}[1]{\llap{\textcolor{ocre}{\csname the#1\endcsname}\hspace{1em}}}
 \renewcommand{\section}{\@startsection{section}{1}{\z@}
 {-4ex \@plus -1ex \@minus -.4ex}
 {1ex \@plus.2ex }
@@ -277,11 +309,11 @@ innerbottommargin=5pt]{cBox}
 \renewcommand{\subsubsection}{\@startsection {subsubsection}{3}{\z@}
 {-2ex \@plus -0.1ex \@minus -.2ex}
 {.2ex \@plus.2ex }
-{\normalfont\small\sffamily\bfseries}}                        
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
+{\normalfont\small\sffamily\bfseries}}
+\renewcommand{\paragraph}{\@startsection {paragraph}{4}{\z@}
 {-2ex \@plus-.2ex \@minus .2ex}
 {.1ex}
-{\normalfont\small\sffamily\bfseries}}
+{\normalfont\small\sffamily\bfseries\em}}
 
 %----------------------------------------------------------------------------------------
 %	HYPERLINKS IN THE DOCUMENTS
@@ -289,7 +321,19 @@ innerbottommargin=5pt]{cBox}
 
 % For an unclear reason, the package should be loaded now and not later
 \usepackage{hyperref}
-\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=true,
+breaklinks=true,citecolor=darkblue,linkcolor=darkgray,urlcolor=ocre,bookmarks=true,
+bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+
+% Package to create a glossary - must be loaded after hyperref
+% to produce the glossary: makeglossaries oq-manual
+\usepackage[acronym,nonumberlist,style=altlist]{glossaries}
+\glstoctrue
+\makeglossaries
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER HEADINGS
@@ -328,7 +372,7 @@ innerbottommargin=5pt]{cBox}
 \fi
 \fi}
 
-% Unnumbered chapters without mini tableofcontents (could be added though) 
+% Unnumbered chapters without mini tableofcontents (could be added though)
 \def\@makeschapterhead#1{
 \thispagestyle{empty}
 {\centering \normalfont\sffamily
@@ -347,10 +391,10 @@ innerbottommargin=5pt]{cBox}
 }
 \makeatother
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %           PYTHON ENVIRONMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{language=Python} % For listings environment - use python
 \definecolor{Code}{rgb}{0,0,0}
 \definecolor{Decorators}{rgb}{0.5,0.5,0.5}
 \definecolor{Numbers}{rgb}{0.5,0,0}
