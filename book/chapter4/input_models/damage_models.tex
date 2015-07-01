@@ -64,4 +64,24 @@ In order to create a damage model based on this criterium, it is necessary to de
 \end{figure}
 
 \subsubsection{Interstorey drift-based damage criterium}
+Maximum interstorey drift is recoginsed by many (e.g. \cite{VamvatsikosCornell2005}; \cite{RossettoElnashai2005}) as a good proxy of the damage level of a structure, because it can detect the storey by storey state of deformation as opposed to global displacement. 
+
+The use of this damage model is quite simple: the parameter \verb=Type= in the csv file should be set to \verb=interstorey drift= and interstorey drift thresholds need to be defined for each damage state, in terms of median value and dispersion. 
+The probabilistic distribution of the damage thresholds implemented so far is lognormal. A different set of thresholds can be assigned to each structure, as in the example provided in Table \ref{table:dm_ISD}, but also a single set can be defined for the entire building population to be assessed.
+
+\begin {table}[htb]
+\caption{Example of a interstorey drift based damage model.} 
+\label{table:dm_ISD} 
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c | c |}
+  \hline
+    Type & interstorey drift &  &  & & \\ \hline
+    Damage States & distribution & Median & Dispersion & Median & Dispersion \\ \hline
+    LS1 & lognormal & 0.001 & 0.0 & 0.001 & 0.0 \\ \hline
+    LS2 & lognormal &  & 0.01 & 0.2 & 0.015 & 0.0 \\ \hline
+    LS3 & lognormal &  & 0.02 & 0.2 & 0.032 & 0.0 \\ \hline
+  \end{tabular}
+\end{center}
+\end{table}
+
 \label{subsubsec:strain-dmg}
