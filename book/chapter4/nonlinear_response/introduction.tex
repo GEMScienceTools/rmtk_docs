@@ -1,12 +1,12 @@
-The nonlinear static procedures described in this section allow the calculation of the seismic response of a number of structures (in terms of maximum displacement of the equivalent single degree of freedom (SDOF) system), considering a set of ground motion records (see Section \ref{subsec:gmrs}). The development of this methods involved numerical analysis of systems with particular structural and dynamic properties (e.g. periods of vibration, viscous damping, hysteretic behaviour, amongst others) and accelerograms selected for specific regions in the world (e.g. California, South Europe). For these reasons, their applicability to other types of structures and considering a different ground motion records calls for due care. This section provides a brief description of each methodology, but users are adviced to fully comprehend the chosen methodology by reading the original publication. \\
+The nonlinear static procedures described in this section allow the calculation of the seismic response of a number of structures (in terms of maximum displacement of the equivalent single degree of freedom (SDOF) system), considering a set of ground motion records (see Section~\ref{subsec:gmrs}). The development of this methods involved numerical analysis of systems with particular structural and dynamic properties (e.g. periods of vibration, viscous damping, hysteretic behaviour, amongst others) and accelerograms selected for specific regions in the world (e.g. California, South Europe). For these reasons, their applicability to other types of structures and considering a different ground motion records calls for due care. This section provides a brief description of each methodology, but users are advised to fully comprehend the chosen methodology by reading the original publications. \\
 
-The main results of each of these methodologies is a probability damage matrix (i.e. fraction of assets per damage state for each ground motion record, represented by the variable \verb=PDM=), and the spectral displacement (i.e. expected maximum displacement of the equivalent SDOF system, represented by the variable \verb=Sds=) per ground motion record. Using the probability damage matrix (\verb=PDM=), it is possible to derive a fragility model (i.e. probability of exceedance a number of damage states for a set of intensity measure levels - see Section \ref{subsec:derive_fragility}), or directly a vulnerability model (i.e. distribution of loss ratio for a set of intensity measure levels - see Section \ref{sec:derive_vulnerability}).
+The main results of each of these methodologies is a probability damage matrix (i.e. fraction of assets per damage state for each ground motion record, represented by the variable \verb=PDM=), and the spectral displacement (i.e. expected maximum displacement of the equivalent SDOF system, represented by the variable \verb=Sds=) per ground motion record. Using the probability damage matrix (\verb=PDM=), it is possible to derive a fragility model (i.e. probability of exceedance a number of damage states for a set of intensity measure levels - see Section~\ref{subsec:derive_fragility}), or directly a vulnerability model (i.e. distribution of loss ratio for a set of intensity measure levels - see Section~\ref{sec:derive_vulnerability}).
 
-Table \ref{table:PDM} comprises a probability damage matrix calculated considering 100 assets and 10 ground motion records. For the purposes of this example, an extra column has been added to this table in order to display the peak ground acceleration (PGA) of each accelerogram. 
+Table \ref{table:PDM} comprises a probability damage matrix calculated considering 100 assets and 10 ground motion records. For the purposes of this example, an extra column has been added to this table in order to display the peak ground acceleration (PGA) of each accelerogram.
 
 \begin {table}[htb]
-\caption{Example of probability damage matrix.} 
-\label{table:PDM} 
+\caption{Example of a probability damage matrix}
+\label{table:PDM}
 \begin{center}
   \begin{tabular}{ | c | c | c | c | c | c |}
   \hline
@@ -20,7 +20,7 @@ Table \ref{table:PDM} comprises a probability damage matrix calculated consideri
     0.435 & 0.00 & 0.00 & 0.53 & 0.32 & 0.15 \\ \hline
     0.720 & 0.00 & 0.00 & 0.26 & 0.45 & 0.29 \\ \hline
     0.822 & 0.00 & 0.00 & 0.16 & 0.48 & 0.36 \\ \hline
-    0.995 & 0.00 & 0.00 & 0.02 & 0.48 & 0.50  \\ \hline
+    0.995 & 0.00 & 0.00 & 0.02 & 0.48 & 0.50 \\ \hline
   \end{tabular}
 \end{center}
 \end{table}
