@@ -1,1 +1,12 @@
-This method allows the user to convert a pushover curve for an MDOF system into an equivalent SDOF capacity curve, considering the first mode of vibration only. The supplied pushover curve, which is in terms of base shear and roof displacement, is transformed into an equivalent SDOF capacity curve, which is in terms of spectral acceleration and spectral displacement. The properties of the equivalent SDOF model correspond to the properties of the first mode of vibration of the MDOF system. The roof displacement is converted to $S_d$ by normalising by the participation factor of the first mode of vibration, whereas the base shear is normalised to give $S_a$ using the the participation factor and modal mass for the first mode.
+This method allows the user to convert a pushover curve for an MDOF system into an equivalent SDOF capacity curve, considering the first mode of vibration only. The supplied pushover curve, which is in terms of base shear and roof displacement, is transformed into an equivalent SDOF capacity curve, which is in terms of spectral acceleration and spectral displacement. The properties of the equivalent SDOF model correspond to the properties of the first mode of vibration of the MDOF system. The roof displacement is converted to $S_d$ by normalising by the participation factor of the first mode of vibration, whereas the base shear is normalised to give $S_a$ using the the participation factor and modal mass for the first mode. Details of this conversion method can be found in \citet{ATC1996}, \citet{FEMA4402005}, and Eurocode 8 \citep{CEN2005}.
+
+The equivalent system acceleration $S_{a-capacity}$ and displacement $S_{d-capacity}$ are calculated as:
+\begin{equation}
+	S_{a-capacity} = \frac{V_{b-pushover}}{M_{1}^{*} g}
+\end{equation}
+
+\begin{equation}
+	S_{d-capacity} = \frac{\Delta_{roof}}{\Gamma_{1} \phi_{1, roof}}
+\end{equation}
+
+where 􏰁$\Gamma_{1}$ and $M_{1}^{*}$ are the modal participation factor and the modal mass of the first mode respectively, $\Delta_{roof}$ is the displacement of the roof, $\phi_{1, roof}$ is the roof displacement in the first mode, and $V_{b-pushover}$ is the total base shear from the pushover analysis.
