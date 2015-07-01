@@ -10,26 +10,44 @@ A summary of the methods available in the present version is given in Table \ref
 \begin{table}[!htbp]
 \centering
 \begin{tabular}{|l|l|} \hline
-\textbf{Module} & \textbf{Feature} \\ \hline
-Plotting & Hazard Curves \\
-Module   & Uniform Hazard Spectra \\
-         & Hazard Maps \\
-         & Ground Motion Fields \\
-         & Collapse Maps \\
-         & Scenario Loss Maps \\
-         & Probabilistic Loss Maps \\
-         & Loss Curves \\
-         & Damage Distribution \\ \hline
-Risk     & Probable Maximum Loss Calculator \\
-Module   & Logic-Tree Branch Selector \\ \hline
-\end{tabular}
-
-\begin{tabular}{|l|l|l|} \hline
-\textbf{Module} & \textbf{Feature} & \textbf{Methodology} \\ \hline
-Vulnerability   & Capacity Curve Generation & DBELA \\
-Module          & & SP-BELA \\
-                & & Point Dispersion \\ \hline
-
+\textbf{Module}     & \textbf{Feature / Methodology} \\ \hline
+\textbf{Plotting}   & Hazard Curves \\
+\textbf{Module}     & Uniform Hazard Spectra \\
+                    & Hazard Maps \\
+                    & Ground Motion Fields \\
+                    & Collapse Maps \\
+                    & Scenario Loss Maps \\
+                    & Probabilistic Loss Maps \\
+                    & Loss Curves \\
+                    & Damage Distribution \\
+                    & \\ \hline
+\textbf{Risk}       & Probable Maximum Loss Calculator \\
+\textbf{Module}     & Logic-Tree Branch Selector \\
+                    & \\ \hline
+\textbf{Vulnerability} & \textbf{Capacity Curve Generation} \\
+\textbf{Module}        & DBELA \\
+                    & SP-BELA \\
+                    & Point Dispersion \\
+                    & \\
+                    & \textbf{MDOF$\to$SDOF Conversion} \\
+                    & Single Mode of Vibration \\
+                    & Adaptive Approach \\
+                    & \\
+                    & \textbf{Direct Nonlinear Static Methods} \\
+                    & SPO2IDA \citep{VamvatsikosCornell2005} \\
+                    & \citet{DolsekFajfar2004} \\
+                    & \citet{RuizGarciaMiranda2007} \\
+                    & \\
+                    & \textbf{Record Based Nonlinear Static Methods} \\
+                    & \citet{VidicEtAl1994} \\
+                    & \citet{LinMiranda2008} \\
+                    & \citet{Miranda2000} for Firm Soils \\
+                    & N2 \citep{CEN2005} \\
+                    & Capacity Spectrum Method \citep{FEMA4402005} \\
+                    & DBELA \citep{SilvaEtAl2013} \\
+                    & \\
+                    & \textbf{Nonlinear Time History Analysis} \\
+                    & for SDOF Oscillators \\ \hline
 \end{tabular}
 \caption{Current features in the OpenQuake Risk Modeller's Toolkit}
 \label{tab:current_features}
