@@ -3,7 +3,7 @@ The research by \citep{RuizGarciaMiranda2007} provides a simple relationship for
 The relationship provided by \citep{RuizGarciaMiranda2007} has been adapted for MDoF systems (\citep{Vamvatsikos2014}), relating the inelastic top displacement of a structure $\hat{d}_{roof}$ to the median elastic spectral displacement value at its fundamental period of vibration $\hat{S}_{d}(T)$, as presented in the following equation:
 
 \begin{equation}
-\hat{S}_d(T_1) = \frac{\hat{d}_{roof}}{\hat{C}_R \Gamma_1 \Phi_1} 
+\hat{S}_d(T_1) = \frac{\hat{d}_{roof}}{\hat{C}_R \Gamma_1 \Phi_1}
 \label{eq:basic_DF}
 \end{equation}
 
@@ -46,7 +46,7 @@ The median value of $S_a$ corresponding to any level of ductility ($d_{roof}/d_y
 \label{fig:Rmu}
 \end{figure}
 
-For any inelastic displacement, and therefore any level of ductility $\mu$ the corresponding $R_{50\%}$, $R_{16\%}$, and $R_{84\%}$ values are found interpolating the aforementioned curves. Median R and its dispersion at ductility levels corresponding to the damage thresholds ds can thus be determined, and converted into median $S_{a, ds}$ and its dispersion due to record-to-record variability $\beta_{S_{a d}}$, according to equations \ref{eq:SaR} and \ref{eq:betaR}. 
+For any inelastic displacement, and therefore any level of ductility $\mu$ the corresponding $R_{50\%}$, $R_{16\%}$, and $R_{84\%}$ values are found interpolating the aforementioned curves. Median R and its dispersion at ductility levels corresponding to the damage thresholds ds can thus be determined, and converted into median $S_{a, ds}$ and its dispersion due to record-to-record variability $\beta_{S_{a d}}$, according to equations \ref{eq:SaR} and \ref{eq:betaR}.
 
 If dispersion in the damage state threshold is different from zero, different values of ductility limit state are sampled from the lognormal distribution with median the median value of the ductility limit state, and dispersion the input $\beta_{\theta c}$. For each of these ductilities the corresponding $R_{50\%}$, $R_{16\%}$, and $R_{84\%}$ values are found interpolating the $\mu_{50\%}-R_{50\%}$, $\mu_{16\%}-R_50\%$ and $\mu_{84\%}-R_50\%$ curves, and converted into $\hat{S}_{a,ds}$ and $\beta_{S_{a d}}$ according to Equations \ref{eq:SaR} and \ref{eq:betaR}. MC random S$_a$ for each of the MC sampled ductility limit states are computed using $\hat{S}_{a,ds}$ and $\beta_{S_{a d}}$, and their median and dispersion are estimated. These parameters constitute the median $\hat{S}_{a,ds}$ and the total dispersion $\beta_{S_a}$ for the considered damage state. The procedure is repeated for each damage state.
 

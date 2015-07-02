@@ -1,4 +1,4 @@
-The OpenQuake-engine offers the possibility of calculating seismic hazard and loss (or risk) maps. To do so, it utilizes the seismic hazard or loss exceedances curves, to estimate the corresponding hazard or loss for the pre-defined return period (or probability of exceedance within a given interval of time).
+The OpenQuake-engine offers the possibility of calculating seismic hazard and loss (or risk) maps. To do so, it utilizes the seismic hazard or loss exceedance curves, to estimate the corresponding hazard or loss for the pre-defined return period (or probability of exceedance within a given interval of time).
 
 \subsection{Plotting hazard maps}
 \label{subsec:plot-hazard_maps}
@@ -13,8 +13,9 @@ A seismic hazard map provides the expected ground motion (e.g. peak ground accel
 
 \subsection{Plotting loss maps}
 \label{subsec:plot-loss_maps}
-A loss map provides the estimated losses for a collection of assets, for a certain return period (or probability of exceedance within a given interval of time). It is important to understand that these maps are not providing the distribution of losses for a seismic event for the chosen return period, nor the losses whose sum would correspond to the aggreagted loss for the same return period. This type of maps is simply providing the expected loss for a specified level of frequency for each asset. 
-To use this feature, it is necessary to define the parth ot the output file using the parameter \verb=loss_map_file=, as well as the exposure model used to perform the risk calculations through the parameter \verb=exposure_model=. Then, similarly to what was explained in section \ref{subsec:plot-collapse_maps} for collapse maps, it is possible to follow three approaches to generate the loss maps:\\ 
+A loss map provides the estimated losses for a collection of assets, for a certain return period (or probability of exceedance within a given interval of time). It is important to understand that these maps are not providing the distribution of losses for a seismic event for the chosen return period, nor the losses whose sum would correspond to the aggregated loss for the same return period. This type of maps is simply providing the expected loss for a specified level of frequency for each asset.
+
+To use this feature, it is necessary to define the path of the output file using the parameter \verb=loss_map_file=, as well as the exposure model used to perform the risk calculations through the parameter \verb=exposure_model=. Then, similarly to what was explained in section \ref{subsec:plot-collapse_maps} for collapse maps, it is possible to follow three approaches to generate the loss maps:\\
 
 \begin{enumerate}
 \item Aggregated loss map only.
@@ -22,7 +23,7 @@ To use this feature, it is necessary to define the parth ot the output file usin
 \item Both aggregated and taxonomy-based.\\
 \end{enumerate}
 
-Then, there are a number of options that can be used to modify the style of the maps. These include the size of the marker of the map (\verb=marker_size=), the geographical limits of the map (\verb=bounding_box=), and the employment of a logarithmic spacing for the color scheme (\verb=log_scale=). An example loss map for a single vulnerability class is presented in Figure \ref{fig:loss_map}.
+Then, there are a number of options that can be used to modify the style of the maps. These include the size of the marker of the map (\verb=marker_size=), the geographical limits of the map (\verb=bounding_box=), and the employment of a logarithmic spacing for the colour scheme (\verb=log_scale=). An example loss map for a single vulnerability class is presented in Figure \ref{fig:loss_map}.
 
 \begin{figure}[htb]
   \centering
