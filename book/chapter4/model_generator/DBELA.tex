@@ -1,5 +1,5 @@
 The Displacement-based Earthquake Loss Assessment (DBELA) methodology permits the calculation of the displacement capacity of a collection of structures at a number of limit states (which could be structural or non-structural). These displacements are derived based on the capacity of an equivalent SDOF structure, following the principles of structural mechanics (\cite{CrowleyEtAl2004}; \cite{BalEtAl2010}; \cite{SilvaEtAl2013}).\\
-The displacement at the height of the centre of seismic force of the original structure ($H_{CSF}$) can be estimated by multiplying the base rotation by the height of the equivalent SDOF structure ($H_{SDOF}$), which is obtained by multiplying the total height of the actual structure ($H_T$) by an effective height ratio ($ef_h$), as illustrated in Figure \ref{fig:efh}:
+The displacement at the height of the centre of seismic force of the original structure ($H_{CSF}$) can be estimated by multiplying the base rotation by the height of the equivalent SDOF structure ($H_{SDOF}$), which is obtained by multiplying the total height of the actual structure ($H_T$) by an effective height ratio ($ef_h$), as illustrated in Figure~\ref{fig:efh}:
 
 \begin{figure}[htb]
   \centering
@@ -7,13 +7,13 @@ The displacement at the height of the centre of seismic force of the original st
   \caption{Definition of effective height coefficient \cite{GlaisterPinho2003}.}
   \label{fig:efh}
 \end{figure}
- 
-\cite{PinhoEtAl2002} and \cite{GlaisterPinho2003} proposed formulae for estimating the effective height coefficient for different response mechanisms. For what concerns the beam sway mechanism (or distributed plasticity mechanism, as shown in Figure \ref{fig:mechanisms}), a ratio of 0.64 is proposed for structures with 4 or less storeys, and 0.44 for structures with 20 or more storeys. For any structures that might fall within these limits, linear interpolation should be employed. With regards to the column-sway mechanism (or concentrated plasticity mechanism, as shown in Figure \ref{fig:mechanisms}), the deformed shapes vary from a linear profile (pre-yield) to a non-linear profile (post-yield). As described in \cite{GlaisterPinho2003}, a coefficient of 0.67 is assumed for the pre-yield response and the following simplified formula can be applied post-yield (to attempt to account for the ductility dependence of the effective height post-yield coefficient):
- 
+
+\cite{PinhoEtAl2002} and \cite{GlaisterPinho2003} proposed formulae for estimating the effective height coefficient for different response mechanisms. For what concerns the beam sway mechanism (or distributed plasticity mechanism, as shown in Figure \ref{fig:mechanisms}), a ratio of 0.64 is proposed for structures with 4 or less storeys, and 0.44 for structures with 20 or more storeys. For any structures that might fall within these limits, linear interpolation should be employed. With regards to the column-sway mechanism (or concentrated plasticity mechanism, as shown in Figure~\ref{fig:mechanisms}), the deformed shapes vary from a linear profile (pre-yield) to a non-linear profile (post-yield). As described in \cite{GlaisterPinho2003}, a coefficient of 0.67 is assumed for the pre-yield response and the following simplified formula can be applied post-yield (to attempt to account for the ductility dependence of the effective height post-yield coefficient):
+
 \begin{equation}
-ef_h = 0.67 - 0.17\frac{\epsilon_{s(LS_i)}-\epsilon_y}{\epsilon_{s(LS_i)}}
+  ef_h = 0.67 - 0.17\frac{\epsilon_{s(LS_i)}-\epsilon_y}{\epsilon_{s(LS_i)}}
 \end{equation}
- 
+
 \begin{figure}[htb]
   \centering
       \includegraphics[width=10cm]{Figures/collapse_mechanisms.png}
@@ -29,8 +29,8 @@ R = \frac{^{h_b}/_{l_b}}{^{h_c}/_{l_c}}
 
 Where $l_c$ stands for the column length. \cite{AboElEzz2008} proposed some limits for this index applicable to bare and fully infilled frame structures, as described in Table \ref{table:AboElEzz2008}.
 \begin {table}[htb]
-\caption{Limits for the deformation-based sway index proposed by \cite{AboElEzz2008}} 
-\label{table:AboElEzz2008} 
+\caption{Limits for the deformation-based sway index proposed by \cite{AboElEzz2008}}
+\label{table:AboElEzz2008}
 \begin{center}
   \begin{tabular}{ | c | c | c |}
   \hline
@@ -41,19 +41,19 @@ Where $l_c$ stands for the column length. \cite{AboElEzz2008} proposed some limi
 \end{center}
 \end{table}
 
-The calculation of the corresponding spectral aceleration is performed by assuming a perfectly elasto-plastic behaviour. Thus, the spectral displacement for the yeilding point is used to derive the associated acceleration through the following formula:
+The calculation of the corresponding spectral acceleration is performed by assuming a perfectly elasto-plastic behaviour. Thus, the spectral displacement for the yielding point is used to derive the associated acceleration through the following formula:
 
 \begin{equation}
 Sa_i = \frac{4\pi^2Sd_i}{T_y^2}
 \end{equation}
 
-Where $T_y$ stands for the yielding period which can be calculated using simplified formulae (e.g. \cite{CrowleyPinho2004}; \cite{CrowleyPinho2006}), as further explained in Section \ref{subsec:DBELA_Silva2013}. Due to the assumption of the elasto-plastic behaviour, the spectral acceleration for the remaining limit states (or spectral displacemens) will be the same (see Figure \ref{fig:DBELA_cc}). \\ 
+Where $T_y$ stands for the yielding period which can be calculated using simplified formulae (e.g. \cite{CrowleyPinho2004}; \cite{CrowleyPinho2006}), as further explained in Section~\ref{subsec:DBELA_Silva2013}. Due to the assumption of the elasto-plastic behaviour, the spectral acceleration for the remaining limit states (or spectral displacements) will be the same (see Figure~\ref{fig:DBELA_cc}).\\
 
-In order to use this methodology it is necessary to define a building model, which specifies the probabilistic distribution of the geometrical and material properties. This information is currently stored in a $csv$ file (tabular format), as presented in Table \ref{table:building_model}.
- 
+In order to use this methodology it is necessary to define a building model, which specifies the probabilistic distribution of the geometrical and material properties. This information is currently stored in a $csv$ file (tabular format), as presented in Table~\ref{table:building_model}.
+
 \begin {table}[htb]
-\caption{Example of a building model compatible with the DBELA method.} 
-\label{table:building_model} 
+\caption{Example of a building model compatible with the DBELA method.}
+\label{table:building_model}
 \begin{center}
   \begin{tabular}{ | l | l | l | l | l | l |}
   \hline
@@ -71,7 +71,7 @@ beam depth & lognormal & 0.6 & 0.16 & 0.4 & 0.8 \\ \hline
 \end{center}
 \end{table}
 
-The \verb=structure type= can be set to \verb=bare frame= or \verb=infilled frame=, while the parameter \verb=ductility= can be equal to \verb=ductile= or \verb=non-ductile=. The variable \verb=number of storeys= must be equal to an integer defining the number of floors of the building class. The following parameters (\verb=steel modulus= , \verb=steel yield strength= , \verb=ground floor height= , \verb=regular floor height= , \verb=column depth= , \verb=beam length= , \verb=beam depth=) define the represent the geometrical and material properties of the building class, and can defined in a probabilitic manner. Currently, three parametric statistical models have been implemented (\verb=normal= , \verb=lognormal= and \verb=gamma=), as well as discrete (i.e. probability mass function) model (\verb=discrete=). The model that should be used must be specified on the second column. Then, for the former type of models (parametric), the mean and coefficient of variation should be provided in the third and forth columns, respectively. For the discrete model, the central values of the bins and corresponding probabilities of occurance should be defined in the third and forth columns, respectively. The last two columns can be used to truncate the probabilistic distribution between a minimum (fifth column) and maximum (sixth column) values. In order to define a parameter in a deterministic manner (no variability), the coeficient of variation for the associated attribute can be set to zero, and the same value (mean) will be used repeatedly.\\
+The \verb=structure type= can be set to \verb=bare frame= or \verb=infilled frame=, while the parameter \verb=ductility= can be equal to \verb=ductile= or \verb=non-ductile=. The variable \verb=number of storeys= must be equal to an integer defining the number of floors of the building class. The following parameters (\verb=steel modulus= , \verb=steel yield strength= , \verb=ground floor height= , \verb=regular floor height= , \verb=column depth= , \verb=beam length= , \verb=beam depth=) define the represent the geometrical and material properties of the building class, and can defined in a probabilistic manner. Currently, three parametric statistical models have been implemented (\verb=normal= , \verb=lognormal= and \verb=gamma=), as well as discrete (i.e. probability mass function) model (\verb=discrete=). The model that should be used must be specified on the second column. Then, for the former type of models (parametric), the mean and coefficient of variation should be provided in the third and forth columns, respectively. For the discrete model, the central values of the bins and corresponding probabilities of occurrence should be defined in the third and forth columns, respectively. The last two columns can be used to truncate the probabilistic distribution between a minimum (fifth column) and maximum (sixth column) values. In order to define a parameter in a deterministic manner (no variability), the coefficient of variation for the associated attribute can be set to zero, and the same value (mean) will be used repeatedly.\\
 
 The location of the building model and the damage model (see Section \ref{subsec:dmg_model}) should be specified in the variables \verb=building_model= and the \verb=damage_model=, respectively. The number of capacity curves that should be generated must be defined using the parameter \verb=no_assets=. Then, after importing the module \verb=DBELA=, the set of capacity curves can be generated using the following commands:
 
