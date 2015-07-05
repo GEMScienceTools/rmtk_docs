@@ -1,0 +1,52 @@
+These fragility functions can be used directly by the Scenario Damage or the Classicla PSHA-based Damage calculators of the OpenQuake-engine (\cite{SilvaEtAl2014a}; \cite{PaganiEtAl2014a}). \\
+
+In order to use the results of the nonlinear static procedures (see Section \ref{sec:record-nsp}) for the derivation of a fragility model, there are a number of attributes that need to be specified. Each function must be related with a building class, which must be defined using the parameter \verb=taxonomy=. Additional information about the GEM building taxonomy can be found in \cite{BrzevEtAl2013}, and a tool to compile the GEM taxonomy can be found on the OpenQuake-platform (https://taxtweb.openquake.org/).\\
+
+For what concerns the definition of the seismic input, it is necessary to establish the intensity measure type that should be considered using the variable \verb=IMT=. Currently, the Risk Modellers Toolkit supports \verb=PGA=, \verb=PGV= and \verb=Sa=. If the latter intensity measure type is chosen, it is also necessary to establish the period of vibration (in seconds) using the variable \verb=T=, and the elastic damping using the variable \verb=damping=. Finally, the range of applicability of the fragility model should be defined using the \verb=minIML= and \verb=maxIML=.  \\
+
+The results in the probability damage matrix (\verb=PDM=) are used to fit a lognormal cumulative function, with a logarithmic mean ($\mu$) and logarithmic standard deviation ($\sigma$). These two parameters are calculated using one of the two currently implemented statistical methods: least squares or the maximum likelihood. The former approach estimates a solution ($\mu$, $\sigma$) that minimizes the sum of the squares of the errors (i.e. difference between the prediction of the lognormal function and the data). The latter method leads to a solution that maximizes the likelihood function. A comprehensive description of the strengths and limitations of these methodologies can be found in \cite{LallemantEtAl2015}. The method that should be followed must be specified by setting the parameter \verb=regression_method= to \verb=least squares= or to \verb=maximum likelihood=.\\
+
+The calculation of the fragility model also requires the set of ground motion records used in the analytical analyses (\verb=gmrs=), and the damage model utilized to allocated each structure into a damage state (\verb=damage_model=). A description of these two components have been provided in Section \ref{subsec:gmrs} and \ref{subsec:dmg_model}, respectively.\\
+
+The function that calculates fragility models is contained in the module \verb=utils=. An example of this process is depicted below.
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+IMT = 'Sa'
+T = 0.3
+regression_method = 'least squares'
+taxonomy = 'RC'
+minIML = 0.01
+maxIML = 1
+fragility_model = utils.calculate_mean_fragility(gmrs,PDM,T,damping,...
+IMT,damage_model,regression_method)
+\end{Verbatim}
+
+Once the parameters ($\mu$, $\sigma$) of the fragility model have been calculated, it is possible to save these results using the function \verb=save_mean_fragility=. This feature can export the fragility model using the OpenQuake-engine format (\verb=nrml=), or following a \verb=csv= format. This indication should be defined using the variable \verb=output_type=. It is also possible to create a plot of the resulting model, using the function \verb=plot_fragility_model=. In order to use these functions, it is necessary to import the module \verb=utils=. This process is demonstrated below. 
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+output_type = 'nrml'
+utils.save_mean_fragility(taxonomy,fragility_model,minIML,maxIML,...
+output_type)
+utils.plot_fragility_model(fragility_model,minIML,maxIML)
+\end{Verbatim}
+
+A detailed description of the \verb=nrml= format can be found on the OpenQuake-engine manual \citep{GEM2015}. For what concerns the structure of the \verb=csv= format, an example is provided in Table \ref{table:ff_csv}. The first row contains the building \verb=taxonomy=, the intensity measure type (\verb=IMT=), the minimum and maximum intensity measure levels (\verb=minIML=, \verb=maxIML=). The second row comprises the titles of the information stored in each column: damage states; logarithmic mean; logarithmic standard deviation; mean; standard deviation; median and coefficient of variation. The remaining columns contain the results for each damage state.
+
+\begin {table}[htb]
+\caption{Example of a fragility model stored following a csv format.}
+\label{table:ff_csv}
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c | c | c |}
+  \hline
+RC & Sa(0.3) & 0.01 & 1.0 &  &  &  \\ \hline
+Damage state & log mean & log stddev & mean & stddev & median & cov \\ \hline
+Slight & -2.67 & 0.28 & 0.07 & 0.02 & 0.07 & 0.29 \\ \hline
+Moderate & -2.37 & 0.30 & 0.10 & 0.03 & 0.09 & 0.31 \\ \hline
+Extensive & -0.26 & 0.86 & 1.12 & 1.16 & 0.77 & 1.04 \\ \hline
+Collapse & 0.42 & 0.96 & 2.42 & 2.99 & 1.52 & 1.24 \\ \hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+
+

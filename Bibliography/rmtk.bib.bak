@@ -108,9 +108,10 @@
   Journal                  = {Bulletin of Earthquake Engineering},
   Year                     = {2007},
   Number                   = {3},
-  Pages                    = {377-390},
+  Pages                    = {377--390},
   Volume                   = {5},
 
+  Doi                      = {10.1007/s10518-007-9031-8},
   ISSN                     = {1570761X}
 }
 
