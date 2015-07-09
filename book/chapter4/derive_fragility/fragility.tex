@@ -48,5 +48,8 @@ Collapse & 0.42 & 0.96 & 2.42 & 2.99 & 1.52 & 1.24 \\ \hline
 \end{center}
 \end{table}
 
+Finally, a folder containing a set of fragility functions for buildings of different typologies derived using the RMTK and saved using the CSV format can be used to create a fragility model for use in OpenQuake risk analyses. In order to use the function \verb=save_fragility_set_nrml=, it is necessary to import the module \verb=utils=. The path to the folder containing the individual CSV fragility files, and the name of the destination XML file are the required inputs for this function. Usage of this function is shown below:
 
-
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+utils.save_fragility_set_nrml(folder, destination_file)
+\end{Verbatim}
