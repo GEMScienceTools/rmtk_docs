@@ -1,4 +1,3 @@
-
 .DS_store
 *.acn
 *.acr
@@ -38,4 +37,3 @@ rmtk-docs-blx.bib
 .texpadtmp
 .texpadtmp/*
 rmtk-docs.pdf
-bibliography/rmtk.bib
