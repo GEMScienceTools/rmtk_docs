@@ -1,4 +1,4 @@
-The record-to-record variability is one of the most important sources of uncertainty in fragility assessment. In the Direct Nonlinear Static Procedures implemented in the Risk Modellers Toolkit (see Section~\ref{subsec:direct-nsp}), this source of uncertainty is directly introduce in the fragility estimates, based on previous nonlinear analyses. In the Record-based Nonlinear Static Procedures (Section~\ref{subsec:record-nsp}) or in the Nonlinear Time History Analysis in Single Degree of Freedom Oscilators (Section~\ref{subsec:NLTHA_SDOF}), users have the possibility of introducing their own ground motion records. Each accelerogram needs to be stored in a \verb=csv= file (tabular format), as depicted in Table~\ref{table:gmr}. This file format uses two columns, in which the first one contains the time (in seconds) and the second the corresponding acceleration (in g).\\
+The record-to-record variability is one of the most important sources of uncertainty in fragility assessment. In the Direct Nonlinear Static Procedures implemented in the Risk Modeller's Toolkit (see Section~\ref{sec:direct-nsp}), this source of uncertainty is directly introduce in the fragility estimates, based on previous nonlinear analyses. In the Record-based Nonlinear Static Procedures (Section~\ref{subsec:record-nsp}) or in the Nonlinear Time History Analysis in Single Degree of Freedom Oscilators (Section~\ref{subsec:NLTHA_SDOF}), users have the possibility of introducing their own ground motion records. Each accelerogram needs to be stored in a \verb=csv= file (tabular format), as depicted in Table~\ref{table:gmr}. This file format uses two columns, in which the first one contains the time (in seconds) and the second the corresponding acceleration (in g).\\
 
 \begin {table}[htb]
 \caption{Example of a ground motion record.}
@@ -21,7 +21,7 @@ The record-to-record variability is one of the most important sources of uncerta
 \end{center}
 \end{table}
 
-In order to load a set of ground motion records into the Risk Modellers Toolkit, it is necessary to import the module \verb=utils=, and specify the location of the folder containing all of the ground motion records using the parameter \verb=gmrs_folder=. Then, the collection of records can be loaded using the following command:
+In order to load a set of ground motion records into the Risk Modeller's Toolkit, it is necessary to import the module \verb=utils=, and specify the location of the folder containing all of the ground motion records using the parameter \verb=gmrs_folder=. Then, the collection of records can be loaded using the following command:
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
 gmrs = utils.read_gmrs(gmrs_folder)
