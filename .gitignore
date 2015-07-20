@@ -37,8 +37,5 @@ rmtk-docs-blx.bib
 *.DS_Store
 .texpadtmp
 .texpadtmp/*
-*.pdf
-
-Bibliography/rmtk.bib
-
-*.pdf
+rmtk-docs.pdf
+bibliography/rmtk.bib
