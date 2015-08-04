@@ -1,4 +1,4 @@
-The Risk Modeller's Toolkit makes extensive use of the Python programming language and the web-browser based interactive IPython notebook interface. As with OpenQuake, the preferred working environment is Ubuntu (12.04 or later) or Mac OS X. At present, the user  must install the dependencies manually. An effort has been made to keep the number of additional dependencies to a minimum. More information regarding the current dependencies of the toolkit can be found at \href{http://github.com/GEMScienceTools/rmtk}{http://github.com/GEMScienceTools/rmtk}.
+The Risk Modeller's Toolkit makes extensive use of the Python programming language and the web-browser based interactive IPython notebook interface. As with the OpenQuake-engine, the preferred working environment is Ubuntu (12.04 or later) or Mac OS X. At present, the user  must install the dependencies manually. An effort has been made to keep the number of additional dependencies to a minimum. More information regarding the current dependencies of the toolkit can be found at \href{http://github.com/GEMScienceTools/rmtk}{http://github.com/GEMScienceTools/rmtk}.
 
 The current dependencies are:
 \begin{itemize}
@@ -33,7 +33,7 @@ To enable usage of the RMTK within any location in the operating system, OS X an
 export PYTHONPATH=/path/to/rmtk/folder/:\$PYTHONPATH
 \end{Verbatim}
 
-Where \verb=/path/to/rmtk/folder/= is the system path to the location of the RMTK folder (use the command \verb=pwd= from within the RMTK folder to view the full system path).
+Where \verb=/path/to/rmtk/folder/= is the system path to the location of the rmtk folder (use the command \verb=pwd= from within the RMTK folder to view the full system path).
 
 \item Reload the profile file using the command
 
@@ -43,9 +43,9 @@ Where \verb=/path/to/rmtk/folder/= is the system path to the location of the RMT
 
 \end{enumerate}
 
-The IPython Notebook is a browser-based notebook which provides support for interactive coding, text, mathematical expressions, inline plots and other rich media. Static notebooks can also be created for recording and distributing the results of the rich computations.
+The IPython Notebook is a web browser-based notebook which provides support for interactive coding, text, mathematical expressions, inline plots and other rich media. Static notebooks can also be created for recording and distributing the results of the rich computations.
 
-If you already have Python installed , you can get IPython along with the dependencies for the IPython notebook using pip:
+If you already have Python installed, you can get IPython along with the dependencies for the IPython notebook using pip:
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, fontsize=\scriptsize, samepage=true]
 ~\$ sudo pip install "ipython[notebook]"
@@ -65,4 +65,4 @@ You can create new notebooks from the dashboard with the New Notebook button, or
 
 At present, the recommended approach for Windows users is to run Ubuntu Linux 14.04 within a Virtual Machine and install the RMTK following the instructions above. Up-to-date VirtualBox images containing the OpenQuake-engine and platform, and the Hazard and Risk Modeller's Toolkits are available here: \href{http://www.globalquakemodel.org/openquake/start/download/}{http://www.globalquakemodel.org/openquake/start/download/}
 
-Knowledge of the Python programming language is not necessary in order to use the tools provided in the Risk Modeller's Toolkit. Nevertheless, a basic understanding of the data types and concepts of Python will come in handy if you are interested in modifying or enhancing the standard scripts provided in the toolkit. If you have never used Python before, the official \href{https://docs.python.org/2/tutorial/}{Python tutorial} is a good place to start. \href{http://www.swaroopch.com/notes/python/}{A Byte of Python} is also a well-written guide to Python and a great reference for beginners. Appendix \ref{chap:python_guide} at the end of this user manual also provides a quick-start guide to Python.
+Knowledge of the Python programming language is not necessary in order to use the tools provided in the Risk Modeller's Toolkit. Nevertheless, a basic understanding of the data types and concepts of Python will come in handy if you are interested in modifying or enhancing the standard scripts provided in the toolkit. If you have never used Python before, the official \href{https://docs.python.org/2/tutorial/}{Python tutorial} is a good place to start. \href{http://www.swaroopch.com/notes/python/}{A Byte of Python} is also a well-written guide to Python and a great reference for beginners. Appendix \ref{sec:python_guide} at the end of this user manual also provides a quick-start guide to Python.
