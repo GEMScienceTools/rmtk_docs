@@ -2,7 +2,7 @@ The Simplified Pushover-based Earthquake Loss Assessment methodology \citep{Borz
 
 The original methodology as proposed by \citet{BorziEtAl2008b} considered three limit states (light damage corresponding to the yielding point, significant damage, and collapse). However, other limit states can be considered, granted that the user provides the information required to establish each limit state.\\
 
-The spectral displacement at each limit state is calculated by firstly assessing the expected chord rotation at the associated damage threshold, and then multiplying this rotation by the height of the equivalent single degree of freedom (SDOF) system. The rotation at the yielding point ($\Theta_y$)can be calculated using the formula below, as proposed by \citet{CosenzaEtAl2005} and \citet{PanagiotakosFardis2001}:
+The spectral displacement at each limit state is calculated by firstly assessing the expected chord rotation at the associated damage threshold, and then multiplying this rotation by the height of the equivalent single degree of freedom (SDoF) system. The rotation at the yielding point ($\Theta_y$)can be calculated using the formula below, as proposed by \citet{CosenzaEtAl2005} and \citet{PanagiotakosFardis2001}:
 
 \begin{equation}
 	\Theta_y = \phi_y\frac{L_V}{3}+0.0013\left(1 + 1.5\frac{h}{L_V}\right)+0.13\phi_y\frac{d_bf_y}{\sqrt{f_c}}
@@ -32,7 +32,7 @@ Where $\epsilon_{cu}$ and $\epsilon_{su}$ are the ultimate concrete and steel st
 
 Other rotation thresholds (corresponding to other limit states) can also be calculated, either through the definition of concrete and steel strains (e.g. \cite{CrowleyEtAl2004}), or as a fraction of the previously described rotations. For example, \cite{BorziEtAl2008b} defined the limit state for significant damage as $^3/_4$ of the ultimate rotation capacity ($\Theta_u$).\\
 
-As previously mentioned, the spectral displacement at each limit state can be calculated by multiplying the respective rotation by the height of the equivalent SDOF system. This height is calculated by multiplying the total height of the structure ($H_T$) by an effective height ratio ($ef_h$). The calculation of this ratio depends on the expected failure mechanism (beam sway or column sway - see Figure~\ref{fig:mechanisms}), and its calculation has been explained in Section~\ref{subsec:DBELA}. For the yielding point, the spectral displacement can then be calculated as follows:
+As previously mentioned, the spectral displacement at each limit state can be calculated by multiplying the respective rotation by the height of the equivalent SDoF system. This height is calculated by multiplying the total height of the structure ($H_T$) by an effective height ratio ($ef_h$). The calculation of this ratio depends on the expected failure mechanism (beam sway or column sway - see Figure~\ref{fig:mechanisms}), and its calculation has been explained in Section~\ref{subsec:DBELA}. For the yielding point, the spectral displacement can then be calculated as follows:
 
 \begin{equation}
 	\Delta_y = \Theta_yef_hH_T

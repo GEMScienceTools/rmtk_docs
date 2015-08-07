@@ -1,4 +1,4 @@
-The record-to-record variability is one of the most important sources of uncertainty in fragility assessment. In the Direct Nonlinear Static Procedures implemented in the Risk Modeller's Toolkit (see Section~\ref{sec:direct-nsp}), this source of uncertainty is directly introduce in the fragility estimates, based on previous nonlinear analyses. In the Record-based Nonlinear Static Procedures (Section~\ref{subsec:record-nsp}) or in the Nonlinear Time History Analysis in Single Degree of Freedom Oscilators (Section~\ref{subsec:NLTHA_SDOF}), users have the possibility of introducing their own ground motion records. Each accelerogram needs to be stored in a \verb=csv= file (tabular format), as depicted in Table~\ref{table:gmr}. This file format uses two columns, in which the first one contains the time (in seconds) and the second the corresponding acceleration (in g).\\
+The record-to-record variability is one of the most important sources of uncertainty in fragility assessment. In the Direct Nonlinear Static Procedures implemented in the Risk Modeller's Toolkit (see Section~\ref{sec:direct-nsp}), this source of uncertainty is directly introduce in the fragility estimates, based on previous nonlinear analyses. In the Record-based Nonlinear Static Procedures (Section~\ref{sec:record-nsp}) or in the Nonlinear Time History Analysis of Single Degree of Freedom Oscilators (Section~\ref{subsec:NLTHA_SDOF}), users have the possibility of introducing their own ground motion records. Each accelerogram needs to be stored in a \verb=csv= file (tabular format), as depicted in Table~\ref{table:gmr}. This file format uses two columns, in which the first one contains the time (in seconds) and the second the corresponding acceleration (in g).\\
 
 \begin {table}[htb]
 \caption{Example of a ground motion record.}
@@ -35,7 +35,7 @@ maxT = 2
 utils.plot_response_spectra(gmrs,minT,maxT)
 \end{Verbatim}
 
-This will generate three plots: 1) spectral acceleration (in g) versus period of vibration (in sec); 2) spectral displacement (in m) versus period of vibration (in sec); and spectral acceleration (in g) versus spectral displacement (in m). Figure \ref{fig:gmrs} illustrates the first two plots for a hundreds ground motion records.
+This will generate three plots: 1) spectral acceleration (in g) versus period of vibration (in sec); 2) spectral displacement (in m) versus period of vibration (in sec); and spectral acceleration (in g) versus spectral displacement (in m). Figure \ref{fig:gmrs} illustrates the first two plots for one hundred ground motion records.
 
 
 \begin{figure}[!htbp]

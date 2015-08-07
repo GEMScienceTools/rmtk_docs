@@ -8,9 +8,9 @@ Different methodologies require the pushover curve to be expressed with differen
  \item \verb=Spectral acceleration vs Spectral displacement=\\
 \end{enumerate}
 
-Within the description of each fragility methodology the required input model and the additional building information are specified. Moreover some methodologies give the user the chance to select the input model that fits better to the data at his disposal. Considering that different methodologies sharing the same input model may need different parameters, not all the information defined in the input file are necessarily used by each method. The various inputs are currently being stored in a \verb=csv= file (tabular format), as illustrated in the following Sections for each input model.
+Within the description of each fragility methodology provided below, the required input model and the additional building information are specified. Moreover some methodologies give the user the chance to select the input model that fits better to the data at his or her disposal. Considering that different methodologies sharing the same input model may need different parameters, not all the information defined in the input file are necessarily used by each method. The various inputs are currently being stored in a \verb=csv= file (tabular format), as illustrated in the following Sections for each input model.
 
-Once the pushover curves have been defined in the input file and uploaded in the ipython notebook, they can be visualised with the following function:
+Once the pushover curves have been defined in the input file and uploaded in the IPython notebook, they can be visualised with the following function:
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
 utils.plot_capacity_curves(capacity_curves)
@@ -19,9 +19,9 @@ utils.plot_capacity_curves(capacity_curves)
 
 \subsubsection{Base Shear vs Roof Displacement}
 \label{subsubsec:VB-Droof}
-Some methodologies require the pushover curve to be expressed in terms of Base Shear vs Top Displacement (e.g. Dolsek and Fajfar 2004 in Section~\ref{subsec:DolsekFajfar}, SPO2IDA in Section~\ref{subsec:SPO2IDA}). The additional building information are needed to convert the pushover curve (referring to a MDoF system) to a capacity curve (SDoF system).\\
+Some methodologies require the pushover curve to be expressed in terms of Base Shear vs Roof Displacement (e.g. Dolsek and Fajfar 2004 in Section~\ref{subsec:DolsekFajfar}, SPO2IDA in Section~\ref{subsec:SPO2IDA}). Additional building information is needed to convert the pushover curve (referring to a Multi Degree of Freedom, MDoF, system) to a capacity curve (Single Degree of Freedom, SDoF, system).\\
 
-When the pushover curve is expressed in terms of Base Shear vs Roof Displacement, the user has to set the \verb=Vb-droof= variable to \verb=TRUE= in the input file, and define whether he has at disposal an idealised or a full pushover curve, setting the variable \verb=Idealised= to \verb=TRUE= or \verb=FALSE= respectively. Then the following information about the structures to be assessed is needed:\\
+When the pushover curve is expressed in terms of Base Shear vs Roof Displacement, the user has to set the \verb=Vb-droof= variable to \verb=TRUE= in the input file, and define whether it is an idealised (e.g. bilinear) or a full pushover curve (i.e. with many pairs of base shear and roof displacement values), setting the variable \verb=Idealised= to \verb=TRUE= or \verb=FALSE= respectively. Then the following information about the structures to be assessed is needed:\\
 
 \begin{enumerate}
 \item \verb=Periods=, first period of vibration T$_1$.
@@ -34,7 +34,7 @@ When the pushover curve is expressed in terms of Base Shear vs Roof Displacement
 \item \verb=droofn=, the roof displacement vector of the n$^{th}$ structure. \\
 \end{enumerate}
 
-Only bilinear and quadrilinear idealisation shapes are supported to express the pushover curve in an idealised format, therefore the $V_b$ and $d_{roof}$ vectors should contain 3 or 5 $V_b$-$d_{roof}$ pairs respectively, as described in the following lists and illustrated in Figures \ref{fig:bilinear} and \ref{fig:quadrilinear}.\\
+Only bilinear and quadrilinear idealisation shapes are currently supported to express the pushover curve in an idealised format, therefore the $V_b$ and $d_{roof}$ vectors should contain 3 or 5 $V_b$-$d_{roof}$ pairs, respectively, as described in the following lists and illustrated in Figures \ref{fig:bilinear} and \ref{fig:quadrilinear}.\\
 
 Bilinear idealisation inputs:
 \begin{itemize}
@@ -89,8 +89,8 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
 
 \subsubsection{Base Shear vs Floor Displacements}
 \label{subsubsec:VB-Dfloor}
-A modification of the previous input model is the Base Shear vs Floor Displacements input type. In this case the to conversion to capacity curve is still based on the roof displacement, but a mapping scheme between roof displacement and inter-storey drift at each floor level is also derived, so that the overall deformation state of the structure corresponding to a given roof displacement can be checked.\\
-When the pushover curve is expressed in terms of Base Shear vs Floor Displacements, the user has to set the \verb=Vb-floor= variable to \verb=TRUE= in the input file. Only full pushover curve can be input, therefore the variable \verb=Idealised= should be set to \verb=FALSE=. Then the following information about the structures that want to be assessed are needed:\\
+A modification of the previous input model is the Base Shear vs Floor Displacements input type. In this case the conversion to a SDoF capacity curve is still based on the roof displacement, but a mapping scheme between the roof displacement and inter-storey drift at each floor level is also derived, so that the overall deformation state of the structure corresponding to a given roof displacement can be checked.\\
+When the pushover curve is expressed in terms of Base Shear vs Floor Displacements, the user has to set the \verb=Vb-floor= variable to \verb=TRUE= in the input file. Only full pushover curves can be input, therefore the variable \verb=Idealised= should be set to \verb=FALSE=. Then the following information about the structures to be assessed is needed:\\
 
 \begin{enumerate}
 \item \verb=Periods=, first period of vibration T$_1$.
@@ -135,8 +135,8 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
 
 \subsubsection{Spectral acceleration vs Spectral displacement}
 \label{subsubsec:Sa-Sd}
-Some methodologies work directly with capacity-curves (Spectral acceleration vs Spectral displacement) of SDOD systems (e.g. N2 in Section~\ref{subsec:N2}, CSM in Section~\ref{subsec:CSM}), so that the user can provide his own conversion of pushover curves, or he can use the "Conversion from MDOF to SDOF" module in Section~\ref{sec:mdof_to_sdof}.\\
-When the pushover curve is expressed in terms of Spectral acceleration vs Spectral displacement, the user has to set the \verb=Sd-Sa= variable to \verb=TRUE= in the input file. Then the following information about the structures that want to be assessed are needed:\\
+Some methodologies work directly with capacity-curves (Spectral acceleration vs Spectral displacement) of SDoF systems (e.g. N2 in Section~\ref{subsec:N2}, CSM in Section~\ref{subsec:CSM}), so that the user can provide his or her own conversion of pushover curves, or can use the "Conversion from MDOF to SDOF" module in Section~\ref{sec:mdof_to_sdof}.\\
+When the pushover curve is expressed in terms of Spectral acceleration vs Spectral displacement, the user has to set the \verb=Sd-Sa= variable to \verb=TRUE= in the input file. Then the following information about the structures to be assessed is needed:\\
 
 \begin{enumerate}
 \item \verb=Periods=, first periods of vibration T$_1$.
@@ -148,7 +148,7 @@ When the pushover curve is expressed in terms of Spectral acceleration vs Spectr
 \item \verb=San [g]=, the Sa vector of the n$^{th}$ structure. \\
 \end{enumerate}
 
-An example of an input \verb=csv= file for the derivation of a fragility model for a set of two structures, is presented in Table \ref{table:Vb-dfloor_input}.
+An example of an input \verb=csv= file for the derivation of a fragility model for a set of three structures, is presented in Table \ref{table:Vb-dfloor_input}.
 
 \begin {table}[htb]
 \caption{Example of a Spectral acceleration-Spectral displacement input model.}
@@ -160,7 +160,7 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
 	Vb-dfloor & 	FALSE & & \\ \hline
 	Sd-Sa &	TRUE & & \\ \hline
 	Periods [s] &	1.52 &	1.63 &	1.25 \\ \hline
-	Heigths [m]	& 6 &	6	& 6 \\ \hline
+	Heights [m]	& 6 &	6	& 6 \\ \hline
 	Gamma participation factors	& 1.24 &	1.24 &	1.24 \\ \hline
 	Sdy [m] & 	0.0821 & 	0.0972 &	0.0533\\ \hline
 	Say [g]	& 0.143	& 0.14723	& 0.13728 \\ \hline
