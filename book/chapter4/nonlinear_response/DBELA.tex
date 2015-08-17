@@ -11,7 +11,7 @@ In this method, the displacement capacity and demand for a number of limit state
 
 The calculation of the displacement capacity at each limit state is explained in the Model Generation Section~(\ref{sec:model-gen}), as this methodology can be employed to generate large sets of capacity curves (Sa versus Sd), which can be combined with other methodologies besides DBELA to derive fragility functions. Instead, this section is focused on describing how the seismic demand is handled in this methodology.\\
 
-The demand is represented by a displacement spectrum which can be described as the expected displacement induced by an earthquake on a single-degree-of-freedom (SDOF) oscillator with a given period of vibration and viscous damping. This demand is initially calculated for a 5\% viscous damping, and later modified for each limit state using a correction factor ($\eta$), representative of the equivalent viscous damping and ductility at the associated damage state. In the Eurocode 8 \citep{CEN2005}, the following equation is proposed for the calculation of the correction factor:
+The demand is represented by a displacement spectrum which can be described as the expected displacement induced by an earthquake on a single-degree-of-freedom (SDoF) oscillator with a given period of vibration and viscous damping. This demand is initially calculated for a 5\% viscous damping, and later modified for each limit state using a correction factor ($\eta$), representative of the equivalent viscous damping and ductility at the associated damage state. In the Eurocode 8 \citep{CEN2005}, the following equation is proposed for the calculation of the correction factor:
 
 \begin{equation}
 \eta_{LS_i} = \sqrt{\frac{10}{5+\xi_{eq_i}}}
@@ -42,4 +42,4 @@ PDM, Sds = DBELA.calculate_fragility(capacity_curves,gmrs,...
 damage_model,structure_type)
 \end{Verbatim}
 
-Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDOF) of each structure per ground motion record. the variable PDM can then be used to calculate the mean fragility model as described in Section~\ref{subsec:derive_fragility}.
+Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDoF) of each structure per ground motion record. The variable PDM can then be used to calculate the mean fragility model as described in Section~\ref{subsec:derive_fragility}.

@@ -1,6 +1,6 @@
 The capacity spectrum method (CSM) was initially proposed by \citep{FreemanEtAl1975}, and it represents a simplified methodology for many purposes such as the evaluation of a large inventory of buildings, structural assessment of new or existing buildings or to identify the correlation between damage states and levels of ground motion. \citet{ATC1996} proposes three different procedures (A, B and C) for the application of the Capacity Spectrum Method. However, procedure B adopts some simplifications that might not always be valid and procedure C has a very strong graphical component, making it difficult for systematic applications. Hence, procedure A, which is characterized by its intuitiveness and simplicity, has been implemented in the RMTK.\\
 
-This procedure iteratively compares the capacity and the demand of a structure, using a capacity curve (for the equivalent SDOF) and a damped response spectrum, respectively. The ground motion spectrum is computed for a level of equivalent viscous damping that is estimated as a function of the displacement at which the response spectrum crosses the capacity curve, in order to take into account the inelastic behaviour of the structure. Iterations are needed until there is a match between the equivalent viscous damping of the structure and the damping applied to the spectrum. The final intersection of these two curves approximates the target displacement response of the structure. This result is presented in Figure~\ref{fig:per_point} for a "weak" and a "strong" ground motion record. \\
+This procedure iteratively compares the capacity and the demand of a structure, using a capacity curve (for the equivalent SDoF) and a damped response spectrum, respectively. The ground motion spectrum is computed for a level of equivalent viscous damping that is estimated as a function of the displacement at which the response spectrum crosses the capacity curve, in order to take into account the inelastic behaviour of the structure. Iterations are needed until there is a match between the equivalent viscous damping of the structure and the damping applied to the spectrum. The final intersection of these two curves approximates the target displacement response of the structure. This result is presented in Figure~\ref{fig:per_point} for a "weak" and a "strong" ground motion record. \\
 
 \begin{figure}[htb]
   \centering
@@ -29,7 +29,7 @@ For $ \mu > 6.5$:
 	\xi_{eq} = \xi_0 + 0.19\left[\frac{0.64\left(\mu-1\right)-1}{\left[0.64\left(\mu-1\right)\right]^2}\right]\left(\frac{T_{eff}}{T_0}\right)^2
 \end{equation}
 
-Where $\xi_0$ stands the initial elastic viscous damping ratio, and $T_{eff}$ represents for the effective period, which for ductility above 6.5 can be calculated using the following expression:
+Where $\xi_0$ stands the initial elastic viscous damping ratio, and $T_{eff}$ represents the effective period, which for ductility above 6.5 can be calculated using the following expression:
 
 \begin{equation}
 	T_{eff} = \left\{0.89\left[\sqrt{\frac{(\mu-1)}{1+0.05(\mu-2)}}\right]+1\right\}T_0
@@ -107,7 +107,7 @@ PDM, Sds = capacitySpectrumMethod.calculate_fragility(capacity_curves,...
 gmrs,damage_model,damping)
 \end{Verbatim}
 
-Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDOF) of each structure per ground motion record. the variable PDM can then be used to calculate the mean fragility model as described in Section~\ref{subsec:derive_fragility}.
+Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDoF) of each structure per ground motion record. The variable PDM can then be used to calculate the mean fragility model as described in Section~\ref{subsec:derive_fragility}.
 
 
 

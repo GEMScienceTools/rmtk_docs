@@ -1,4 +1,4 @@
-The Simplified Pushover-based Earthquake Loss Assessment methodology \citep{BorziEtAl2008b} allows the calculation of the displacement capacity (i.e. spectral displacement) and collapse multiplier (i.e. spectral acceleration) using a mechanics-based procedure, similar to what has been proposed by \citet{CosenzaEtAl2005}. The methodology currently implemented in the Risk Modeller's Toolkit only supports reinforced concrete frames, though a similar process has been proposed for masonry structures \citep{BorziEtAl2008a}.\\
+The Simplified Pushover-based Earthquake Loss Assessment methodology \citep{BorziEtAl2008b} allows the calculation of the displacement capacity (i.e. spectral displacement) and collapse multiplier (i.e. spectral acceleration) using a mechanics-based procedure, similar to what has been proposed by \citet{CosenzaEtAl2005}. The methodology implemented in the Risk Modeller's Toolkit currently only uses the displacement capacity equations of SP-BELA for reinforced concrete frames (and does not yet estimate the collapse multiplier using the simplified pushover approach of SP-BELA). The full SP-BELA methodology will be implemented in the future, together with the similar process that has also been proposed for masonry structures \citep{BorziEtAl2008a}.\\
 
 The original methodology as proposed by \citet{BorziEtAl2008b} considered three limit states (light damage corresponding to the yielding point, significant damage, and collapse). However, other limit states can be considered, granted that the user provides the information required to establish each limit state.\\
 
@@ -59,7 +59,7 @@ The calculation of the spectral aceleration for each limit states follows the sa
 	Sa_i = \frac{4\pi^2Sd_i}{T_y^2}
 \end{equation}
 
-Where $T_y$ stands for the yielding period which can be calculated using simplified formulae (e.g. \cite{CrowleyPinho2004}; \cite{CrowleyPinho2006}), as further explained in Section \ref{subsec:DBELA_Silva2013}.\\
+Where $T_y$ stands for the yielding period which is currently calculated using simplified formulae (e.g. \cite{CrowleyPinho2004}; \cite{CrowleyPinho2006}), as further explained in Section \ref{subsec:DBELA_Silva2013}, rather than based on estimating the collapse multiplier as in the original SP-BELA methodology.\\
 
 To use this methodology it is necessary to define a building model, which specifies the probabilistic distribution of the geometrical and material properties. This information is currently stored in a $csv$ file (tabular format), as presented in Table \ref{table:building_model}.
 

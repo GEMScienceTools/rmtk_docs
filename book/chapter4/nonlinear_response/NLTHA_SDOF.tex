@@ -1,17 +1,17 @@
-This methodology performs a series of non-linear time history analyses (NLTHA) over one or multiple single degree of freedom (SDOF) systems. In order to determine the structural capacity of the system(s) under analysis, it is necessary to identify the relationship between the base shear and roof displacement (i.e. pushover curve). This curve can be further modified in order to obtain the curve corresponding to an equivalent SDOF, or capacity curve. It is typically assumed that the fundamental mode of vibration corresponds with the predominant response of the structure. Under this hypothesis, the capacity curve usually represents the first mode of response of the structure. This is usually valid for buildings with fundamental periods of vibration up to approximately 1.0 s. Otherwise, higher modes should be taken into account. Along with the capacity curve, it is necessary to specify either the mass or the fundamental period of vibration of the SDOF system.\\
+This methodology performs a series of non-linear time history analyses (NLTHA) over one or multiple single degree of freedom (SDoF) systems. In order to determine the structural capacity of the system(s) under analysis, it is necessary to identify the relationship between the base shear and roof displacement (i.e. pushover curve). This curve can be further modified in order to obtain the curve corresponding to an equivalent SDoF, or capacity curve. It is typically assumed that the fundamental mode of vibration corresponds with the predominant response of the structure. Under this hypothesis, the capacity curve usually represents the first mode of response of the structure. This is usually valid for buildings with fundamental periods of vibration up to approximately 1.0 s. Otherwise, higher modes should be taken into account. Along with the capacity curve, it is necessary to specify either the mass or the fundamental period of vibration of the SDoF system.\\
 
-On the other hand, the demand is represented by a set of ground motion records. The response of each structure is given by the solution of the equation of motion for an inelastic SDOF under earthquake excitation:
+On the other hand, the demand is represented by a set of ground motion records. The response of each structure is given by the solution of the equation of motion for an inelastic SDoF under earthquake excitation:
 
 \begin{equation}
 m\ddot{u}(t) + c\dot{u}(t) + ku(t) = p(t)
 \end{equation}
 
-Where $u$, $\dot{u}$ and $\ddot{u}$ stand for the displacement, velocity and acceleration, respectively, over time ($t$), and $p$ represents an external excitation. In this method, the behaviour of the SDOF is modelled by a capacity curve that must follow the structure illustrated in Figure \ref{fig:backbone}.
+Where $u$, $\dot{u}$ and $\ddot{u}$ stand for the displacement, velocity and acceleration, respectively, over time ($t$), and $p$ represents an external excitation. In this method, the behaviour of the SDoF is modelled by a capacity curve that must follow the structure illustrated in Figure \ref{fig:backbone}.
 
 \begin{figure}[htb]
   \centering
       \includegraphics[width=9cm]{Figures/backbone_curve.png}
-  \caption{Representation of the capacity curve required to represent the structural capacity of the SDOF system.}
+  \caption{Representation of the capacity curve required to represent the structural capacity of the SDoF system.}
   \label{fig:backbone}
 \end{figure}
 
@@ -24,4 +24,4 @@ PDM, Sds = NLTHA_on_SDOF.calculate_fragility(capacity_curves,gmrs,...
 damage_model,damping)
 \end{Verbatim}
 
-Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDOF) of each structure per ground motion record. the variable PDM can then be used to calculate the mean fragility model as described in Section \ref{subsec:derive_fragility}.
+Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDoF) of each structure per ground motion record. The variable PDM can then be used to calculate the mean fragility model as described in Section \ref{subsec:derive_fragility}.

@@ -8,18 +8,18 @@ In this study, 264 earthquake acceleration time histories recorded in California
 It was observed that for periods longer than about 1.0 s, the mean inelastic displacement ratios are approximately equal to 1, meaning that, on average, the maximum inelastic displacements are equal to the maximum inelastic displacements. On the other hand, for periods smaller than 1.0 s, the mean inelastic displacement ratios are larger than 1 and strongly depend on the period of vibration and on the level of inelastic deformation.
 The results of the investigation yielded that for the sites under consideration (i.e. average shear-wave velocities higher than 180 m/s) neither the soil conditions, nor the earthquake magnitude, nor the distance to rupture cause significant differences on the value of $C_\mu$. However, if directivity effects are taken into consideration, the inelastic displacement ratios for periods between 0.1 s and 1.3 s can be larger than those estimated for systems not affected by directivity.\\
 
-Based on the results of the mean inelastic displacement ratios, nonlinear regression analyses were conducted to estimate the following simplified expression, which allows estimating the inelastic displacement ratio of a system:
+Based on the results of the mean inelastic displacement ratios, nonlinear regression analyses were conducted to estimate the following simplified expression for the inelastic displacement ratio of a system:
 
 \begin{equation}
 C_\mu = \left[1+\left(\frac{1}{\mu}-1\right)exp\left(-12T\mu^{-0.8}\right)\right]^{-1}
 \end{equation}
 
 Where $\mu$ = displacement ductility ratio and T = period of vibration.\\
-In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motio nrecords, as explained in Section \ref{subsec:cap_curves} and \ref{subsec:gmrs}, respectively. Then, it is necessary to specify a damage model using the parameter \verb=damage_model= (see Section \ref{subsec:dmg_model}), and a damping ratio using the parameter \verb=damping=. After importing the module \verb=miranda_2000_firm_soils=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
+In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motion records, as explained in Section \ref{subsec:cap_curves} and \ref{subsec:gmrs}, respectively. Then, it is necessary to specify a damage model using the parameter \verb=damage_model= (see Section \ref{subsec:dmg_model}), and a damping ratio using the parameter \verb=damping=. After importing the module \verb=miranda_2000_firm_soils=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
 PDM, Sds = miranda_2000_firm_soils.calculate_fragility(capacity_curves,...
 gmrs,damage_model,damping)
 \end{Verbatim}
 
-Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDOF) of each structure per ground motion record. the variable PDM can then be used to calculate the mean fragility model as described in Section \ref{subsec:derive_fragility}.
+Where \verb=PDM= (i.e. probability damage matrix) represents a matrix with the number of structures in each damage state per ground motion record, and \verb=Sds= (i.e. spectral displacements) represents a matrix with the maximum displacement (of the equivalent SDoF) of each structure per ground motion record. The variable PDM can then be used to calculate the mean fragility model as described in Section \ref{subsec:derive_fragility}.
