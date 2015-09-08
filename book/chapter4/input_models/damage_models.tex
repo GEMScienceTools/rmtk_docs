@@ -4,11 +4,11 @@ The derivation of fragility models requires the definition of a criterion to all
 \label{subsubsec:strain-dmg}
 Displacement-based \citep{CrowleyEtAl2004} or mechanics-based \citep{BorziEtAl2008b} methodologies use strain levels to define a number of limit states. Thus, for each limit state, a strain for the conrete and steel should be provided. It is recognized that there is a large uncertainty in the allocation of a structure into a physical damage state based on its structural response. Thus, the Risk Modeller's Toolkit allows the representation of the damage criterion in a probabilistic manner. This way, the parameter that establishes the damage threshold can be defined by a mean, a coefficient of variation and a probabilistic distribution (normal, lognormal or gamma) \citep{SilvaEtAl2013}. This approach is commonly used to at least assess the spectral displacement at the yielding point (\verb=Sdy=) and for the ultimate capacity (\verb=Sdu=). Other limit states can also be defined using other strain levels (e.g. \cite{CrowleyEtAl2004}), or a fraction of the yielding or ultimate displacement. For example, \cite{BorziEtAl2008b} defined light damage and collapse through the concrete and steel strains, and significant damage as $^3/_4$ of the ultimate displacement (\verb=Sdu=).\\
 
-To use this damage criteria, it is necessary to define the parameter \verb=Type= as \verb=strain dependent= within the damage model file. Then, each limit state needs to be defined by a name (e.g. light damage), type of criterion and the adopted probabilistic model. Using the damage criteria described above (by \cite{BorziEtAl2008b}), an example of a damage model is provided in Table~\ref{table:strain_dmg}. In this case, the threshold for light damage is defined at the yielding point, which in return is calculated based on the yielding strain of the steel. The limit state for collapse is computed based on the mean strain in the concrete and steel (0.0075 and 0.0225, respectively) and the a coefficient of variation (0.3 and 0.45, respectively). The remaining limit state (significant damage), is defined as fraction (0.75) of the ultimate displacement (collapse).
+To use this damage criteria, it is necessary to define the parameter \verb=Type= as \verb=strain dependent= within the damage model file. Then, each limit state needs to be defined by a name (e.g. light damage), type of criterion and the adopted probabilistic model. Using the damage criteria described above (by \cite{BorziEtAl2008b}), an example of a damage model is provided in Table~\ref{table:strain-dmg}. In this case, the threshold for light damage is defined at the yielding point, which in return is calculated based on the yielding strain of the steel. The limit state for collapse is computed based on the mean strain in the concrete and steel (0.0075 and 0.0225, respectively) and the a coefficient of variation (0.3 and 0.45, respectively). The remaining limit state (significant damage), is defined as fraction (0.75) of the ultimate displacement (collapse).
 
 \begin {table}[htb]
 \caption{Example of a strain dependent damage model}
-\label{table:strain_dmg}
+\label{table:strain-dmg}
 \begin{center}
   \begin{tabular}{ | c | c | c | c | c |}
   \hline
@@ -22,7 +22,7 @@ collapse & strain & lognormal & 0.0075 0.0225 & 0.30 0.45 \\ \hline
 \end{table}
 
 \subsubsection{Capacity curve-based damage criterion}
-\label{subsubsec:strain-dmg}
+\label{subsubsec:cc-dmg}
 Several existing studies (e.g. \cite{Erberik2008}; \cite{SilvaEtAl2014c}; \cite{CasottoEtAl2005}) have used capacity curves (spectral displacement versus spectral acceleration) or pushover curves (roof displacement versus base shear) to define a set of damage thresholds. In the vast majority of these studies, the various limit states are defined as a function of the displacement at the yielding point (\verb=Sdy=), the maximum spectral acceleration (or base shear), and / or of the ultimate displacement capacity (\verb=Sdu=). For this reason, the mechanism that has been implemented in the RMTK is considerably flexible, and allows users to define a set of limit states following the options below:\\
 
 \begin{enumerate}
@@ -35,11 +35,11 @@ Several existing studies (e.g. \cite{Erberik2008}; \cite{SilvaEtAl2014c}; \cite{
  \item \verb=Sdu= this limit state is equal to ultimate displacement capacity (\verb=Sdu=), usually marking the point beyond which structural collapse is assumed to occur.\\
 \end{enumerate}
 
-In order to create a damage model based on this criterion, it is necessary to define the parameter \verb=Type= as \verb=capacity curve dependent=. Then, each limit state needs to be defined by a name (e.g. slight damage), type of criterion (as defined in the aforementioned list) and a potential probabilistic model (as described in the previous subsection). An example of a damage model considering all of the possible options described in the previous list is presented in Table~\ref{table:cc_dmg}, and illustrated in Figure~\ref{fig:cc_damage_model}. Despite the inclusion of all of the options, a damage model using this approach may use only a few of these criteria. Moreover, some of the options (namely the first, fifth and sixth) may by used multiple times.
+In order to create a damage model based on this criterion, it is necessary to define the parameter \verb=Type= as \verb=capacity curve dependent=. Then, each limit state needs to be defined by a name (e.g. slight damage), type of criterion (as defined in the aforementioned list) and a potential probabilistic model (as described in the previous subsection). An example of a damage model considering all of the possible options described in the previous list is presented in Table~\ref{table:cc-dmg}, and illustrated in Figure~\ref{fig:cc-dmg}. Despite the inclusion of all of the options, a damage model using this approach may use only a few of these criteria. Moreover, some of the options (namely the first, fifth and sixth) may by used multiple times.
 
 \begin {table}[htb]
 \caption{Example of a capacity curve dependent damage model.}
-\label{table:cc_dmg}
+\label{table:cc-dmg}
 \begin{center}
   \begin{tabular}{ | c | c | c | c | c |}
   \hline
@@ -58,21 +58,22 @@ In order to create a damage model based on this criterion, it is necessary to de
 
 \begin{figure}[htb]
   \centering
-      \includegraphics[width=9cm]{Figures/cc_damage_model.png}
+      \includegraphics[width=9cm]{figures/cc_damage_model.png}
   \caption{Representation of the possible options for the definition of the limit states using a capacity curve.}
-  \label{fig:cc_damage_model}
+  \label{fig:cc-dmg}
 \end{figure}
 
 \subsubsection{Inter-storey drift-based damage criterion}
-Maximum inter-storey drift is recognised by many (e.g. \cite{VamvatsikosCornell2005}; \cite{RossettoElnashai2005}) as a good proxy of the damage level of a structure, because it can detect the storey by storey state of deformation as opposed to global displacement.
+\label{subsubsec:isd-dmg}
+Maximum inter-storey drift is recognised by many researchers (e.g. \cite{VamvatsikosCornell2005}; \cite{RossettoElnashai2005}) as a good proxy of the damage level of a structure, because it can detect the storey by storey state of deformation as opposed to global displacement.
 
 The use of this damage model is quite simple: the parameter \verb=Type= in the csv file should be set to \verb=interstorey drift= and inter-storey drift thresholds need to be defined for each damage state, in terms of median value and dispersion.
 
-The probabilistic distribution of the damage thresholds implemented so far is lognormal. A different set of thresholds can be assigned to each structure, as in the example provided in Table~\ref{table:dm_ISD}, but also a single set can be defined for the entire building population to be assessed.
+The probabilistic distribution of the damage thresholds implemented so far is lognormal. A different set of thresholds can be assigned to each structure, as in the example provided in Table~\ref{table:isd-dmg}, but also a single set can be defined for the entire building population to be assessed.
 
 \begin {table}[htb]
 \caption{Example of a inter-storey drift based damage model}
-\label{table:dm_ISD}
+\label{table:isd-dmg}
 \begin{center}
   \begin{tabular}{ | c | c | c | c | c | c |}
   \hline
@@ -84,5 +85,3 @@ The probabilistic distribution of the damage thresholds implemented so far is lo
   \end{tabular}
 \end{center}
 \end{table}
-
-\label{subsubsec:strain-dmg}

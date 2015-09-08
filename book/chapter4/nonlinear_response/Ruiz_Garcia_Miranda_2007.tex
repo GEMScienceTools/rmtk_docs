@@ -4,7 +4,7 @@ The relationship provided by \citep{RuizGarciaMiranda2007} has been adapted for 
 
 \begin{equation}
 \hat{S}_d(T_1) = \frac{\hat{d}_{roof}}{\hat{C}_R \Gamma_1 \Phi_1}
-\label{eq:basic_DF}
+\label{eq:basic_RGM}
 \end{equation}
 
 where $\Gamma_1 \Phi_1$ is the first mode participation factor estimated for the first-mode shape normalised by the roof displacement, and C$_R$ is the inelastic displacement ratio (inelastic over elastic spectral displacement), computed by \citep{RuizGarciaMiranda2007} for nonlinear SDoF systems, which is a function of the first-mode period of vibration and the relative lateral strength of the system R. Therefore the median spectral acceleration at the fundamental period of vibration $\hat{S}_{a}(T)$ turns out to be expressed as a function of top displacement according to the following equation:
@@ -28,7 +28,7 @@ where $\hat{R}$ is given by the following equation:
 \label{eq:R_RGM}
 \end{equation}
 
-where c = 79.12 T$^{1.98}$, and $\hat{\mu}$ is the median ductility level of interest.
+where $c = 79.12 T^{1.98}$, and $\hat{\mu}$ is the median ductility level of interest.
 
 Moreover \citep{RuizGarciaMiranda2007} provide an estimate of the dispersion of C$_{R}$ parameter due to record-to-record variability with Equation \ref{eq:beta_eq_RGM}, that can be assumed equal to the dispersion of $d_{roof}$, since the two quantities are proportional.
 
@@ -52,7 +52,7 @@ If dispersion in the damage state threshold is different from zero, different va
 
 If multiple buildings have been input to derive fragility function for a class of buildings all $\hat{S}_{a, blg}$ and $\beta_{S_a, blg}$ are combined in a single lognormal curve as described in section \ref{subsec:SPO2IDA}.\\
 
-In order to use this methodology, it is necessary to load one or multiple capacity curves as described in Section \ref{subsec:cap_curves}. The pushover curve input type needs to be either Base Shear vs Roof Displacement (Section \ref{subsubsec:VB-Droof}), or Base Shear vs Floor Displacements (Section \ref{subsubsec:VB-Dfloor}). The capacity curves are then idealised with a bilinear elasto-plastic shape. If the user has already at disposal an idealised multilinear pushover curve for each building, the variable \verb=Idealised= in the csv input file should be set to \verb=TRUE=, and idealised curves should be provided according to what described in section \ref{subsec:cap_curves}. Then, it is necessary to specify a damage model using the parameter \verb=damage_model= (see Section \ref{subsec:dmg_model}).
+In order to use this methodology, it is necessary to load one or multiple capacity curves as described in Section \ref{subsec:cap_curves}. The pushover curve input type needs to be either Base Shear vs Roof Displacement (Section \ref{subsubsec:VB-Droof}), or Base Shear vs Floor Displacements (Section \ref{subsubsec:VB-Dfloor}). The capacity curves are then idealised with a bilinear elasto-plastic shape. If the user has already at disposal an idealised multilinear pushover curve for each building, the variable \verb=Idealised= in the csv input file should be set to \verb=TRUE=, and idealised curves should be provided according to what described in section \ref{subsec:cap_curves}. Then, it is necessary to specify a damage model using the parameter \verb=damage_model=. The inter-storey drift based damage model described in \ref{subsubsec:isd-dmg} should be used for this method.
 
 If dispersion due to uncertainty in the limit state definition is different from zero a Monte Carlo sampling needs to be performed to combine it with the record-to-record dispersion. The number of Monte Carlo samples should be defined in the variable \verb=montecarlo_samples=.
 After importing the module RGM2007, it is possible to calculate the parameter of the fragility model, median and dispersion, using the following command:

@@ -24,3 +24,4 @@ rm *.toc
 rm -rf .texpadtmp
 rm -rf tex/.texpadtmp
 rm rmtk-docs-blx.bib
+rm log.md

@@ -13,16 +13,19 @@
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 % Compiling this template:
-% This template uses biber for its bibliography and makeindex for its index.
+% This template uses bibtex for its bibliography and makeindex for its index.
 % When you first open the template, compile it from the command line with the 
 % commands below to make sure your LaTeX distribution is configured correctly:
 %
-% 1) pdflatex rmtk-docs
-% 1a) pdflatex -shell-escape rmtk-docs
-% 2) makeindex rmtk-docs.idx -s StyleInd.ist
-% 3) biber rmtk-docs
-% 4  makeglossaries rmtk-docs
-% 4) pdflatex rmtk-docs x 2
+% pdflatex -interaction=nonstopmode rmtk-docs.tex
+% bibtex rmtk-docs
+% pdflatex -interaction=nonstopmode rmtk-docs.tex
+% pdflatex -interaction=nonstopmode rmtk-docs.tex
+% makeindex rmtk-docs.idx -s configuration/StyleInd.ist
+% makeglossaries rmtk-docs
+% pdflatex -interaction=nonstopmode rmtk-docs.tex
+% ./clean.sh
+% open rmtk-docs.pdf
 %
 % After this, when you wish to update the bibliography/index use the appropriate
 % command above and make sure to compile with pdflatex several times 
@@ -70,12 +73,14 @@
             maxcitenames=2,
             maxbibnames=100,
             autopunct=true,
-            babel=hyphen,
+            autolang=hyphen,
             hyperref=true,
             doi=true,
             abbreviate=false,
             backref=true,
             backend=bibtex,
+            bibencoding=ascii,
+            firstinits=true,
 	    	uniquename=false,
 	    	uniquelist=false]{biblatex}
 \addbibresource{bibliography/rmtk.bib} % BibTeX bibliography file

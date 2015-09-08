@@ -3,7 +3,7 @@ The displacement at the height of the centre of seismic force of the original st
 
 \begin{figure}[htb]
   \centering
-      \includegraphics[width=8cm]{Figures/effective_height.png}
+      \includegraphics[width=8cm]{figures/effective_height.png}
   \caption{Definition of effective height coefficient \cite{GlaisterPinho2003}.}
   \label{fig:efh}
 \end{figure}
@@ -16,7 +16,7 @@ The displacement at the height of the centre of seismic force of the original st
 
 \begin{figure}[htb]
   \centering
-      \includegraphics[width=10cm]{Figures/collapse_mechanisms.png}
+      \includegraphics[width=10cm]{figures/collapse_mechanisms.png}
   \caption{Deformed profiles for beam-sway (left) and column-sway (right) mechanisms\cite{PaulayPriestley2002}.}
   \label{fig:mechanisms}
 \end{figure}
@@ -49,11 +49,11 @@ Sa_i = \frac{4\pi^2Sd_i}{T_y^2}
 
 Where $T_y$ stands for the yielding period which can be calculated using simplified formulae (e.g. \cite{CrowleyPinho2004}; \cite{CrowleyPinho2006}), as further explained in Section~\ref{subsec:DBELA_Silva2013}. Due to the assumption of the elasto-plastic behaviour, the spectral acceleration for the remaining limit states (or spectral displacements) will be the same (see Figure~\ref{fig:DBELA_cc}).\\
 
-In order to use this methodology it is necessary to define a building model, which specifies the probabilistic distribution of the geometrical and material properties. This information is currently stored in a $csv$ file (tabular format), as presented in Table~\ref{table:building_model}.
+In order to use this methodology it is necessary to define a building model, which specifies the probabilistic distribution of the geometrical and material properties. This information is currently stored in a $csv$ file (tabular format), as presented in Table~\ref{table:building_model_dbela}.
 
 \begin {table}[htb]
 \caption{Example of a building model compatible with the DBELA method.}
-\label{table:building_model}
+\label{table:building_model_dbela}
 \begin{center}
   \begin{tabular}{ | l | l | l | l | l | l |}
   \hline
@@ -85,7 +85,7 @@ The first function (\verb=read_building_class_model=) processes the information 
 
 \begin{figure}[htb]
   \centering
-      \includegraphics[width=8cm]{Figures/synthethic_capacity_curves.png}
+      \includegraphics[width=8cm]{figures/synthethic_capacity_curves.png}
   \caption{Capacity curves for reinforced concrete bare frames generated using the DBELA methodology.}
   \label{fig:DBELA_cc}
 \end{figure}
