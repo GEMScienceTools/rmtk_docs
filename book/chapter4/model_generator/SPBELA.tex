@@ -61,11 +61,11 @@ The calculation of the spectral aceleration for each limit states follows the sa
 
 Where $T_y$ stands for the yielding period which is currently calculated using simplified formulae (e.g. \cite{CrowleyPinho2004}; \cite{CrowleyPinho2006}), as further explained in Section \ref{subsec:DBELA_Silva2013}, rather than based on estimating the collapse multiplier as in the original SP-BELA methodology.\\
 
-To use this methodology it is necessary to define a building model, which specifies the probabilistic distribution of the geometrical and material properties. This information is currently stored in a $csv$ file (tabular format), as presented in Table \ref{table:building_model}.
+To use this methodology it is necessary to define a building model, which specifies the probabilistic distribution of the geometrical and material properties. This information is currently stored in a $csv$ file (tabular format), as presented in Table \ref{table:building_model_spbela}.
 
 \begin {table}[htb]
 \caption{Example of a building model compatible with the SPBELA method}
-\label{table:building_model}
+\label{table:building_model_spbela}
 \begin{center}
   \begin{tabular}{ | l | l | l | l | l | l |}
   \hline
@@ -99,7 +99,7 @@ The first function (\verb=read_building_class_model=) processes the information 
 
 \begin{figure}[htb]
   \centering
-      \includegraphics[width=8cm]{Figures/SPBELA_cc.eps}
+      \includegraphics[width=8cm]{figures/SPBELA_cc.eps}
   \caption{Capacity curves for reinforced concrete bare frames generated using the SPBELA methodology.}
   \label{fig:SPBELA_cc}
 \end{figure}

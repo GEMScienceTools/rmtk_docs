@@ -43,7 +43,7 @@ Bilinear idealisation inputs:
 \end{itemize}
 \begin{figure}[htb]
   \centering
-      \includegraphics[width=9cm]{Figures/bilinear.jpg}
+      \includegraphics[width=9cm]{figures/bilinear.jpg}
   \caption{Inputs for bilinear idealisation of pushover curve.}
   \label{fig:bilinear}
 \end{figure}
@@ -56,7 +56,7 @@ Quadrilinear idealisation inputs:
 
 \begin{figure}[htb]
   \centering
-      \includegraphics[width=9cm]{Figures/quadrilinear.jpg}
+      \includegraphics[width=9cm]{figures/quadrilinear.jpg}
   \caption{Inputs for quadrilinear idealisation of pushover curve.}
   \label{fig:quadrilinear}
 \end{figure}
@@ -124,8 +124,8 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
     Number storeys & 6 & 6 & & & & \\ \hline
     Weights & 0.5 & 0.5 & & & & \\ \hline
     Vb1 [kN] & 0	& ...	& 50	& 94	& 118	& \\ \hline
-	dfloor1-1 [m] & 0.002	& ...	& 0.05	& 0.09	& 0.11	& \\ \hline
-	dfloor1-2 [m] & 0.004	& ...	& 0.12	& 0.16	& 0.20	& \\ \hline
+	  dfloor1-1 [m] & 0.002	& ...	& 0.05	& 0.09	& 0.11	& \\ \hline
+	  dfloor1-2 [m] & 0.004	& ...	& 0.12	& 0.16	& 0.20	& \\ \hline
     Vb2 [kN] & 0	& ...	& 79	& 100	& 105	& 150 \\ \hline
     dfloor2-1 [m] & 0.006 &	...	& 0.018	& 0.023	& 0.05	& 0.1 \\ \hline
 	dfloor2-2 [m] & 0.008	& ... &	0.023	& 0.030	& 0.038	& 0.15 \\ \hline
@@ -148,11 +148,11 @@ When the pushover curve is expressed in terms of Spectral acceleration vs Spectr
 \item \verb=San [g]=, the Sa vector of the n$^{th}$ structure. \\
 \end{enumerate}
 
-An example of an input \verb=csv= file for the derivation of a fragility model for a set of three structures, is presented in Table \ref{table:Vb-dfloor_input}.
+An example of an input \verb=csv= file for the derivation of a fragility model for a set of three structures, is presented in Table \ref{table:Sa-Sd_input}.
 
 \begin {table}[htb]
 \caption{Example of a Spectral acceleration-Spectral displacement input model.}
-\label{table:Vb-dfloor_input}
+\label{table:Sa-Sd_input}
 \begin{center}
   \begin{tabular}{ | c | c | c | c | c |}
   \hline
