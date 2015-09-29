@@ -87,6 +87,12 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
 \end{center}
 \end{table}
 
+Base shear vs Roof Displacement pushover curves can be idealised with bilinear and quadrilinear formats, according to \citep{FEMA4402005} and to the GEM Vulnerability guidelines (\citep{Dayala2014}), respectively, using the following function:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+idealised_capacity = utils.idealisation(idealised_type, capacity_curves)
+\end{Verbatim}
+
 \subsubsection{Base Shear vs Floor Displacements}
 \label{subsubsec:VB-Dfloor}
 A modification of the previous input model is the Base Shear vs Floor Displacements input type. In this case the conversion to a SDoF capacity curve is still based on the roof displacement, but a mapping scheme between the roof displacement and inter-storey drift at each floor level is also derived, so that the overall deformation state of the structure corresponding to a given roof displacement can be checked.\\
@@ -133,6 +139,12 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
 \end{center}
 \end{table}
 
+Base shear vs Floor Displacement pushover curves can be idealised with bilinear and quadrilinear formats, according to \citep{FEMA4402005} and to the GEM Vulnerability guidelines (\citep{Dayala2014}), respectively, using the following function:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+idealised_capacity = utils.idealisation(idealised_type, capacity_curves)
+\end{Verbatim}
+
 \subsubsection{Spectral acceleration vs Spectral displacement}
 \label{subsubsec:Sa-Sd}
 Some methodologies work directly with capacity-curves (Spectral acceleration vs Spectral displacement) of SDoF systems (e.g. N2 in Section~\ref{subsec:N2}, CSM in Section~\ref{subsec:CSM}), so that the user can provide his or her own conversion of pushover curves, or can use the "Conversion from MDOF to SDOF" module in Section~\ref{sec:mdof_to_sdof}.\\
@@ -173,3 +185,9 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
   \end{tabular}
 \end{center}
 \end{table}
+
+Capacity curves can be idealised with bilinear and quadrilinear formats, according to \citep{FEMA4402005} and to the GEM Vulnerability guidelines (\citep{Dayala2014}), respectively, using the following function:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+idealised_capacity = utils.idealisation(idealised_type, capacity_curves)
+\end{Verbatim}
