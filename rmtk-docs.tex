@@ -19,11 +19,12 @@
 %  PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-------------------------------------------------------------------------------
 
-\input{configuration/configuration.tex} % -------------------- Load packages -
-\input{configuration/structure.tex} % ------------------------ Load template -
+\documentclass[11pt,fleqn]{book} % ------------------ Left-justified equations -
+\input{configuration/configuration} % ------------- Load packages and template -
+\graphicspath{{figures/}} % -------------- Directory where pictures are stored -
 
 \begin{document}
-\input{book/glossary.tex} % ------------------------------  Load the glossary
+\input{book/glossary} % ---------------------------------------- Load glossary -
 
 %-------------------------------------------------------------------------------
 %  COVER PAGE
@@ -37,12 +38,16 @@
 
 \begingroup
 \thispagestyle{empty}
+\begin{center}
 \par\normalfont\fontsize{15}{15}\sffamily\selectfont
-``OpenQuake: Calculate, share, explore''
-\centering
+\textcolor{oqblue}{OpenQuake: calculate, share, explore}
 \vspace*{9cm}
-\par\normalfont\fontsize{35}{35}\sffamily\selectfont
-Risk Modeller's Toolkit - User Guide\par % Book title
+\par\bfseries\fontsize{35}{35}\sffamily\selectfont
+\textcolor{gembrown}{Risk Modeller's Toolkit\\User Instruction Manual}\par
+\vspace*{9cm}
+\par\normalfont\fontsize{15}{15}\sffamily\selectfont
+\href{https://github.com/GEMScienceTools/rmtk}{\textcolor{oqblue}{github.com/gemsciencetools/rmtk}}
+\end{center}
 \endgroup
 
 %----------------------------------------------------------------------------------------
@@ -147,25 +152,33 @@ Risk Modeller's Toolkit - User Guide\par % Book title
 %----------------------------------------------------------------------------------------
 %  APPENDICES
 %----------------------------------------------------------------------------------------
-\part{Appendices}
+\part*{Appendices}
 \appendix
 \include{book/appendix1}
 
-%----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
-\include{book/bibliography}
+%-------------------------------------------------------------------------------
+%  BIBLIOGRAPHY
+%-------------------------------------------------------------------------------
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{\textcolor{darkgray}{Bibliography}}
+\section*{Books}
+\printbibliography[heading=bibempty,type=book]
+\section*{Articles}
+\printbibliography[heading=bibempty,type=article]
+\section*{Other Sources}
+\printbibliography[heading=bibempty,nottype=book,nottype=article]
+\cleardoublepage
 
 %-------------------------------------------------------------------------------
 %  INDEX & GLOSSARY
 %-------------------------------------------------------------------------------
 
-\cleardoublepage
-\phantomsection
-\setlength{\columnsep}{0.75cm}
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 \printindex
-\printglossary
+\chapter*{Glossary}
+\addcontentsline{toc}{chapter}{\textcolor{darkgray}{Glossary}}
+\printglossary[type=acronym, title=List of Acronyms]
+\printglossary[title=List of Terms]
 \hfill \\ \thispagestyle{empty} \clearpage % ---------------- Final empty page -
 
 
