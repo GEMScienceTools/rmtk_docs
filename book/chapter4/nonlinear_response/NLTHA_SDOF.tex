@@ -21,8 +21,40 @@ Pinching4 OpenSees material is employed to model the hysteretic behaviour of the
 
 It can be noted that the capacity curve can describe only the envelope response of the hysteretic behaviour. In order to keep the definition of the model as simple as possible, some assumptions have been formulated on the unload-reload path and the three damage rules.\\
 
-The first assumption regards the level of pinching of the cyclic behaviour. rDispP, rForceP and uForceP (see Figure \ref{fig:backbone}) are the parameters that control the unload-reload paths of Pinching4 material; they are assigned default values of 0.5, 0.25 and 0.05, respectively to represent a medium level of pinching. Since the cyclic behaviour is considered symmetrical the parameters rDispN, rForceN and uForceN are set equal to rDispP, rForceP and uForceP, respectively. 
-The second assumption regards the degrading behaviour of the model. The user has the option of introducing energy-based degradation during the cyclic hystory assigning non-zero values to the parameters gK2, gD2 and gF2, that control unloading, reloading stiffness and strength degradation, respectively. If degradation is selected gK2, gD2 and gF2 are assigned default values of 0.1, 0.1 and 0.4 respectively. More details about the degrading models and the meaning of the degrading parameters can be found in \citep{LowesEtAl2003}.\\
+The first assumption regards the level of pinching of the cyclic behaviour. rDispP, rForceP and uForceP (see Figure \ref{fig:backbone}) are the parameters that control the unload-reload paths of Pinching4 material; they are assigned default values of 0.5, 0.25 and 0.05, respectively to represent a medium level of pinching. Since the cyclic behaviour is considered symmetrical the parameters rDispN, rForceN and uForceN are set equal to rDispP, rForceP and uForceP, respectively.
+The second assumption regards the degrading behaviour of the model. The user has the option of introducing energy-based degradation during the cyclic hystory assigning non-zero values to the parameters gK2, gD2 and gF2, that control unloading, reloading stiffness and strength degradation, respectively. If degradation is selected gK2, gD2 and gF2 are assigned default values of 0.1, 0.1 and 0.4 respectively. More details about the degrading models and the meaning of the degrading parameters can be found in \citep{LowesEtAl2003}  and in the OpenSees wiki (\href{http://opensees.berkeley.edu/wiki/index.php/Pinching4_Material}{http://opensees.berkeley.edu/wiki/index.php/Pinching4\_Material}).\\
+
+If the User agrees with these assumptions he should set the variable \verb=sdof_hysteresis= to \verb="Default"= in the ipython notebook
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+sdof_hysteresis = "Default"
+\end{Verbatim}
+
+If the User wants instead to define each variable of the pinching4 material himself, he should assign the variable \verb=sdof_hysteresis= the path to the file where these parameters are specified.
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+sdof_hysteresis = "../../../../../rmtk_data/pinching_parameters.csv"
+\end{Verbatim}
+
+The pinching parameters should be defined in a csv file (tabular format) as shown in Table \ref{table:pinching4}. The variables of Table \ref{table:pinching4} are those characterising pinching4 material as explained in the OpenSees wiki (\href{http://opensees.berkeley.edu/wiki/index.php/Pinching4_Material}{http://opensees.berkeley.edu/wiki/index.php/Pinching4\_Material}).
+
+\begin {table}[htb]
+\caption{Example of file containing Pinching4 material parameters}
+\label{table:pinching4}
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c | c |}
+  \hline
+	rDisp  & 0.4	&	&	&	 &	\\ \hline
+	fForce	 & 0.6 &	&	&	 &	\\ \hline
+	uForce	 & 0	&	&	&	 &	\\ \hline
+	gK1	 & 0  &	0.6  &	0  &	0	 & 1\\ \hline
+	gD1	 & 0	 & 0  &	0  &	0  &	0\\ \hline
+	gF1	 & 0  &	0.07	 & 0  &	0.07  &	0.9\\ \hline
+	gE	 & 10 &	&	&	 &\\ \hline
+	dmgType	& energy &	&	&	 &\\ \hline
+	\end{tabular}
+\end{center}
+\end{table}			
 
 In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motion records, as explained in Sections~\ref{subsec:cap_curves} and \ref{subsec:gmrs}, respectively. Then, it is necessary to specify a damage model using the parameter \verb=damage_model=. Currently only spectral displacement and capacity curve-based  damage criterion can be used in the damage model (see Section~\ref{subsec:dmg_model}). When the capacity curve-based criterion is selected, it may be necessary to identify the yielding spectral displacement and acceleration. The User can either input the yielding point in the input file, or he can use the algorithm described in Section \ref{subsec:cap_curves} for the idealisation of the capacity curves, to identify the spectral displacement and acceleration at yielding on the capacity curves.
 The damping ratio must be defined using the parameter \verb=damping=, and if structural degradation should be considered in the analysis, it is necessary to set the parameter \verb=degradation= to \verb=True=. After importing the module \verb=NLTHA_on_SDOF=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
