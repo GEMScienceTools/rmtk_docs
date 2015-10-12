@@ -63,6 +63,26 @@ In order to create a damage model based on this criterion, it is necessary to de
   \label{fig:cc-dmg}
 \end{figure}
 
+\subsubsection{Spectral displacement-based damage criterion}
+\label{subsubsec:sd-dmg}
+In many methodologies for the definition of the seismic vulnerability of structures an equivalent Single Degree Of Freedom (SDOF) system is subjected to multiple analyses instead of the complex Multi Degree Of Freedom (MDOF) system. The capacity of the structure is thus expressed in terms of spectral acceleration vs spectral displacement. The easiest way to allocate the structure into a damage state is that of comparing spectral displacement demand with spectral displacement damage thresholds. A damage model has been implemented in the RMTK that allows to introduce directly spectral displacement damage thresholds, and an example of input file is provided in Table~\ref{table:sd-dmg}.
+
+\begin {table}[htb]
+\caption{Example of a spectral displacement based damage model}
+\label{table:sd-dmg}
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c | c |}
+  \hline
+    Type & spectral displacement &  & \\ \hline
+    Damage States & distribution & Median & Dispersion \\ \hline
+    Slight & lognormal & 0.01 & 0.0 \\ \hline
+    Moderate & lognormal & 0.05  & 0.1 \\ \hline
+    Exyensive & lognormal & 0.1  & 0.2 \\ \hline
+    Collapse & lognormal & 0.2  & 0.25 \\ \hline
+  \end{tabular}
+\end{center}
+\end{table}
+
 \subsubsection{Inter-storey drift-based damage criterion}
 \label{subsubsec:isd-dmg}
 Maximum inter-storey drift is recognised by many researchers (e.g. \cite{VamvatsikosCornell2005}; \cite{RossettoElnashai2005}) as a good proxy of the damage level of a structure, because it can detect the storey by storey state of deformation as opposed to global displacement.
@@ -71,6 +91,8 @@ The use of this damage model is quite simple: the parameter \verb=Type= in the c
 
 The probabilistic distribution of the damage thresholds implemented so far is lognormal. A different set of thresholds can be assigned to each structure, as in the example provided in Table~\ref{table:isd-dmg}, but also a single set can be defined for the entire building population to be assessed.
 
+When a vulnerability assessment methodology uses an equivalent SDOF system instead of the complex MDOF system it is still possible to define an inter-storey drift-based damage model for the MDOF system and introduce a relationship to convert inter-storey drift to spectral displacement damage thresholds. The conversion file containing the relationship between the maximum inter-storey drift along the building height and the spectral displacement of the equivalent SDOF system can be obtained using the "Conversion from MDOF to SDOF" module (see Section \ref{sec:mdof_to_sdof}). If this option wants to be enabled the variable \verb=deformed shape path= should be set to \verb=TRUE= in the csv input file, and the name of the conversion file should be specified in the next cell, as shown in Table ~\ref{table:isd-dmg}. The conversion file should be placed in the same folder where the damage model is located. An example of conversion file is provided in Table ~\ref{table:isd-sd} for the vulnerability assessment of a building population.
+
 \begin {table}[htb]
 \caption{Example of a inter-storey drift based damage model}
 \label{table:isd-dmg}
@@ -78,10 +100,27 @@ The probabilistic distribution of the damage thresholds implemented so far is lo
   \begin{tabular}{ | c | c | c | c | c | c |}
   \hline
     Type & interstorey drift &  &  & & \\ \hline
+    deformed shape path & TRUE & ISD-Sd.csv  &  & & \\ \hline
     Damage States & distribution & Median & Dispersion & Median & Dispersion \\ \hline
     LS1 & lognormal & 0.001 & 0.0 & 0.001 & 0.0 \\ \hline
     LS2 & lognormal & 0.01  & 0.2 & 0.015 & 0.0 \\ \hline
     LS3 & lognormal & 0.02  & 0.2 & 0.032 & 0.0 \\ \hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+\begin {table}[htb]
+\caption{Example of file containing the relationship between maximum inter-storey drift and spectral displacement for each structure of the building population}
+\label{table:isd-sd}
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c | c |}
+  \hline
+    ISD & 0.0004 & 0.0009 & 0.0013 &	0.0018 & 0.0023 \\ \hline
+    Sd [m] & 0.003 &	0.006 & 0.009 &	0.012 &	0.015 \\ \hline
+    ISD & 0.0003 & 0.0011 & 0.0014 &	0.002 & 0.0025 \\ \hline
+    Sd [m] & 0.002 &	0.005 & 0.011 &	0.013 &	0.014 \\ \hline
+    ISD & ... & ... & ... &	... & ... \\ \hline
+    Sd [m] & .. &... & ... &... &... \\ \hline
   \end{tabular}
 \end{center}
 \end{table}
