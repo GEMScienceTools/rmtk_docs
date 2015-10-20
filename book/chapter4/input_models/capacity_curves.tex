@@ -28,6 +28,7 @@ When the pushover curve is expressed in terms of Base Shear vs Roof Displacement
 \item \verb=Ground height=, height of the ground floor.
 \item \verb=Regular height=, height of the regular floors.
 \item \verb=Gamma participation factors=, modal participation factor $\Gamma_1$ of the first mode of vibration, normalised with respect to the roof displacement.
+\item \verb=Effective modal masses=, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
 \item \verb=Number storeys=, number of storeys.
 \item \verb=Weight=, weight assigned to each structure for the derivation of fragility models for many buildings.
 \item \verb=Vbn=, the base shear vector of the n$^{th}$ structure.
@@ -77,6 +78,7 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
     Ground heights [m] & 7 & 6.5 & \\ \hline
     Regular heights [m] & 2.7 & 3.0 & \\ \hline
     Gamma participation factors & 1.29 & 1.4 & \\ \hline
+    Effective modal masses & 232 &	230 &  \\ \hline
     Number storeys & 6 & 6 & \\ \hline
     Weights & 0.5 & 0.5 & \\ \hline
     Vb1 [kN] & 0 & 2090 & 2090 \\ \hline
@@ -103,6 +105,7 @@ When the pushover curve is expressed in terms of Base Shear vs Floor Displacemen
 \item \verb=Ground height=, height of the ground floor.
 \item \verb=Regular height=, height of the regular floors.
 \item \verb=Gamma participation factors=, modal participation factor $\Gamma_1$ of the first mode of vibration, normalised with respect to the roof displacement.
+\item \verb=Effective modal masses=, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
 \item \verb=Number storeys=, number of storeys.
 \item \verb=Weight=, weight assigned to each structure for the derivation of fragility models for many buildings.
 \item \verb=Vbn=, the base shear vector of the n$^{th}$ structure.
@@ -127,6 +130,7 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
     Ground heights [m] & 7 & 6.5 & & & & \\ \hline
     Regular heights [m] & 2.7 & 3.0 & & & & \\ \hline
     Gamma participation factors & 1.29 & 1.4 & & & & \\ \hline
+    Effective modal masses	& 232 &	230 & & & & \\ \hline
     Number storeys & 6 & 6 & & & & \\ \hline
     Weights & 0.5 & 0.5 & & & & \\ \hline
     Vb1 [kN] & 0	& ...	& 50	& 94	& 118	& \\ \hline
@@ -154,6 +158,7 @@ When the pushover curve is expressed in terms of Spectral acceleration vs Spectr
 \item \verb=Periods=, first periods of vibration T$_1$.
 \item \verb=Heights=, heights of the structure.
 \item \verb=Gamma participation factors=, modal participation factors $\Gamma_1$ of the first mode of vibration.
+\item \verb=Effective modal masses=, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
 \item \verb=Sdy=, the yielding spectral displacements.
 \item \verb=Say=, the yielding spectral accelerations.
 \item \verb=Sdn [m]=, the Sd vector of the n$^{th}$ structure.
@@ -173,7 +178,8 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
 	Sd-Sa &	TRUE & & \\ \hline
 	Periods [s] &	1.52 &	1.63 &	1.25 \\ \hline
 	Heights [m]	& 6 &	6	& 6 \\ \hline
-	Gamma participation factors	& 1.24 &	1.24 &	1.24 \\ \hline
+	Gamma participation factors	& 1.24 &	1.22 &	1.27 \\ \hline
+	Effective modal masses	& 232 &	230 &	240 \\ \hline
 	Sdy [m] & 	0.0821 & 	0.0972 &	0.0533\\ \hline
 	Say [g]	& 0.143	& 0.14723	& 0.13728 \\ \hline
 	Sd1 [m]	& 0 &	0.0821	& 0.238 \\ \hline
