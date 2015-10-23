@@ -24,15 +24,15 @@ Some methodologies require the pushover curve to be expressed in terms of Base S
 When the pushover curve is expressed in terms of Base Shear vs Roof Displacement, the user has to set the \verb=Vb-droof= variable to \verb=TRUE= in the input file, and define whether it is an idealised (e.g. bilinear) or a full pushover curve (i.e. with many pairs of base shear and roof displacement values), setting the variable \verb=Idealised= to \verb=TRUE= or \verb=FALSE= respectively. Then the following information about the structures to be assessed is needed:\\
 
 \begin{enumerate}
-\item \verb=Periods=, first period of vibration T$_1$.
-\item \verb=Ground height=, height of the ground floor.
-\item \verb=Regular height=, height of the regular floors.
-\item \verb=Gamma participation factors=, modal participation factor $\Gamma_1$ of the first mode of vibration, normalised with respect to the roof displacement.
-\item \verb=Effective modal masses=, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
-\item \verb=Number storeys=, number of storeys.
-\item \verb=Weight=, weight assigned to each structure for the derivation of fragility models for many buildings.
-\item \verb=Vbn=, the base shear vector of the n$^{th}$ structure.
-\item \verb=droofn=, the roof displacement vector of the n$^{th}$ structure. \\
+\item Periods, first period of vibration T$_1$.
+\item Ground height, height of the ground floor.
+\item Regular height, height of the regular floors.
+\item Gamma participation factors, modal participation factor $\Gamma_1$ of the first mode of vibration, normalised with respect to the roof displacement.
+\item Effective modal masses, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
+\item Number storeys, number of storeys.
+\item Weight, weight assigned to each structure for the derivation of fragility models for many buildings. The weights should sum to 1.
+\item Vbn, the base shear vector of the n$^{th}$ structure.
+\item droofn, the roof displacement vector of the n$^{th}$ structure. \\
 \end{enumerate}
 
 Only bilinear and quadrilinear idealisation shapes are currently supported to express the pushover curve in an idealised format, therefore the $V_b$ and $d_{roof}$ vectors should contain 3 or 5 $V_b$-$d_{roof}$ pairs, respectively, as described in the following lists and illustrated in Figures \ref{fig:bilinear} and \ref{fig:quadrilinear}.\\
@@ -78,7 +78,7 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
     Ground heights [m] & 7 & 6.5 & \\ \hline
     Regular heights [m] & 2.7 & 3.0 & \\ \hline
     Gamma participation factors & 1.29 & 1.4 & \\ \hline
-    Effective modal masses & 232 &	230 &  \\ \hline
+    Effective modal masses [ton] & 232 &	230 &  \\ \hline
     Number storeys & 6 & 6 & \\ \hline
     Weights & 0.5 & 0.5 & \\ \hline
     Vb1 [kN] & 0 & 2090 & 2090 \\ \hline
@@ -101,17 +101,17 @@ A modification of the previous input model is the Base Shear vs Floor Displaceme
 When the pushover curve is expressed in terms of Base Shear vs Floor Displacements, the user has to set the \verb=Vb-floor= variable to \verb=TRUE= in the input file. Only full pushover curves can be input, therefore the variable \verb=Idealised= should be set to \verb=FALSE=. Then the following information about the structures to be assessed is needed:\\
 
 \begin{enumerate}
-\item \verb=Periods=, first period of vibration T$_1$.
-\item \verb=Ground height=, height of the ground floor.
-\item \verb=Regular height=, height of the regular floors.
-\item \verb=Gamma participation factors=, modal participation factor $\Gamma_1$ of the first mode of vibration, normalised with respect to the roof displacement.
-\item \verb=Effective modal masses=, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
-\item \verb=Number storeys=, number of storeys.
-\item \verb=Weight=, weight assigned to each structure for the derivation of fragility models for many buildings.
-\item \verb=Vbn=, the base shear vector of the n$^{th}$ structure.
-\item \verb=dfloorn-1=, the displacement vector of the 1$^{st}$ floor of the n$^{th}$ structure.
-\item \verb=dfloorn-2=, the displacement vector of the 2$^{nd}$ floor of the n$^{th}$ structure.
-\item \verb=dfloorn-k=, the displacement vector of the k$^{th}$ floor of the n$^{th}$ structure. \\
+\item Periods, first period of vibration T$_1$.
+\item Ground height, height of the ground floor.
+\item Regular height, height of the regular floors.
+\item Gamma participation factors, modal participation factor $\Gamma_1$ of the first mode of vibration, normalised with respect to the roof displacement.
+\item Effective modal masses, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
+\item Number storeys, number of storeys.
+\item Weight, weight assigned to each structure for the derivation of fragility models for many buildings.
+\item Vbn, the base shear vector of the n$^{th}$ structure.
+\item dfloorn-1, the displacement vector of the 1$^{st}$ floor of the n$^{th}$ structure.
+\item dfloorn-2, the displacement vector of the 2$^{nd}$ floor of the n$^{th}$ structure.
+\item dfloorn-k, the displacement vector of the k$^{th}$ floor of the n$^{th}$ structure. \\
 \end{enumerate}
 
 An example of an input \verb=csv= file for the derivation of a fragility model for a set of two structures, is presented in Table~\ref{table:Vb-dfloor_input}.
@@ -130,7 +130,7 @@ An example of an input \verb=csv= file for the derivation of a fragility model f
     Ground heights [m] & 7 & 6.5 & & & & \\ \hline
     Regular heights [m] & 2.7 & 3.0 & & & & \\ \hline
     Gamma participation factors & 1.29 & 1.4 & & & & \\ \hline
-    Effective modal masses	& 232 &	230 & & & & \\ \hline
+    Effective modal masses	[ton] & 232 &	230 & & & & \\ \hline
     Number storeys & 6 & 6 & & & & \\ \hline
     Weights & 0.5 & 0.5 & & & & \\ \hline
     Vb1 [kN] & 0	& ...	& 50	& 94	& 118	& \\ \hline
@@ -155,14 +155,14 @@ Some methodologies work directly with capacity-curves (Spectral acceleration vs 
 When the pushover curve is expressed in terms of Spectral acceleration vs Spectral displacement, the user has to set the \verb=Sd-Sa= variable to \verb=TRUE= in the input file. Then the following information about the structures to be assessed is needed:\\
 
 \begin{enumerate}
-\item \verb=Periods=, first periods of vibration T$_1$.
-\item \verb=Heights=, heights of the structure.
-\item \verb=Gamma participation factors=, modal participation factors $\Gamma_1$ of the first mode of vibration.
-\item \verb=Effective modal masses=, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
-\item \verb=Sdy=, the yielding spectral displacements.
-\item \verb=Say=, the yielding spectral accelerations.
-\item \verb=Sdn [m]=, the Sd vector of the n$^{th}$ structure.
-\item \verb=San [g]=, the Sa vector of the n$^{th}$ structure. \\
+\item Periods, first periods of vibration T$_1$.
+\item Heights, heights of the structure.
+\item Gamma participation factors, modal participation factors $\Gamma_1$ of the first mode of vibration.
+\item Effective modal masses, effective modal masses $M_{1}^{*}$ of the first mode of vibration, normalised with respect to the roof displacement (see Section \ref{subsec:one_mode} for description).
+\item Sdy, the yielding spectral displacements.
+\item Say, the yielding spectral accelerations.
+\item Sdn [m], the Sd vector of the n$^{th}$ structure.
+\item San [g], the Sa vector of the n$^{th}$ structure. \\
 \end{enumerate}
 
 An example of an input \verb=csv= file for the derivation of a fragility model for a set of three structures, is presented in Table \ref{table:Sa-Sd_input}.
