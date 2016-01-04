@@ -43,7 +43,7 @@ If the User wants instead to define each variable of the pinching4 material hims
 sdof_hysteresis = "../../../../../rmtk_data/pinching_parameters.csv"
 \end{Verbatim}
 
-The pinching parameters should be defined in a csv file (tabular format) as shown in Table \ref{table:pinching4}. The variables of Table \ref{table:pinching4} are those characterising pinching4 material as explained in the OpenSees wiki (\href{http://opensees.berkeley.edu/wiki/index.php/Pinching4_Material}{http://opensees.berkeley.edu/wiki/index.php/Pinching4\_Material}).\\
+The pinching parameters should be defined in a csv file (tabular format) as shown in Table \ref{table:pinching4}. The variables of Table \ref{table:pinching4} are those characterising pinching4 material as explained in the OpenSees wiki (\href{http://opensees.berkeley.edu/wiki/index.php/Pinching4_Material}{http://opensees.berkeley.edu/wiki/index.php/Pinching4\_Material}). If multiple capacity curves are input, a single hysteretic behaviour can be input to describe the building class.\\
 
 \begin {table}[htb]
 \caption{Example of file containing Pinching4 material parameters}
@@ -62,7 +62,7 @@ The pinching parameters should be defined in a csv file (tabular format) as show
 	\end{tabular}
 \end{center}
 \end{table}			
-
+\\
 In order to use this methodology, it is necessary to specify a damage model. Currently spectral displacement, capacity curve-based and inter-storey drift-based damage criterion can be used in the damage model (see Section~\ref{subsec:dmg_model}). When the capacity curve-based criterion is selected, it may be necessary to identify the yielding spectral displacement and acceleration. The User can either input the yielding point in the input file, or he can use the algorithm described in Section \ref{subsec:cap_curves} for the idealisation of the capacity curves, to identify the spectral displacement and acceleration at yielding on the capacity curves. When inter-storey drift-based damage criterion is selected it is necessary to define a file containing the relationship between maximum inter-storey drift and spectral displacement (see Section~\ref{subsubsec:isd-dmg}). If this file is not defined a linear relationship between inter-storey drift and roof displacement is assumed and the spectral displacement is obtained dividing the roof displacement by the first modal participation factor $\Gamma$. \\
 
 Other important inputs are the damping ratio, defined using the parameter \verb=damping=, and the degree of degradation in the hysteretic response of the SDOF system. If structural degradation wants be considered in the analysis using the default parameters, it is necessary to set the parameter \verb=degradation= to \verb=True=.
