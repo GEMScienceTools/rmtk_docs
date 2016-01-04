@@ -30,7 +30,7 @@ It can be noted that the capacity curve provided as input to the RMTK can descri
 \item The first assumption regards the level of pinching of the cyclic behaviour. rDispP, rForceP and uForceP (see Figure \ref{fig:backbone}) are the parameters that control the unload-reload paths of Pinching4 material; they are assigned default values of 0.5, 0.25 and 0.05, respectively to represent a medium level of pinching. Since the cyclic behaviour is considered symmetrical the parameters rDispN, rForceN and uForceN are set equal to rDispP, rForceP and uForceP, respectively.
 \item The second assumption regards the degrading behaviour of the model. The parameters that control unloading, reloading stiffness and strength degradation, are gK2, gD2 and gF2, respectively. If the input parameter referring to degradation is activated (\verb=degradation= parameter set to \verb=True=) the gK2, gD2 and gF2 are assigned default values of 0.1, 0.1 and 0.4 respectively, otherwise they are set to zero and degradation is not modelled. More details about the degrading models and the meaning of the degrading parameters can be found in \citep{LowesEtAl2003} or in the OpenSees online wiki (\href{http://opensees.berkeley.edu/wiki/index.php/Pinching4_Material}{http://opensees.berkeley.edu/wiki/index.php/Pinching4\_Material}).
 \end{itemize}
-
+\\
 If the User agrees with these assumptions he should set the variable \verb=sdof_hysteresis= to \verb="Default"= in the ipython notebook
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
@@ -71,7 +71,7 @@ Other important inputs are the damping ratio, defined using the parameter \verb=
 \label{subsec:NLTHA-unscaled}
 
 In this method the ground motion records are unscaled and the response of each SDOF system in terms of displacement due to each ground motion record is used as input to determine the Probability Damage Matrix (PDM). The PDM represents the number of structures in each damage state per each ground motion record intensity.\
-In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motion records, as explained in Sections 4.2.1 and 4.2.2, respectively. After importing the module \verb=NLTHA_on_SDOF=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
+In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motion records, as explained in Sections 4.2.1 and 4.2.2 respectively. After importing the module \verb=NLTHA_on_SDOF=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
 PDM, Sds = NLTHA_on_SDOF.calculate_fragility(capacity_curves,gmrs,
@@ -118,7 +118,7 @@ The User should also specify the scaling factors to apply to the set of ground m
 \end{center}
 \end{table}
 
-The path to the folder where the csv files for each intensity measure bin are should be defined in the variable \verb=record_scaled_folder= (only the csv files containing the scaling factors should be in the folder) and the path to the folder where the ground motion records are should be specified in the variable \verb=gmrs_folder=, as exemplified below. The ground motion records are loaded as explained in Section \ref{subsec:gmrs}.
+The path to the folder where the csv files for each intensity measure bin are should be defined in the variable \verb=record_scaled_folder= (only the csv files containing the scaling factors should be in the folder) and the path to the folder where the ground motion records are should be specified in the variable \verb=gmrs_folder=, as exemplified below. The ground motion records are loaded as explained in Section \ref{subsec:gmrs}. The \verb=record_scaled_folder= contain separate csv files for the different IM bins, each file contains the name of the records and the corresponding scaling factors to scale them to the Intensity Measure of that bin. The files are then read in alphabetic order by the script, but the records indicated in each file are applied to the SDOF system in the same order in which they are listed in the file. In this way the results are "clustered" for IM bin, and they can be easily referred to the corresponding Intensity Measure Level.
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
 gmrs_folder = "../../../../../rmtk_data/MSA_records"
