@@ -1,4 +1,23 @@
-The derivation of fragility models requires the definition of a criterion to allocate one (or multiple) structures into a set of damage states, according to their nonlinear structural response. These rules to relate structural response with physical damage can vary significantly across the literature. Displacement-based methodologies frequently adopt the strain of the concrete and steel (e.g. \cite{BorziEtAl2008b}; \cite{SilvaEtAl2013}). The vast majority of the methodologies that require equivalent linearisation methods or nonlinear time history analysis adopt inter-storey drifts (e.g. \cite{VamvatsikosCornell2005}; \cite{RossettoElnashai2005}), or spectral displacement calculated based on a pushover curve (e.g. \cite{Erberik2008}; \cite{SilvaEtAl2014c}). The various rules dictated by the damage model are currently being stored in a \verb=csv= file (tabular format), as described below for each type of model.
+The derivation of fragility models requires the definition of a criterion to allocate one (or multiple) structures into a set of damage states, according to their nonlinear structural response. These rules to relate structural response with physical damage can vary significantly across the literature. Displacement-based methodologies frequently adopt the strain of the concrete and steel (e.g. \cite{BorziEtAl2008b}; \cite{SilvaEtAl2013}). The vast majority of the methodologies that require equivalent linearisation methods or nonlinear time history analysis adopt inter-storey drifts (e.g. \cite{VamvatsikosCornell2005}; \cite{RossettoElnashai2005}), or spectral displacement calculated based on a pushover curve (e.g. \cite{Erberik2008}; \cite{SilvaEtAl2014c}). The various rules dictated by the damage model are currently being stored in a \verb=csv= file (tabular format), as described below for each type of model. Tabel \ref{table:dmg_list} reports the available damage models and for each of them the methodologies in which they can be used.
+
+\begin {table}[!htbp]
+\caption{List of damage models and methodologies in which they can be used}
+\label{table:dmg_list}
+\begin{center}
+  \begin{tabular}{|l|l|}\hline
+\textbf{Type} & \textbf{Methodologies} \\ \hline
+Strain dependent & D-BELA capacity curves generation\\ 
+							& SP-BELA capacity curves generation\\ \hline
+Capacity curve dependent &  Record-based nonlinear static procedure\\ 
+										& Nonlinear Time History Analysis on SDOF\\ \hline
+Spectral displacement &  Record-based nonlinear static procedure\\ 
+										& Nonlinear Time History Analysis on SDOF\\ \hline
+Interstorey drift & Record-based nonlinear static procedure\\ 
+						& Nonlinear Time History Analysis on SDOF\\
+						& Direct nonlinear static procedures\\ \hline
+  \end{tabular}
+\end{center}
+\end{table}
 
 \subsubsection{Strain-based damage criterion}
 \label{subsubsec:strain-dmg}
@@ -6,7 +25,7 @@ Displacement-based \citep{CrowleyEtAl2004} or mechanics-based \citep{BorziEtAl20
 
 To use this damage criteria, it is necessary to define the parameter \verb=Type= as \verb=strain dependent= within the damage model file. Then, each limit state needs to be defined by a name (e.g. light damage), type of criterion and the adopted probabilistic model. Using the damage criteria described above (by \cite{BorziEtAl2008b}), an example of a damage model is provided in Table~\ref{table:strain-dmg}. In this case, the threshold for light damage is defined at the yielding point, which in return is calculated based on the yielding strain of the steel. The limit state for collapse is computed based on the mean strain in the concrete and steel (0.0075 and 0.0225, respectively) and the a coefficient of variation (0.3 and 0.45, respectively). The remaining limit state (significant damage), is defined as fraction (0.75) of the ultimate displacement (collapse).
 
-\begin {table}[htb]
+\begin {table}[!htbp]
 \caption{Example of a strain dependent damage model}
 \label{table:strain-dmg}
 \begin{center}
@@ -37,7 +56,7 @@ Several existing studies (e.g. \cite{Erberik2008}; \cite{SilvaEtAl2014c}; \cite{
 
 In order to create a damage model based on this criterion, it is necessary to define the parameter \verb=Type= as \verb=capacity curve dependent=. Then, each limit state needs to be defined by a name (e.g. slight damage), type of criterion (as defined in the aforementioned list) and a potential probabilistic model (as described in the previous subsection). An example of a damage model considering all of the possible options described in the previous list is presented in Table~\ref{table:cc-dmg}, and illustrated in Figure~\ref{fig:cc-dmg}. Despite the inclusion of all of the options, a damage model using this approach may use only a few of these criteria. Moreover, some of the options (namely the first, fifth and sixth) may by used multiple times.
 
-\begin {table}[htb]
+\begin {table}[!htbp]
 \caption{Example of a capacity curve dependent damage model.}
 \label{table:cc-dmg}
 \begin{center}

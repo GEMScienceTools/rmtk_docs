@@ -1,4 +1,4 @@
-This method allows the user to convert a pushover curve for a MDoF system into an equivalent SDoF capacity curve, considering the first mode of vibration only. The supplied pushover curve, which is in terms of base shear and roof displacement, is transformed into an equivalent SDoF capacity curve, which is in terms of spectral acceleration and spectral displacement. The properties of the equivalent SDoF model correspond to the properties of the first mode of vibration of the MDoF system. The roof displacement is converted to $S_d$ by normalising by the participation factor of the first mode of vibration, whereas the base shear is normalised to give $S_a$ using the the modal mass for the first mode. Details of this conversion method can be found in \citet{ATC1996} and \citet{FEMA4402005}.
+This method allows the user to convert a pushover curve for a MDoF system into an equivalent SDoF capacity curve, considering the first mode of vibration only. The supplied pushover curve, which can be in terms of base shear and roof displacement or base shear and floor displacements, is transformed into an equivalent SDoF capacity curve, which is in terms of spectral acceleration and spectral displacement. The properties of the equivalent SDoF model correspond to the properties of the first mode of vibration of the MDoF system. The roof displacement is converted to $S_d$ by normalising by the participation factor of the first mode of vibration, whereas the base shear is normalised to give $S_a$ using the the modal mass for the first mode. Details of this conversion method can be found in \citet{ATC1996} and \citet{FEMA4402005}.
 
 The equivalent system acceleration $S_{a-capacity}$ and displacement $S_{d-capacity}$ are calculated as:
 \begin{equation}
@@ -16,7 +16,7 @@ where $\Gamma_{1}$ and $M_{1}^{*}$ are the modal participation factor and the ef
 \end{equation}
 
 \begin{equation}
-	M_{1}^{*} = \sum_{i=1}^{N} m_i \phi_{i,1}^2
+	M_{1}^{*} = \frac{(\sum_{i=1}^{N} m_i \phi_{i,1})^2}{\sum_{i=1}^{N} m_i \phi_{i,1}^2}
 \end{equation}
 
 where m$_i$ is the mass of storey i, N is the number of storeys and $\phi_{i,1}$ is the displacement of storey i in the first mode. In the calculation of $\Gamma_1$ and $M_{1}^{*} $, we assume that the first mode shape $\phi$ has been normalised to unit amplitude at the roof, i.e., $\phi_{1, roof} = 1$. Thus, we have the following:
