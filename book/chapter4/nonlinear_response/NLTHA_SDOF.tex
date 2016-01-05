@@ -8,10 +8,11 @@ m\ddot{u}(t) + c\dot{u}(t) + ku(t) = p(t)
 
 Where $u$, $\dot{u}$ and $\ddot{u}$ stand for the displacement, velocity and acceleration, respectively, over time ($t$), and $p$ represents an external excitation. The nonlinear time history analysis are performed using the open-source software for structural analysis OpenSees \citep{McKennaEtAl2000}. It is important to understand the GEM Foundation does not have authorization to distribute this tool, and therefore in order to use this methodology, users are expected to download OpenSEES (http://opensees.berkeley.edu/), and allocate it in the appropriate folder (\verb=vulnerability/derivation_fragility/NLTHA_on_SDOF=).\\
 
-Two methodologies have been implemented to perform NLTHA on SDOF systems, differing in the way the ground motion records are pre-processed before running the structural analysis and in the post-processing of the structural responses.\
+Three methodologies have been implemented to perform NLTHA on SDOF systems, differing in the way the ground motion records are pre-processed before running the structural analysis and in the post-processing of the structural responses.\
 The first method, called "Unscaled Records" employs unscaled ground motion records. Multiple capacity curves should be input to obtain reliable results. It should be noted that the records could also be scaled to cover high intensity measure levels, but scaling is not required by the method itself. More details about the "Unscaled Records" method can be found in Section \ref{subsec:NLTHA-unscaled}.\
 The second method implements the Multiple Stripe Analysis (MSA) \citep{Jalayer2003}, in which the records are scaled to pre-defined target intensity measure levels. The MSA is suitable to assess both single and multiple structures. More details can be found in Section \ref{subsec:NLTHA-MSA}.\
-The two methods share the same input models for what concerns capacity curves and damage model. The description of these input is thus reported below for both methodologies, while the definition of the ground motion records and the derivation of fragility based on the structural responses are addressed separately in Section \ref{subsec:NLTHA-unscaled} and Section \ref{subsec:NLTHA-MSA}.\\
+Another method has been developed to derive the fragility of buildings presenting an existing level of damage. The method has been named "Double Multiple Stripe Analysis on SDOF oscillators", because it applies two nonlinear time history analyses in sequence to SDOF oscillators, in which the second one is in the format of Multiple Stripe Analysis. More details can be found in Section \ref{subsec:2MSA}.\
+The three methods share the same input models for what concerns capacity curves and damage model. The description of these input is thus reported below for all the methodologies, while the definition of the ground motion records and the derivation of fragility based on the structural responses are addressed separately in Section \ref{subsec:NLTHA-unscaled}, Section \ref{subsec:NLTHA-MSA} and Section \ref{subsec:2MSA}.\\
 
 The user has to provide one (or multiple) capacity curve, idealized by five relevant Sd-Sa points, a value of damping ratio, the period of the structure and the degree of degradation in the cyclic rule. Of these five relevant points, four are needed to represent the hysteretic behaviour of the OpenSees material (see Figure \ref{fig:backbone}); the fifth is the origin that should be also specified in the inputs for the generation of the SDOF system in the RMTK implementation. In summary, the first point corresponds to the origin (0, 0); the second couple of Sd-Sa values (ePd1, ePf1) corresponds to the yielding point of the structure, i.e. the point beyond which the structure no longer displays an elastic behaviour; the following two points, (ePd2, ePf2) and (ePd3, ePf3), are defined as any two intermediate points between the yield point and the ultimate point which can be used to represent particular structural properties, such as reduction of stiffness due to collapse of infill panels or softening behaviour due to P-delta effects; the last point (ePd4, ePf4) corresponds to the point of maximum displacement of the structure.
 
@@ -71,7 +72,7 @@ Other important inputs are the damping ratio, defined using the parameter \verb=
 \label{subsec:NLTHA-unscaled}
 
 In this method the ground motion records are unscaled and the response of each SDOF system in terms of displacement due to each ground motion record is used as input to determine the Probability Damage Matrix (PDM). The PDM represents the number of structures in each damage state per each ground motion record intensity.\
-In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motion records, as explained in Sections 4.2.1 and 4.2.2 respectively. After importing the module \verb=NLTHA_on_SDOF=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
+In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motion records, as explained in Sections \ref{subsec:cap_curves} and \ref{{subsec:gmrs} respectively. After importing the module \verb=NLTHA_on_SDOF=, it is possible to calculate the distribution of structures across the set of damage states for each ground motion record using the following command:
 
 \begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
 PDM, Sds = NLTHA_on_SDOF.calculate_fragility(capacity_curves,gmrs,
@@ -104,7 +105,7 @@ The User should also specify the scaling factors to apply to the set of ground m
 
 \begin {table}[htb]
 \caption{Example of file containing scaling factor for each ground motion record}
-\label{table:pinching4}
+\label{table:scaling}
 \begin{center}
   \begin{tabular}{ | c | c |}
   \hline
@@ -153,3 +154,81 @@ IML_info,IMT,msa,damage_model,T,damping_ratio, regression_method)
 \end{Verbatim}
 
 Once the parameters ($\mu$, $\sigma$) of the fragility model have been calculated, it is possible to save these results as explained in Section \ref{subsec:derive_fragility}.
+
+\subsection{Double Multiple Stripe Analysis}
+\label{subsec:2MSA}
+
+The “Double MSA on SDOF Oscillators” allows performing sequences of mainshock-aftershock dynamic analyses to derive fragility curves for different levels of existing damage. The implementation of the present methodology consists of three main steps:
+
+\begin{enumerate}
+\item In the first step, unscaled ground motion records are applied to the intact structure and they are classified according to the damage state attained at the end of the nonlinear time history analysis. Once a certain number of ground motion records is found for each damage state, the dynamic analyses are stopped. If this number (pre-defined at the beginning of the analyses) is not reached, an increasing scaling factor is applied to the accelerograms until enough ground motion records populate each damage state. Finally, for each damage state, a file is generated with the corresponding list of records and the scaling factor applied. The ground motion records listed in the files are used as mainshocks of the mainshock-aftershock sequences applied in step 2.
+
+\item In the second step, a multiple stripe analysis is performed. Each structure is led to a certain level of damage, by applying the records selected at step 1, one at the time. The structure is then subjected to another accelerogram (representative of a possible aftershock). The aftershock of the sequence is scaled to obtain a certain intensity measure level, defined at the beginning of the MSA. For each of the mainshock ground motion record the dynamic analyses are repeated for the number of records per IM level e for the number of IM levels.
+
+\item Finally, for each initial damage state (the damage state attained after the mainshock dynamic analysis) a set of fragility curves is derived based on the results of the MSA, saved in terms of Damage Probability Matrix (DPM). The DPM is calculated allocating the structure into a damage state after each nonlinear time history analysis, and saving the defined damage state in the corresponding intensity measure bin. The number of rows of the PDM are thus equal to the number of IM bins, and the number of columns to the number of damage states.
+\end{enumerate}
+\\
+A graphical representation of the series of analyses performed on the SDOF oscillators is depicted in Figure \ref{fig:2msa}.\
+
+\begin{figure}[htb]
+  \centering
+      \includegraphics[width=14cm]{figures/2MSA.jpg}
+  \caption{Double Multiple Stripes Analysis.}
+  \label{fig:2msa}
+\end{figure}
+
+In order to use this methodology, it is necessary to load one or multiple capacity curves and a set of ground motion records, as explained in Sections \ref{subsec:cap_curves} and \ref{subsec:gmrs} respectively, while the hysteretic behaviour of the systems is set as described at the beginning of this Chapter, using the variable \verb=sdof_hysteresis=. 
+It is possible to derive fragility curves for a single structure or for a building class. In the latter case many capacity curves should be input and the PDMs of the SDOF systems are summed up to get a unique PDM for the building class.
+The User should also specify the number of intensity measure bins and the number of records per bin for the MSA. An essential parameter is the number of "damaged" structure to populate each initial damage state with. The following variables are thus needed:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+no_bins = 2
+no_rec_bin = 10
+number_models_in_DS = 10
+\end{Verbatim}
+
+As in the MSA described in Section \ref{subsec:NLTHA-MSA} the User should also specify the scaling factors to apply to the set of ground motion records in separate csv files for each IM bin. An example of the csv file for a single intensity measure bin is given in Table \ref{table:scaling}. The path to the folder where the csv files for each intensity measure bin are should be defined in the variable \verb=record_scaled_folder= (only the csv files containing the scaling factors should be in the folder) and the path to the folder where the ground motion records are should be specified in the variable \verb=gmrs_folder=, as exemplified below:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+gmrs_folder = "../../../../../rmtk_data/MSA_records"
+record_scaled_folder = "../../../../../rmtk_data/Scaling_factors"
+\end{Verbatim}
+
+Moreover there is the possibility to impose a certain relationship between the ground motion characteristics of the mainshock and the aftershock of the seismic sequences. In this case the variable \verb=filter_aftershocks= should be set to \verb=TRUE= and the parameters \verb=Mw_multiplier= and \verb=waveform_path= should be defined. The former represents the ratio between the aftershock magnitude and the mainshock magnitude that wants to be imposed, the latter the path to the file containing magnitude and predominant period of each ground motion record of the selected database . More details about the relationship between mainshock and aftershock ground motion characteristics, and their use in damage-dependent fragility assessment can be found in \citep{Casotto2016}.
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+ Mw_multiplier = 0.92
+ waveform_path = '../../../../../rmtk_data/waveform.csv'
+\end{Verbatim}
+
+If the User is not interested in this option, the variable \verb=filter_aftershocks= should be set to \verb=FALSE= and the aforementioned parameters can be left empty.\\
+After importing the module \verb=double_MSA_on_SDOF=, it is possible to calculate the PDM, using the following command:
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+PDM, Sds, gmr_info = double_MSA_on_SDOF.calculate_fragility(
+                        capacity_curves, hysteresis, msa, gmrs, 
+                        gmr_characteristics, damage_model, 
+                        damping_ratio,degradation,number_models_in_DS)
+\end{Verbatim}
+
+Where \verb=Sds= (i.e. spectral displacements) represents a vector with the maximum displacement (of the equivalent SDOF) of each structure per ground motion record of the MSA only, and \verb=IML_info= is a vector containing the names of the ground motion records selected for the MSA and the corresponding scaling factor. The variable PDM instead is a dictionary containing the PDMs for each initial damage state. It should be noted that the fragility model for each initial damage states contains information only about the higher damage states.\\ 
+For each of the PDM in the dictionary the mean fragility model can be calculated as described in Section \ref{subsec:NLTHA-MSA}. The variables to be set to compute the mean fragility functions are the intensity measure type that should be considered (\verb=IMT=) the period of vibration (\verb=T=), if the intensity measure is related to a spectral quantity, and the ratio of viscous damping (\verb=damping=). Finally, the statistical method to fit the data from the PDM with a lognormal cumulative function and the range of applicability of the fragility model should be defined using the variables \verb=regression_method=, \verb=minIML= and \verb=maxIML= respectively.\
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+IMT = "Sa"
+T = 1.5
+damping_ratio = 0.05
+regression_method = "max likelihood"
+minIML, maxIML = 0.01, 3.00
+\end{Verbatim}
+
+The calculation of the fragility model also requires the \verb=IML_info= vector (previously derived with the PDM), the set of ground motion records used in the dynamic analyses (\verb=gmrs=), and the damage model utilized to allocated each structure into a damage state (\verb=damage_model=). A description of the latter two components are provided in Section \ref{subsec:gmrs} and \ref{subsec:dmg_model}, respectively.\\
+The function that calculates fragility models is contained in the module \verb=MSA_utils=. An example of this process is depicted below.
+
+\begin{Verbatim}[frame=single, commandchars=\\\{\}, samepage=true]
+fragility_model = MSA_utils.calculate_fragility_model_damaged(
+PDM,gmrs,gmr_info,IMT,msa,damage_model,
+T,damping_ratio, regression_method)
+\end{Verbatim}
+
+The fragility model contains the parameters ($\mu$, $\sigma$) of the fitted lognormal functions for each fin 	al damage state, for each level of initial damage. It is then possible to save these results as explained in Section \ref{subsec:derive_fragility}.
